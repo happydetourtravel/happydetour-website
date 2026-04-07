@@ -9,7 +9,7 @@ const LOGO_MOBILE_URL = LOGO_URL;
 
 const navLinks = [
   { label: "Home", href: "#hero" },
-  { label: "Start Planning My Trip", href: "https://happydetour.app.n8n.cloud/form/ec5185b0-7ac2-4940-8dd3-f46039ff0a69" },
+  { label: "Start Planning My Trip", href: "https://happydetour.app.n8n.cloud/form/91799171-4079-4ab7-9d13-9417ae57dfba" },
   { label: "Contact", href: "#contact" },
 ];
 
