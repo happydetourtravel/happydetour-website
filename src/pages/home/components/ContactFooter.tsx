@@ -8,7 +8,6 @@ const LOGO_URL =
 const quickLinks = [
   { label: "Home", href: "#hero" },
   { label: "Blog", href: "https://happydetourtravel.wordpress.com" },
-  { label: "Start Planning My Trip", href: FORM_URL },
   { label: "Contact", href: "mailto:eric@happydetour.com" },
 ];
 
