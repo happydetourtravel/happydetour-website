@@ -109,19 +109,35 @@ export default function HeroSection() {
   Beaches (Families)
 </a>
 
-             <a href={FORM_URL}
+             <button onClick={() => setShowModal(true)}
   target="_blank"
   rel="noopener noreferrer"
   className="group relative inline-flex items-center gap-2 rounded-full bg-white/15 backdrop-blur-sm border border-white/20 px-3 py-1.5 text-xs font-medium text-white hover:bg-amber-400 hover:border-amber-300 hover:shadow-[0_0_12px_rgba(251,191,36,0.6)] hover:scale-105 transition-all duration-300"
 >
   <span className="inline-block opacity-0 -translate-x-3 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 text-white w-4">✈️</span>
   Royal Caribbean & More
-</a>
+</button>
             </div>
           </div>
 
         </div>
       </div>
+
+      {showModal && (
+  <div className="fixed inset-0 z-50 flex items-center justify-center px-4 bg-black/60" onClick={() => setShowModal(false)}>
+    <div className="bg-white rounded-2xl max-w-md w-full p-8 text-center shadow-2xl" onClick={e => e.stopPropagation()}>
+      <div className="text-4xl mb-4">🚢</div>
+      <h3 className="text-xl font-bold text-gray-900 mb-3">Royal Caribbean, Celebrity & Carnival</h3>
+      <p className="text-gray-500 text-sm mb-6">I have access to exclusive rates on all major cruise lines. Tell me what you are looking for and I will send you a custom quote personally!</p>
+      <a href={FORM_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-full bg-amber-500 px-8 py-3 text-sm font-semibold text-white hover:bg-amber-600 transition-all">
+        Get My Custom Quote
+      </a>
+      <button onClick={() => setShowModal(false)} className="block mx-auto mt-4 text-sm text-gray-400 hover:text-gray-600">
+        Maybe later
+      </button>
+    </div>
+  </div>
+)}
     </section>
   );
 }
