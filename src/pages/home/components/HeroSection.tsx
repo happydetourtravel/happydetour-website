@@ -76,7 +76,7 @@ export default function HeroSection() {
             <p className="text-sm text-white/90 mb-3">
               Want to explore a little first?
             </p>
-            <div className="grid grid-cols-2 justify-items-center gap-2 max-w-sm mx-auto">
+            <div className="flex flex-wrap justify-center gap-2">
               
             <a  href="https://www.virginvoyages.com/book/voyage-planner/find-a-voyage?cabins=1&currencyCode=USD&agentId=278796&agencyId=589&bookingChannel=FMLINK&priceType=cabinPerNight"
   target="_blank"
