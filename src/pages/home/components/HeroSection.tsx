@@ -81,7 +81,7 @@ export default function HeroSection() {
             <a  href="https://www.virginvoyages.com/book/voyage-planner/find-a-voyage?cabins=1&currencyCode=USD&agentId=278796&agencyId=589&bookingChannel=FMLINK&priceType=cabinPerNight"
   target="_blank"
   rel="noopener noreferrer"
-  className="group relative inline-flex items-center gap-2 rounded-full bg-white/15 backdrop-blur-sm border border-white/20 px-5 py-2 text-sm font-medium text-white hover:bg-amber-400 hover:border-amber-300 hover:shadow-[0_0_12px_rgba(251,191,36,0.6)] hover:scale-105 transition-all duration-300"
+  className="group relative inline-flex items-center gap-2 rounded-full bg-white/15 backdrop-blur-sm border border-white/20 px-3 py-1.5 text-xs font-medium text-white hover:bg-amber-400 hover:border-amber-300 hover:shadow-[0_0_12px_rgba(251,191,36,0.6)] hover:scale-105 transition-all duration-300"
 >
   <span className="inline-block w-0 overflow-hidden group-hover:w-4 transition-all duration-300 text-white">✈️</span>
   Virgin Voyages
@@ -90,7 +90,7 @@ export default function HeroSection() {
  <a  href="https://www.sandals.com/?referral=101731&agentid=ERCA7707"
   target="_blank"
   rel="noopener noreferrer"
-  className="group relative inline-flex items-center gap-2 rounded-full bg-white/15 backdrop-blur-sm border border-white/20 px-5 py-2 text-sm font-medium text-white hover:bg-amber-400 hover:border-amber-300 hover:shadow-[0_0_12px_rgba(251,191,36,0.6)] hover:scale-105 transition-all duration-300"
+  className="group relative inline-flex items-center gap-2 rounded-full bg-white/15 backdrop-blur-sm border border-white/20 px-3 py-1.5 text-xs font-medium text-white hover:bg-amber-400 hover:border-amber-300 hover:shadow-[0_0_12px_rgba(251,191,36,0.6)] hover:scale-105 transition-all duration-300"
 >
   <span className="inline-block w-0 overflow-hidden group-hover:w-4 transition-all duration-300 text-white">✈️</span>
   Sandals (Couples)
@@ -99,7 +99,7 @@ export default function HeroSection() {
  <a  href="https://www.beaches.com/?referral=101731&agentid=ERCA7707"
   target="_blank"
   rel="noopener noreferrer"
-  className="group relative inline-flex items-center gap-2 rounded-full bg-white/15 backdrop-blur-sm border border-white/20 px-5 py-2 text-sm font-medium text-white hover:bg-amber-400 hover:border-amber-300 hover:shadow-[0_0_12px_rgba(251,191,36,0.6)] hover:scale-105 transition-all duration-300"
+  className="group relative inline-flex items-center gap-2 rounded-full bg-white/15 backdrop-blur-sm border border-white/20 px-3 py-1.5 text-xs font-medium text-white hover:bg-amber-400 hover:border-amber-300 hover:shadow-[0_0_12px_rgba(251,191,36,0.6)] hover:scale-105 transition-all duration-300"
 >
   <span className="inline-block w-0 overflow-hidden group-hover:w-4 transition-all duration-300 text-white">✈️</span>
   Beaches (Families)
@@ -108,7 +108,7 @@ export default function HeroSection() {
              <a href={FORM_URL}
   target="_blank"
   rel="noopener noreferrer"
-  className="group relative inline-flex items-center gap-2 rounded-full bg-white/15 backdrop-blur-sm border border-white/20 px-5 py-2 text-sm font-medium text-white hover:bg-amber-400 hover:border-amber-300 hover:shadow-[0_0_12px_rgba(251,191,36,0.6)] hover:scale-105 transition-all duration-300"
+  className="group relative inline-flex items-center gap-2 rounded-full bg-white/15 backdrop-blur-sm border border-white/20 px-3 py-1.5 text-xs font-medium text-white hover:bg-amber-400 hover:border-amber-300 hover:shadow-[0_0_12px_rgba(251,191,36,0.6)] hover:scale-105 transition-all duration-300"
 >
   <span className="inline-block w-0 overflow-hidden group-hover:w-4 transition-all duration-300 text-white">✈️</span>
   Royal Caribbean & More
