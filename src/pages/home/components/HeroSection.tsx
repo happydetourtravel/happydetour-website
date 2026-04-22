@@ -104,20 +104,6 @@ export default function HeroSection() {
             </div>
           </div>
 
-          {/* Category bubbles */}
-          <ScrollReveal direction="up" delay={530} duration={700} threshold={0.05}>
-            <div className="mt-8 flex flex-wrap justify-center gap-2">
-              {["Cruises", "All-Inclusive Resorts", "Custom Getaways"].map((tag) => (
-                <span
-                  key={tag}
-                  className="rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-xs font-medium text-white/70 backdrop-blur-sm"
-                >
-                  {tag}
-                </span>
-              ))}
-            </div>
-          </ScrollReveal>
-
         </div>
       </div>
     </section>
