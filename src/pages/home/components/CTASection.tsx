@@ -28,7 +28,7 @@ export default function CTASection() {
         <ScrollReveal direction="up" delay={300} duration={700}>
           <div className="mt-10 flex flex-col items-center gap-3">
             
-              href={FORM_URL}
+             <a href={FORM_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2.5 rounded-full bg-amber-500 px-12 py-4 text-base font-semibold text-white hover:bg-amber-600 active:scale-95 transition-all duration-150 whitespace-nowrap cursor-pointer">
