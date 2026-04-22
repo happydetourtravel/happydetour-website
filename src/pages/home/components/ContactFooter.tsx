@@ -181,6 +181,30 @@ export default function ContactFooter() {
           </ScrollReveal>
         </div>
 
+        {/* CTA Banner */}
+<ScrollReveal direction="up" delay={50} duration={680}>
+  <div className="mt-12 rounded-2xl bg-amber-500 px-8 py-10 text-center">
+    <p className="text-white/80 text-sm font-semibold uppercase tracking-widest mb-2">
+      What are you waiting for?
+    </p>
+    <h2 className="text-2xl font-bold text-white sm:text-3xl mb-2">
+      Stop scrolling, start packing.
+    </h2>
+    <p className="text-white/80 text-base mb-6">
+      Let's find your happy detour.
+    </p>
+    
+     <a href={FORM_URL}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-flex items-center gap-2 rounded-full bg-white px-8 py-3 text-sm font-semibold text-amber-600 hover:bg-amber-50 transition-all"
+    >
+      <i className="ri-plane-fill" />
+      Start Planning My Trip
+    </a>
+  </div>
+</ScrollReveal>
+
         {/* WorldVia note */}
         <ScrollReveal direction="up" delay={100} duration={680}>
           <div className="mt-12 rounded-2xl border border-amber-100 bg-amber-50/50 p-6 flex flex-col sm:flex-row sm:items-center gap-4">
