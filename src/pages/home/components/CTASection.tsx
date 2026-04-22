@@ -38,16 +38,16 @@ export default function CTASection() {
         {/* CTA */}
         <ScrollReveal direction="up" delay={300} duration={700}>
           <div className="mt-10 flex flex-col items-center gap-3">
-            <a href={FORM_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2.5 rounded-full bg-amber-500 px-12 py-4 text-base font-semibold text-white hover:bg-amber-600 active:scale-95 transition-all duration-150 whitespace-nowrap cursor-pointer"</a>
-            >
-              <span className="w-4 h-4 flex items-center justify-center">
-                <i className="ri-plane-fill text-base leading-none" />
-              </span>
-              Start Planning My Trip
-            </a>
+       <a href={FORM_URL}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="inline-flex items-center justify-center gap-2.5 rounded-full bg-amber-500 px-12 py-4 text-base font-semibold text-white hover:bg-amber-600 active:scale-95 transition-all duration-150 whitespace-nowrap cursor-pointer"
+>
+  <span className="w-4 h-4 flex items-center justify-center">
+    <i className="ri-plane-fill text-base leading-none" />
+  </span>
+  Start Planning My Trip
+</a>
             <p className="text-sm text-gray-500">
               Start with an idea. I'll help from there.
             </p>
