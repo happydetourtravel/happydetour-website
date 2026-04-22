@@ -15,62 +15,64 @@
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.5.0/remixicon.min.css">
-    <script type="application/ld+json">
+ <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Happy Detour Travel",
-  "url": "https://www.happydetour.com",
-  "description": "Affordable vacations, fun experiences, and stress-free travel planning specializing in cruises, all-inclusive resorts, and custom getaways.",
-  "founder": {
-    "@type": "Person",
-    "name": "Eric Carney"
-  },
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "contactType": "Customer Service"
-  }
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.happydetour.com/#organization",
+      "name": "Happy Detour Travel",
+      "url": "https://www.happydetour.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://static.websitebuilder-cdn.com/ff4558209215a440/media/img/logo.30fb1e8b14fa58c29568cadc94d36a72b9c0ae687633fcc7be077d2afe4d4a70.png"
+      },
+      "description": "Happy Detour Travel is an independent travel advisory service led by Eric Carney, specializing in personalized and free vacation planning for cruises, all-inclusive resorts, and custom trips. Affordable vacations. Fun experiences. Everyone welcome.",
+      "email": "eric@happydetour.com",
+      "sameAs": [
+        "https://www.facebook.com/profile.php?id=61582209485454",
+        "https://www.instagram.com/happydetourtravel/"
+      ],
+      "founder": {
+        "@id": "https://www.happydetour.com/#person"
+      },
+      "memberOf": {
+        "@type": "Organization",
+        "name": "WorldVia Travel Network"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.happydetour.com/#person",
+      "name": "Eric Carney",
+      "jobTitle": "Independent Travel Advisor",
+      "url": "https://www.happydetour.com/",
+      "email": "eric@happydetour.com",
+      "worksFor": {
+        "@id": "https://www.happydetour.com/#organization"
+      },
+      "sameAs": [
+        "https://www.facebook.com/profile.php?id=61582209485454",
+        "https://www.instagram.com/happydetourtravel/"
+      ]
+    },
+    {
+      "@type": "TravelAgency",
+      "@id": "https://www.happydetour.com/#travelagency",
+      "name": "Happy Detour Travel",
+      "url": "https://www.happydetour.com/",
+      "description": "Free, personalized travel planning for cruises, all-inclusive resorts, and custom vacations. Led by independent travel advisor Eric Carney.",
+      "email": "eric@happydetour.com",
+      "priceRange": "Free service — commission paid by cruise lines and resorts",
+      "areaServed": "United States",
+      "parentOrganization": {
+        "@id": "https://www.happydetour.com/#organization"
+      }
+    }
+  ]
 }
 </script>
-    <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Eric Carney",
-  "jobTitle": "Independent Travel Advisor",
-  "worksFor": {
-    "@type": "Organization",
-    "name": "Happy Detour Travel"
-  },
-  "url": "https://www.happydetour.com"
-}
-</script>
-    <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Service",
-  "name": "Travel Planning Services",
-  "description": "Personalized and free travel planning for cruises, all-inclusive resorts, and custom getaways.",
-  "provider": {
-    "@type": "Organization",
-    "name": "Happy Detour Travel"
-  },
-  "areaServed": "US",
-  "serviceType": "Travel Planning",
-  "url": "https://www.happydetour.com"
-}
-</script>
-    <link rel="canonical" href="https://www.happydetour.com/" />
-    <meta property="og:title" content="Happy Detour | Affordable Vacations for Everyone" />
-<meta property="og:description" content="Affordable vacations, fun experiences, and stress-free planning. Start your trip with Happy Detour Travel." />
-<meta property="og:url" content="https://www.happydetour.com/" />
-<meta property="og:type" content="website" />
-    <meta property="og:image" content="https://static.websitebuilder-cdn.com/ff4558209215a440/media/img/logo.30fb1e8b14fa58c29568cadc94d36a72b9c0ae687633fcc7be077d2afe4d4a70.png" />
-<meta property="og:site_name" content="Happy Detour Travel" />
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Happy Detour | Affordable Vacations for Everyone" />
-<meta name="twitter:description" content="Forget the work of planning. I handle the heavy lifting so you can enjoy the experience." />
-<meta name="twitter:image" content="https://static.websitebuilder-cdn.com/ff4558209215a440/media/img/logo.30fb1e8b14fa58c29568cadc94d36a72b9c0ae687633fcc7be077d2afe4d4a70.png" />
   </head>
   <body>
     <div id="root"></div>
