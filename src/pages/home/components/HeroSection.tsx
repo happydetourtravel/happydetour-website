@@ -126,7 +126,7 @@ const [showModal, setShowModal] = React.useState(false);
   <div className="fixed inset-0 z-50 flex items-center justify-center px-4 bg-black/60" onClick={() => setShowModal(false)}>
     <div className="bg-white rounded-2xl max-w-md w-full p-8 text-center shadow-2xl" onClick={e => e.stopPropagation()}>
       <div className="text-4xl mb-4">🚢</div>
-      <h3 className="text-xl font-bold text-gray-900 mb-3">Royal Caribbean, Celebrity, MSC & Carnival</h3>
+      <h3 className="text-xl font-bold text-gray-900 mb-3">Royal Caribbean, Norwegian, & MSC</h3>
       <p className="text-gray-500 text-sm mb-6">I have access to exclusive rates on all major cruise lines. Tell me what you are looking for and I will send you a custom quote personally!</p>
       <a href={FORM_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-full bg-amber-500 px-8 py-3 text-sm font-semibold text-white hover:bg-amber-600 transition-all">
         Get My Custom Quote
