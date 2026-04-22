@@ -104,6 +104,15 @@ export default function HeroSection() {
   <span className="inline-block w-0 overflow-hidden group-hover:w-4 transition-all duration-300 text-white">✈️</span>
   Beaches (Families)
 </a>
+
+             <a href={FORM_URL}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="group relative inline-flex items-center gap-2 rounded-full bg-white/15 backdrop-blur-sm border border-white/20 px-5 py-2 text-sm font-medium text-white hover:bg-amber-400 hover:border-amber-300 hover:shadow-[0_0_12px_rgba(251,191,36,0.6)] hover:scale-105 transition-all duration-300"
+>
+  <span className="inline-block w-0 overflow-hidden group-hover:w-4 transition-all duration-300 text-white">✈️</span>
+  Royal Caribbean & More
+</a>
             </div>
           </div>
 
