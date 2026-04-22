@@ -57,7 +57,7 @@ export default function HeroSection() {
           {/* 4. CTA button */}
           <ScrollReveal direction="up" delay={420} duration={700} threshold={0.05}>
             <div className="mt-9 flex justify-center">
-              <a
+              
                 href={FORM_URL}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -71,37 +71,38 @@ export default function HeroSection() {
             </div>
           </ScrollReveal>
 
-         <div className="mt-4 mb-4 text-center">
-  <p className="text-sm text-white/90 mb-3">
-    Want to explore a little first?
-  </p>
-  <div className="flex flex-wrap justify-center gap-2">
-    
-      href="https://www.virginvoyages.com/book/voyage-planner/find-a-voyage?cabins=1&currencyCode=USD&agentId=278796&agencyId=589&bookingChannel=FMLINK&priceType=cabinPerNight"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="rounded-full bg-white/15 backdrop-blur-sm border border-white/20 px-5 py-2 text-sm font-medium text-white hover:bg-amber-400 hover:border-amber-400 hover:text-white transition-all"
-    >
-      Virgin Voyages
-    </a>
-    
-      href="https://www.sandals.com/?referral=101731&agentid=ERCA7707"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="rounded-full bg-white/15 backdrop-blur-sm border border-white/20 px-5 py-2 text-sm font-medium text-white hover:bg-amber-400 hover:border-amber-400 hover:text-white transition-all"
-    >
-      Sandals (Couples)
-    </a>
-    
-      href="https://www.beaches.com/?referral=101731&agentid=ERCA7707"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="rounded-full bg-white/15 backdrop-blur-sm border border-white/20 px-5 py-2 text-sm font-medium text-white hover:bg-amber-400 hover:border-amber-400 hover:text-white transition-all"
-    >
-      Beaches (Families)
-    </a>
-  </div>
-</div>
+          {/* Browse row */}
+          <div className="mt-4 mb-4 text-center">
+            <p className="text-sm text-white/90 mb-3">
+              Want to explore a little first?
+            </p>
+            <div className="flex flex-wrap justify-center gap-2">
+              
+                href="https://www.virginvoyages.com/book/voyage-planner/find-a-voyage?cabins=1&currencyCode=USD&agentId=278796&agencyId=589&bookingChannel=FMLINK&priceType=cabinPerNight"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-full bg-white/15 backdrop-blur-sm border border-white/20 px-5 py-2 text-sm font-medium text-white hover:bg-amber-400 hover:border-amber-400 hover:text-white transition-all"
+              >
+                Virgin Voyages
+              </a>
+              
+                href="https://www.sandals.com/?referral=101731&agentid=ERCA7707"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-full bg-white/15 backdrop-blur-sm border border-white/20 px-5 py-2 text-sm font-medium text-white hover:bg-amber-400 hover:border-amber-400 hover:text-white transition-all"
+              >
+                Sandals (Couples)
+              </a>
+              
+                href="https://www.beaches.com/?referral=101731&agentid=ERCA7707"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-full bg-white/15 backdrop-blur-sm border border-white/20 px-5 py-2 text-sm font-medium text-white hover:bg-amber-400 hover:border-amber-400 hover:text-white transition-all"
+              >
+                Beaches (Families)
+              </a>
+            </div>
+          </div>
 
           {/* Category bubbles */}
           <ScrollReveal direction="up" delay={530} duration={700} threshold={0.05}>
