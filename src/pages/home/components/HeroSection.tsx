@@ -58,7 +58,7 @@ export default function HeroSection() {
           <ScrollReveal direction="up" delay={420} duration={700} threshold={0.05}>
             <div className="mt-9 flex justify-center">
               
-                href={FORM_URL}
+                <a href={FORM_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2.5 rounded-full bg-amber-500 px-10 py-4 text-base font-semibold text-white hover:bg-amber-600 active:scale-95 transition-all whitespace-nowrap cursor-pointer"
@@ -78,7 +78,7 @@ export default function HeroSection() {
             </p>
             <div className="flex flex-wrap justify-center gap-2">
               
-                href="https://www.virginvoyages.com/book/voyage-planner/find-a-voyage?cabins=1&currencyCode=USD&agentId=278796&agencyId=589&bookingChannel=FMLINK&priceType=cabinPerNight"
+                <a href="https://www.virginvoyages.com/book/voyage-planner/find-a-voyage?cabins=1&currencyCode=USD&agentId=278796&agencyId=589&bookingChannel=FMLINK&priceType=cabinPerNight"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="rounded-full bg-white/15 backdrop-blur-sm border border-white/20 px-5 py-2 text-sm font-medium text-white hover:bg-amber-400 hover:border-amber-400 hover:text-white transition-all"
@@ -86,7 +86,7 @@ export default function HeroSection() {
                 Virgin Voyages
               </a>
               
-                href="https://www.sandals.com/?referral=101731&agentid=ERCA7707"
+                <a href="https://www.sandals.com/?referral=101731&agentid=ERCA7707"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="rounded-full bg-white/15 backdrop-blur-sm border border-white/20 px-5 py-2 text-sm font-medium text-white hover:bg-amber-400 hover:border-amber-400 hover:text-white transition-all"
@@ -94,7 +94,7 @@ export default function HeroSection() {
                 Sandals (Couples)
               </a>
               
-                href="https://www.beaches.com/?referral=101731&agentid=ERCA7707"
+                <a href="https://www.beaches.com/?referral=101731&agentid=ERCA7707"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="rounded-full bg-white/15 backdrop-blur-sm border border-white/20 px-5 py-2 text-sm font-medium text-white hover:bg-amber-400 hover:border-amber-400 hover:text-white transition-all"
