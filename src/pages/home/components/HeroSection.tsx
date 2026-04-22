@@ -83,7 +83,7 @@ export default function HeroSection() {
   rel="noopener noreferrer"
   className="group relative inline-flex items-center gap-2 rounded-full bg-white/15 backdrop-blur-sm border border-white/20 px-3 py-1.5 text-xs font-medium text-white hover:bg-amber-400 hover:border-amber-300 hover:shadow-[0_0_12px_rgba(251,191,36,0.6)] hover:scale-105 transition-all duration-300"
 >
-  <span className="inline-block w-0 overflow-hidden group-hover:w-4 transition-all duration-300 text-white">✈️</span>
+  <span className="inline-block opacity-0 -translate-x-3 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 text-white w-4">✈️</span>
   Virgin Voyages
 </a>
 
@@ -92,7 +92,7 @@ export default function HeroSection() {
   rel="noopener noreferrer"
   className="group relative inline-flex items-center gap-2 rounded-full bg-white/15 backdrop-blur-sm border border-white/20 px-3 py-1.5 text-xs font-medium text-white hover:bg-amber-400 hover:border-amber-300 hover:shadow-[0_0_12px_rgba(251,191,36,0.6)] hover:scale-105 transition-all duration-300"
 >
-  <span className="inline-block w-0 overflow-hidden group-hover:w-4 transition-all duration-300 text-white">✈️</span>
+  <span className="inline-block opacity-0 -translate-x-3 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 text-white w-4">✈️</span>
   Sandals (Couples)
 </a>
 
@@ -101,7 +101,7 @@ export default function HeroSection() {
   rel="noopener noreferrer"
   className="group relative inline-flex items-center gap-2 rounded-full bg-white/15 backdrop-blur-sm border border-white/20 px-3 py-1.5 text-xs font-medium text-white hover:bg-amber-400 hover:border-amber-300 hover:shadow-[0_0_12px_rgba(251,191,36,0.6)] hover:scale-105 transition-all duration-300"
 >
-  <span className="inline-block w-0 overflow-hidden group-hover:w-4 transition-all duration-300 text-white">✈️</span>
+  <span className="inline-block opacity-0 -translate-x-3 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 text-white w-4">✈️</span>
   Beaches (Families)
 </a>
 
@@ -110,7 +110,7 @@ export default function HeroSection() {
   rel="noopener noreferrer"
   className="group relative inline-flex items-center gap-2 rounded-full bg-white/15 backdrop-blur-sm border border-white/20 px-3 py-1.5 text-xs font-medium text-white hover:bg-amber-400 hover:border-amber-300 hover:shadow-[0_0_12px_rgba(251,191,36,0.6)] hover:scale-105 transition-all duration-300"
 >
-  <span className="inline-block w-0 overflow-hidden group-hover:w-4 transition-all duration-300 text-white">✈️</span>
+  <span className="inline-block opacity-0 -translate-x-3 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 text-white w-4">✈️</span>
   Royal Caribbean & More
 </a>
             </div>
