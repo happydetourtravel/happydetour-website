@@ -11,7 +11,7 @@ export default function SuccessPage() {
           Expect to hear from me within 24–48 hours.
         </p>
         
-          href="/"
+         <a href="/"
           className="inline-flex items-center gap-2 rounded-full bg-amber-500 px-8 py-3 text-base font-semibold text-white hover:bg-amber-600 transition-all"
         >
           Back to Home
