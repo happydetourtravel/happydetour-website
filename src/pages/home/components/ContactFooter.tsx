@@ -242,7 +242,7 @@ export default function ContactFooter() {
             </a>
           </p>
           <p className="mt-4">© 2026 Happy Detour Travel. All rights reserved.</p>
-<p className="mt-1">Last updated: April 2026</p>
+<p className="mt-1">Last updated: <time dateTime="2026-04-23">April 23, 2026</time></p>
         </div>
       </div>
     </footer>
