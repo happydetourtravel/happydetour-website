@@ -15,6 +15,7 @@
       --blue: #007298;
       --blue-dark: #005a78;
       --blue-light: #e6f4f8;
+      --blue-border: #b3dce8;
       --amber: #F59E0B;
       --amber-dark: #d97706;
       --bg: #F9FAFB;
@@ -27,28 +28,33 @@
 
     body {
       font-family: var(--font);
-      background: var(--blue);
-      background-image:
-        radial-gradient(ellipse at 20% 20%, rgba(245,158,11,0.15) 0%, transparent 50%),
-        radial-gradient(ellipse at 80% 80%, rgba(255,255,255,0.05) 0%, transparent 50%);
+      background: var(--bg);
       min-height: 100vh;
       display: flex;
       align-items: flex-start;
       justify-content: center;
-      padding: 3rem 1.25rem 4rem;
+      padding: 2rem 1.25rem 4rem;
       -webkit-font-smoothing: antialiased;
     }
 
-    .card {
-      width: 100%;
-      max-width: 480px;
+    .card { width: 100%; max-width: 480px; }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--blue);
+      text-decoration: none;
+      margin-bottom: 1.5rem;
+      opacity: 0.75;
+      transition: opacity 0.2s;
     }
 
-    /* PROFILE */
-    .profile {
-      text-align: center;
-      margin-bottom: 2.25rem;
-    }
+    .back-link:hover { opacity: 1; }
+
+    .profile { text-align: center; margin-bottom: 2.25rem; }
 
     .profile-photo {
       width: 90px;
@@ -57,77 +63,83 @@
       object-fit: cover;
       object-position: center top;
       border: 3px solid var(--amber);
-      box-shadow: 0 0 0 5px rgba(245,158,11,0.2);
+      box-shadow: 0 0 0 5px rgba(245,158,11,0.15);
       margin-bottom: 1rem;
+      cursor: pointer;
+      transition: transform 0.2s;
     }
 
-    .profile-logo {
-      height: 56px;
-      width: auto;
-      margin-bottom: 1rem;
-    }
+    .profile-photo:hover { transform: scale(1.04); }
+
+    .profile-logo { height: 56px; width: auto; margin-bottom: 0.85rem; }
 
     .profile h1 {
       font-size: 1.35rem;
       font-weight: 800;
-      color: var(--white);
+      color: var(--text);
       margin-bottom: 0.3rem;
     }
 
-    .profile p {
+    .profile-tagline {
       font-size: 0.85rem;
-      color: rgba(255,255,255,0.65);
+      color: var(--soft);
       font-style: italic;
+      margin-bottom: 0.5rem;
     }
 
     .profile-handle {
       display: inline-block;
-      margin-top: 0.6rem;
       font-size: 0.8rem;
       font-weight: 600;
-      color: var(--amber);
+      color: var(--blue);
       letter-spacing: 0.04em;
     }
 
-    /* LINKS */
-    .links {
-      display: flex;
-      flex-direction: column;
-      gap: 0.85rem;
-    }
+    .links { display: flex; flex-direction: column; gap: 0.75rem; }
 
     .link-btn {
       display: flex;
       align-items: center;
       gap: 1rem;
       background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: 14px;
+      border: 1.5px solid var(--border);
+      border-radius: 16px;
       padding: 1rem 1.35rem;
       text-decoration: none;
       color: var(--text);
       font-weight: 600;
       font-size: 0.95rem;
-      transition: transform 0.18s, box-shadow 0.18s, background 0.18s;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      transition: transform 0.18s, box-shadow 0.18s, border-color 0.18s;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
     }
 
     .link-btn:hover {
       transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
-      background: #fafafa;
+      box-shadow: 0 6px 20px rgba(0,114,152,0.12);
+      border-color: var(--blue-border);
     }
 
     .link-btn.primary {
       background: var(--amber);
       border-color: var(--amber);
       color: var(--white);
+      box-shadow: 0 4px 16px rgba(245,158,11,0.3);
     }
 
     .link-btn.primary:hover {
       background: var(--amber-dark);
       border-color: var(--amber-dark);
+      box-shadow: 0 6px 20px rgba(245,158,11,0.4);
     }
+
+    .link-btn.blue-outline {
+      background: var(--white);
+      border-color: var(--blue);
+      color: var(--blue);
+    }
+
+    .link-btn.blue-outline:hover { background: var(--blue-light); }
+    .link-btn.blue-outline .link-icon { background: var(--blue-light); }
 
     .link-icon {
       width: 38px;
@@ -138,126 +150,122 @@
       justify-content: center;
       font-size: 1.2rem;
       flex-shrink: 0;
-      background: var(--blue-light);
+      background: var(--bg);
     }
 
-    .link-btn.primary .link-icon {
-      background: rgba(255,255,255,0.25);
-    }
+    .link-btn.primary .link-icon { background: rgba(255,255,255,0.25); }
 
-    .link-label {
-      flex: 1;
-    }
+    .link-label { flex: 1; }
 
     .link-label span {
       display: block;
       font-size: 0.75rem;
       font-weight: 500;
-      opacity: 0.6;
+      opacity: 0.65;
       margin-top: 0.1rem;
     }
 
-    .link-arrow {
-      font-size: 1rem;
-      opacity: 0.4;
-      flex-shrink: 0;
-    }
+    .link-btn.primary .link-label span { opacity: 0.85; }
 
-    .link-btn.primary .link-arrow { opacity: 0.7; }
+    .link-arrow { font-size: 1rem; opacity: 0.35; flex-shrink: 0; }
+    .link-btn.primary .link-arrow,
+    .link-btn.blue-outline .link-arrow { opacity: 0.6; }
 
-    /* DIVIDER */
     .section-divider {
       text-align: center;
-      margin: 0.5rem 0;
-      font-size: 0.72rem;
+      margin: 0.35rem 0;
+      font-size: 0.7rem;
       font-weight: 700;
       letter-spacing: 0.1em;
       text-transform: uppercase;
-      color: rgba(255,255,255,0.4);
+      color: var(--soft);
     }
 
-    /* SOCIAL ROW */
+    .slogan {
+      text-align: center;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--blue);
+      font-style: italic;
+    }
+
     .social-row {
       display: flex;
       justify-content: center;
       gap: 1rem;
-      margin-top: 2rem;
+      margin-top: 0.5rem;
     }
 
     .social-btn {
       width: 44px;
       height: 44px;
       border-radius: 50%;
-      background: rgba(255,255,255,0.12);
-      border: 1px solid rgba(255,255,255,0.2);
+      background: var(--white);
+      border: 1.5px solid var(--border);
       display: flex;
       align-items: center;
       justify-content: center;
       font-size: 1.2rem;
       text-decoration: none;
-      transition: background 0.2s, transform 0.2s;
+      transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.06);
     }
 
     .social-btn:hover {
-      background: rgba(255,255,255,0.22);
+      border-color: var(--blue-border);
       transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,114,152,0.15);
     }
 
-    /* FOOTER */
     .page-footer {
       text-align: center;
-      margin-top: 2rem;
-      font-size: 0.75rem;
-      color: rgba(255,255,255,0.3);
+      margin-top: 1.75rem;
+      font-size: 0.72rem;
+      color: var(--soft);
+      line-height: 1.7;
     }
 
-    .page-footer a {
-      color: rgba(255,255,255,0.4);
-      text-decoration: none;
-    }
+    .page-footer a { color: var(--blue); text-decoration: none; }
+    .page-footer a:hover { text-decoration: underline; }
   </style>
 </head>
 <body>
   <div class="card">
 
-    <!-- PROFILE -->
+    <a href="https://www.happydetour.com" class="back-link">← Back to HappyDetour.com</a>
+
     <div class="profile">
-     <img
+      <img
         src="https://raw.githubusercontent.com/happydetourtravel/happydetour-website/main/IMG_4204.jpeg"
         alt="Eric Carney"
         class="profile-photo"
         onclick="this.nextElementSibling.style.display='flex'"
-        style="cursor:pointer;"
       />
       <div onclick="this.style.display='none'" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.85);z-index:999;align-items:center;justify-content:center;cursor:pointer;">
         <img src="https://raw.githubusercontent.com/happydetourtravel/happydetour-website/main/IMG_4204.jpeg" style="max-width:90vw;max-height:90vh;border-radius:16px;box-shadow:0 20px 60px rgba(0,0,0,0.5);" />
       </div>
-      <img
-        src="https://static.websitebuilder-cdn.com/ff4558209215a440/media/img/logo.30fb1e8b14fa58c29568cadc94d36a72b9c0ae687633fcc7be077d2afe4d4a70.png"
-        alt="Happy Detour Travel"
-        class="profile-logo"
-      />
+      <img src="https://static.websitebuilder-cdn.com/ff4558209215a440/media/img/logo.30fb1e8b14fa58c29568cadc94d36a72b9c0ae687633fcc7be077d2afe4d4a70.png" alt="Happy Detour Travel" class="profile-logo" />
       <h1>Happy Detour Travel</h1>
-      <p>Affordable vacations. Fun experiences. Everyone welcome.</p>
+      <p class="profile-tagline">Your travel advisor. Your corner. Always free.</p>
       <span class="profile-handle">@happydetourtravel</span>
     </div>
 
-    <!-- LINKS -->
     <div class="links">
 
-      <!-- PRIMARY CTA -->
-      <a href="https://happydetour.app.n8n.cloud/form/91799171-4079-4ab7-9d13-9417ae57dfba" target="_blank" rel="noopener" class="link-btn primary">
+      <a href="https://happydetour.app.n8n.cloud/form/91799171-4079-4ab7-9d13-9417ae57dfba" target="_blank" rel="noopener noreferrer" class="link-btn primary">
         <div class="link-icon">✈️</div>
         <div class="link-label">
-          Start Planning My Trip
-          <span>Free travel planning — no cost to you</span>
+          Start Your Detour — Let's Chat
+          <span>Free travel planning — no cost to you, ever</span>
         </div>
         <div class="link-arrow">→</div>
       </a>
 
       <div class="section-divider">Learn More</div>
 
-      <a href="https://www.happydetour.com" target="_blank" rel="noopener" class="link-btn">
+      <a href="https://www.happydetour.com" target="_blank" rel="noopener noreferrer" class="link-btn blue-outline">
         <div class="link-icon">🌐</div>
         <div class="link-label">
           Visit HappyDetour.com
@@ -266,7 +274,7 @@
         <div class="link-arrow">→</div>
       </a>
 
-      <a href="https://www.happydetour.com/about" target="_blank" rel="noopener" class="link-btn">
+      <a href="https://www.happydetour.com/about" target="_blank" rel="noopener noreferrer" class="link-btn">
         <div class="link-icon">👋</div>
         <div class="link-label">
           About Eric
@@ -275,7 +283,7 @@
         <div class="link-arrow">→</div>
       </a>
 
-      <a href="https://happydetourtravel.wordpress.com/" target="_blank" rel="noopener" class="link-btn">
+      <a href="https://happydetourtravel.wordpress.com/" target="_blank" rel="noopener noreferrer" class="link-btn">
         <div class="link-icon">📝</div>
         <div class="link-label">
           Read the Blog
@@ -284,31 +292,31 @@
         <div class="link-arrow">→</div>
       </a>
 
-      <div class="section-divider">Browse by Line</div>
+      <div class="section-divider">My Expert Toolkit</div>
 
-      <a href="https://www.virginvoyages.com/book/voyage-planner/find-a-voyage?cabins=1&currencyCode=USD&agentId=278796&agencyId=589&bookingChannel=FMLINK&priceType=cabinPerNight" target="_blank" rel="noopener" class="link-btn">
+      <a href="https://www.virginvoyages.com/book/voyage-planner/find-a-voyage?cabins=1&currencyCode=USD&agentId=278796&agencyId=589&bookingChannel=FMLINK&priceType=cabinPerNight" target="_blank" rel="noopener noreferrer" class="link-btn">
         <div class="link-icon">🚢</div>
         <div class="link-label">
-          Virgin Voyages
-          <span>Adults-only cruises</span>
+          Explore Virgin Voyages
+          <span>Adults-only cruises — no kids, all vibes</span>
         </div>
         <div class="link-arrow">→</div>
       </a>
 
-      <a href="https://www.sandals.com/?referral=101731&agentid=ERCA7707" target="_blank" rel="noopener" class="link-btn">
+      <a href="https://www.sandals.com/?referral=101731&agentid=ERCA7707" target="_blank" rel="noopener noreferrer" class="link-btn">
         <div class="link-icon">🏖️</div>
         <div class="link-label">
-          Sandals Resorts
+          Escape to Sandals Resorts
           <span>Luxury couples all-inclusive</span>
         </div>
         <div class="link-arrow">→</div>
       </a>
 
-      <a href="https://www.beaches.com/?referral=101731&agentid=ERCA7707" target="_blank" rel="noopener" class="link-btn">
+      <a href="https://www.beaches.com/?referral=101731&agentid=ERCA7707" target="_blank" rel="noopener noreferrer" class="link-btn">
         <div class="link-icon">👨‍👩‍👧</div>
         <div class="link-label">
           Beaches Resorts
-          <span>Family all-inclusive</span>
+          <span>Family all-inclusive — everyone's invited</span>
         </div>
         <div class="link-arrow">→</div>
       </a>
@@ -324,16 +332,17 @@
 
     </div>
 
-    <!-- SOCIAL ROW -->
+    <p class="slogan">Affordable vacations. Fun experiences. Everyone welcome.</p>
+
     <div class="social-row">
-      <a href="https://www.instagram.com/happydetourtravel/" target="_blank" rel="noopener" class="social-btn" title="Instagram">📸</a>
-      <a href="https://www.facebook.com/profile.php?id=61582209485454" target="_blank" rel="noopener" class="social-btn" title="Facebook">👍</a>
-      <a href="https://www.tiktok.com/@happydetourtravel" target="_blank" rel="noopener" class="social-btn" title="TikTok">🎵</a>
+      <a href="https://www.instagram.com/happydetourtravel/" target="_blank" rel="noopener noreferrer" class="social-btn" title="Instagram">📸</a>
+      <a href="https://www.facebook.com/profile.php?id=61582209485454" target="_blank" rel="noopener noreferrer" class="social-btn" title="Facebook">👍</a>
+      <a href="https://www.tiktok.com/@happydetourtravel" target="_blank" rel="noopener noreferrer" class="social-btn" title="TikTok">🎵</a>
     </div>
 
-    <!-- FOOTER -->
     <div class="page-footer">
-      <p>© 2026 Happy Detour Travel · <strong style="color:rgba(255,255,255,0.45)">Eric Carney</strong> · Affiliated with WorldVia Travel Network · <a href="mailto:eric@happydetour.com">eric@happydetour.com</a> · Last updated: April 2026</p>
+      <p>© 2026 Happy Detour Travel · <strong>Eric Carney</strong> · Affiliated with WorldVia Travel Network</p>
+      <p><a href="mailto:eric@happydetour.com">eric@happydetour.com</a> · Last updated: April 2026</p>
     </div>
 
   </div>
