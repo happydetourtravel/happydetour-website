@@ -50,7 +50,7 @@ export default function WhyBookSection() {
 
         {/* Stats Bar */}
         <ScrollReveal direction="up" delay={150} duration={680}>
-          <div className="mt-12 grid grid-cols-3 gap-6 rounded-2xl border border-amber-100 bg-amber-50/50 px-8 py-8 text-center">
+         <div className="mt-12 grid grid-cols-2 gap-6 rounded-2xl border border-amber-100 bg-amber-50/50 px-8 py-8 text-center sm:grid-cols-4">
             <div>
               <p className="text-3xl font-bold text-amber-500">17+</p>
               <p className="mt-1 text-sm text-gray-500">Cruises taken personally</p>
@@ -60,12 +60,14 @@ export default function WhyBookSection() {
               <p className="mt-1 text-sm text-gray-500">Cost to you — always free</p>
             </div>
             <div>
-              <div>
-              <div>
               <p className="text-3xl font-bold text-amber-500">3+</p>
               <p className="mt-1 text-sm text-gray-500">Countries visited personally</p>
             </div>
+            <div>
+              <p className="text-3xl font-bold text-amber-500">100+</p>
+              <p className="mt-1 text-sm text-gray-500">Destinations researched for clients</p>
             </div>
+          </div>
             </div>
           </div>
         </ScrollReveal>
