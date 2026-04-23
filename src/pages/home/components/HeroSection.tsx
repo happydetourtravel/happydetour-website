@@ -37,8 +37,8 @@ const [showModal, setShowModal] = React.useState(false);
           {/* 1. Main header */}
           <ScrollReveal direction="up" delay={80} duration={700} threshold={0.05}>
             <h1 className="text-5xl font-bold text-white sm:text-6xl lg:text-7xl leading-tight tracking-tight">
-              Happy Detour Travel
-            </h1>
+  Happy Detour Travel — Free Cruise & Vacation Planning
+</h1>
           </ScrollReveal>
 
           {/* 2. Tagline */}
