@@ -222,11 +222,16 @@
 
     <!-- PROFILE -->
     <div class="profile">
-      <img
+     <img
         src="https://raw.githubusercontent.com/happydetourtravel/happydetour-website/main/IMG_4204.jpeg"
         alt="Eric Carney"
         class="profile-photo"
+        onclick="this.nextElementSibling.style.display='flex'"
+        style="cursor:pointer;"
       />
+      <div onclick="this.style.display='none'" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.85);z-index:999;align-items:center;justify-content:center;cursor:pointer;">
+        <img src="https://raw.githubusercontent.com/happydetourtravel/happydetour-website/main/IMG_4204.jpeg" style="max-width:90vw;max-height:90vh;border-radius:16px;box-shadow:0 20px 60px rgba(0,0,0,0.5);" />
+      </div>
       <img
         src="https://static.websitebuilder-cdn.com/ff4558209215a440/media/img/logo.30fb1e8b14fa58c29568cadc94d36a72b9c0ae687633fcc7be077d2afe4d4a70.png"
         alt="Happy Detour Travel"
