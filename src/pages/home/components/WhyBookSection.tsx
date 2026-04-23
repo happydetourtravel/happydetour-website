@@ -48,6 +48,24 @@ export default function WhyBookSection() {
           </div>
         </ScrollReveal>
 
+        {/* Stats Bar */}
+        <ScrollReveal direction="up" delay={150} duration={680}>
+          <div className="mt-12 grid grid-cols-3 gap-6 rounded-2xl border border-amber-100 bg-amber-50/50 px-8 py-8 text-center">
+            <div>
+              <p className="text-3xl font-bold text-amber-500">17+</p>
+              <p className="mt-1 text-sm text-gray-500">Cruises taken personally</p>
+            </div>
+            <div>
+              <p className="text-3xl font-bold text-amber-500">$0</p>
+              <p className="mt-1 text-sm text-gray-500">Cost to you — always free</p>
+            </div>
+            <div>
+              <p className="text-3xl font-bold text-amber-500">50+</p>
+              <p className="mt-1 text-sm text-gray-500">Destinations researched</p>
+            </div>
+          </div>
+        </ScrollReveal>
+
         {/* Feature Cards */}
         <div className="mt-16 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {reasons.map((reason, i) => (
