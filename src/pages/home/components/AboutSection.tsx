@@ -32,7 +32,7 @@ export default function AboutSection() {
               </div>
 
               {/* Quote */}
-              <figure className="mt-8 rounded-2xl border border-amber-100 bg-amber-50/60 px-6 py-5">
+              <figure role="note" className="mt-8 rounded-2xl border border-amber-100 bg-amber-50/60 px-6 py-5">
                 <blockquote className="text-base font-medium leading-7 text-gray-800">
                   "Sometimes the best journeys begin with a Happy Detour."
                 </blockquote>
@@ -48,22 +48,23 @@ export default function AboutSection() {
                     href={FORM_URL}
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label="Start planning my trip with Happy Detour Travel"
                     className="inline-flex items-center gap-2 rounded-full bg-amber-500 px-7 py-3 text-sm font-semibold text-white hover:bg-amber-600 transition-colors whitespace-nowrap cursor-pointer"
                   >
                     <span className="w-4 h-4 flex items-center justify-center">
-                      <i className={`${point.icon} text-lg`} aria-hidden="true" />
+                      <i className="ri-plane-fill text-sm leading-none" aria-hidden="true" />
                     </span>
                     Start Planning My Trip
                   </a>
                   <a
                     href="mailto:eric@happydetour.com"
+                    aria-label="Email Eric Carney directly at eric@happydetour.com"
                     className="inline-flex items-center gap-2 rounded-full border border-amber-400 px-7 py-3 text-sm font-semibold text-amber-600 hover:bg-amber-50 transition-colors whitespace-nowrap cursor-pointer"
                   >
-                    <i className={`${point.icon} text-lg`} aria-hidden="true" />
+                    <i className="ri-mail-line" aria-hidden="true" />
                     Email Eric Directly
                   </a>
                 </div>
-
               </div>
             </div>
           </ScrollReveal>
@@ -74,7 +75,7 @@ export default function AboutSection() {
               <div className="overflow-hidden rounded-3xl border border-gray-200 bg-gray-100 w-full h-80 sm:h-96 lg:h-[420px]">
                 <img
                   src={ADVISOR_IMAGE}
-                  alt="Travel advisor consultation"
+                  alt="Eric Carney, Happy Detour Travel advisor, helping a couple plan their vacation"
                   className="w-full h-full object-cover object-top"
                 />
               </div>
