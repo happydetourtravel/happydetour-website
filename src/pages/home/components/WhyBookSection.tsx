@@ -61,8 +61,10 @@ export default function WhyBookSection() {
             </div>
             <div>
               <div>
-              <p className="text-3xl font-bold text-amber-500">20+</p>
-              <p className="mt-1 text-sm text-gray-500">Countries & destinations visited</p>
+              <div>
+              <p className="text-3xl font-bold text-amber-500">3+</p>
+              <p className="mt-1 text-sm text-gray-500">Countries visited personally</p>
+            </div>
             </div>
             </div>
           </div>
