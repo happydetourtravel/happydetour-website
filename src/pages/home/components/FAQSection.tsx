@@ -40,6 +40,22 @@ const faqs: FAQ[] = [
   {
     question: "Can you help with groups or special occasions?",
     answer: "Definitely. Destination weddings, family reunions, anniversary trips, milestone birthdays. Groups are some of my favorite trips to plan. They also tend to get better pricing and extras that solo bookings just don't."
+  },
+  {
+    question: "What cruise lines do you work with?",
+    answer: "I work with all the major cruise lines including Royal Caribbean, Norwegian, MSC, Virgin Voyages, and more. For all-inclusive resorts I work with Sandals and Beaches among others. If you have a specific line or resort in mind just ask — chances are I can help."
+  },
+  {
+    question: "What is a travel advisor and what do they do?",
+    answer: "A travel advisor is a real person who handles the research, planning, and booking of your trip on your behalf. Think of me as your personal travel expert. I know the industry, I know the ships and resorts, and I do all the heavy lifting so you don't have to. Unlike a search engine, I actually know your situation and can make recommendations based on what you actually want."
+  },
+  {
+    question: "What is the difference between a cruise and an all-inclusive resort?",
+    answer: "A cruise takes you to multiple destinations — you wake up somewhere new every day. An all-inclusive resort keeps you in one beautiful location where everything is included: food, drinks, activities, and entertainment. Both are great options depending on whether you want to explore or truly unwind. I can help you figure out which one fits your style."
+  },
+  {
+    question: "Is Happy Detour Travel a legitimate travel agency?",
+    answer: "Yes. Happy Detour Travel is an independent travel advisory service affiliated with WorldVia Travel Network, one of the largest travel networks in the United States. I'm Eric Carney, and I'm a real person based in Ohio who genuinely loves helping people plan trips. My contact information is on this site and I'm always reachable directly."
   }
 ];
 
