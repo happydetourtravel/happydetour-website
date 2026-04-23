@@ -7,6 +7,7 @@ const LOGO_URL =
 
 const quickLinks = [
   { label: "Home", href: "#hero" },
+  { label: "About", href: "/about" },
   { label: "Blog", href: "https://happydetourtravel.wordpress.com" },
   { label: "Contact", href: "mailto:eric@happydetour.com" },
 ];
@@ -241,6 +242,7 @@ export default function ContactFooter() {
             </a>
           </p>
           <p className="mt-4">© 2026 Happy Detour Travel. All rights reserved.</p>
+<p className="mt-1">Last updated: April 2026</p>
         </div>
       </div>
     </footer>
