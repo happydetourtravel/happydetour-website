@@ -28,7 +28,7 @@ const services = [
 
 export default function TravelServices() {
   return (
-    <section id="services" className="bg-white py-20 sm:py-28">
+    <section id="services" aria-labelledby="services-heading" className="bg-white py-20 sm:py-28">
       <div className="mx-auto max-w-7xl px-6 lg:px-10 flex flex-col gap-14">
         {/* Header */}
         <ScrollReveal direction="up" delay={0} duration={680}>
@@ -36,7 +36,7 @@ export default function TravelServices() {
             <p className="text-sm font-semibold uppercase tracking-widest text-amber-600 mb-3">
               What I Help With
             </p>
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+            <h2 id="services-heading" className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
               You Pick the Destination. I'll Figure Out the Rest.
             </h2>
             <p className="mt-4 text-base text-gray-500 leading-7">
@@ -51,11 +51,13 @@ export default function TravelServices() {
             <ScrollReveal key={service.title} direction="up" delay={i * 130} duration={680}>
               <article
                 className="flex flex-col rounded-2xl border border-gray-100 bg-white p-8 hover:border-gray-200 hover:shadow-md transition-all duration-200 h-full"
+                aria-label={service.title}
               >
                 <div
                   className={`flex w-12 h-12 items-center justify-center rounded-full border ${service.accent}`}
+                  aria-hidden="true"
                 >
-                  <i className={`${service.icon} text-xl`} />
+                  <i className={`${service.icon} text-xl`} aria-hidden="true" />
                 </div>
                 <h3 className="mt-6 text-xl font-semibold text-gray-900">
                   {service.title}
@@ -75,14 +77,14 @@ export default function TravelServices() {
               href={FORM_URL}
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Start planning my trip with Happy Detour Travel"
               className="inline-flex items-center justify-center gap-2 rounded-full bg-amber-500 px-10 py-4 text-base font-semibold text-white hover:bg-amber-600 transition-colors whitespace-nowrap cursor-pointer"
             >
               <span className="w-4 h-4 flex items-center justify-center">
-                <i className="ri-plane-fill text-base leading-none" />
+                <i className="ri-plane-fill text-base leading-none" aria-hidden="true" />
               </span>
               Start Planning My Trip
             </a>
-
           </div>
         </ScrollReveal>
       </div>
