@@ -7,21 +7,21 @@ const services = [
     icon: "ri-ship-line",
     title: "Cruise Vacations",
     description:
-      "Cruises are a lot to sort through on your own. Hundreds of ships, itineraries, and prices. I do that work for you and come back with a few options that actually match what you're looking for. We talk through them, you pick the one you like, and I handle everything from there.",
+      "I work with all major cruise lines including Royal Caribbean, Norwegian, Carnival, MSC, and Virgin Voyages. Cruises can start as low as $299 per person for a 3-night sailing, with 7-night Caribbean itineraries typically ranging from $499 to $1,200 per person depending on the ship and cabin. I sort through hundreds of options and come back with the ones that actually match what you're looking for.",
     accent: "text-amber-600 bg-amber-50 border-amber-200",
   },
   {
     icon: "ri-hotel-line",
     title: "All-Inclusive Resorts",
     description:
-      "Not all all-inclusives are created equal, and I've seen the difference firsthand. I'll point you toward the ones that are genuinely worth it and steer you away from the ones that look good in photos but disappoint in person. You get the right resort the first time.",
+      "I specialize in Sandals and Beaches Resorts, two of the top-rated all-inclusive brands in the Caribbean. Sandals is adults-only and couples-focused, while Beaches welcomes families. All-inclusive resorts bundle meals, drinks, activities, and entertainment into one price — typically starting around $200 per person per night. I've experienced these resorts firsthand and know which ones are genuinely worth it.",
     accent: "text-teal-600 bg-teal-50 border-teal-200",
   },
   {
     icon: "ri-map-2-line",
     title: "Custom Travel Experiences",
     description:
-      "Maybe you have a specific trip in mind. Maybe you just know you need to get away. Either way, I'll ask the right questions, put together something that actually fits your life, and handle every booking so you don't have to coordinate a single thing.",
+      "From a long weekend getaway to a two-week international trip, I build itineraries around your budget, timeline, and travel style. Whether you're planning a honeymoon, a family reunion, a solo trip, or a group vacation, I handle every booking and coordinate every detail. My planning service is always 100% free to you — cruise lines and resorts pay my commission.",
     accent: "text-rose-500 bg-rose-50 border-rose-200",
   },
 ];
