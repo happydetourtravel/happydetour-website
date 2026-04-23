@@ -3,8 +3,5 @@
     { "source": "/about", "destination": "/about.html" },
     { "source": "/links", "destination": "/links.html" },
     { "source": "/(.*)", "destination": "/index.html" }
-  ],
-  "errorPages": [
-    { "statusCode": 404, "destination": "/404.html" }
   ]
 }
