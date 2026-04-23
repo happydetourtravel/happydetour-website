@@ -49,7 +49,7 @@ export default function WhyBookSection() {
         <ScrollReveal direction="up" delay={150} duration={680}>
           <div className="mt-12 grid grid-cols-2 gap-6 rounded-2xl border border-amber-100 bg-amber-50/50 px-8 py-8 text-center sm:grid-cols-4">
             <div>
-              <p className="text-3xl font-bold text-amber-500">17+</p>
+              <p className="text-3xl font-bold text-amber-500">17</p>
               <p className="mt-1 text-sm text-gray-500">Cruises taken personally</p>
             </div>
             <div>
