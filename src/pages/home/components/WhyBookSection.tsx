@@ -60,8 +60,10 @@ export default function WhyBookSection() {
               <p className="mt-1 text-sm text-gray-500">Cost to you — always free</p>
             </div>
             <div>
-              <p className="text-3xl font-bold text-amber-500">50+</p>
-              <p className="mt-1 text-sm text-gray-500">Destinations researched</p>
+              <div>
+              <p className="text-3xl font-bold text-amber-500">20+</p>
+              <p className="mt-1 text-sm text-gray-500">Countries & destinations visited</p>
+            </div>
             </div>
           </div>
         </ScrollReveal>
