@@ -51,7 +51,7 @@ export default function AboutSection() {
                     className="inline-flex items-center gap-2 rounded-full bg-amber-500 px-7 py-3 text-sm font-semibold text-white hover:bg-amber-600 transition-colors whitespace-nowrap cursor-pointer"
                   >
                     <span className="w-4 h-4 flex items-center justify-center">
-                      <i className="ri-plane-fill text-sm leading-none" />
+                      <i className={`${point.icon} text-lg`} aria-hidden="true" />
                     </span>
                     Start Planning My Trip
                   </a>
@@ -59,7 +59,7 @@ export default function AboutSection() {
                     href="mailto:eric@happydetour.com"
                     className="inline-flex items-center gap-2 rounded-full border border-amber-400 px-7 py-3 text-sm font-semibold text-amber-600 hover:bg-amber-50 transition-colors whitespace-nowrap cursor-pointer"
                   >
-                    <i className="ri-mail-line" />
+                    <i className={`${point.icon} text-lg`} aria-hidden="true" />
                     Email Eric Directly
                   </a>
                 </div>
