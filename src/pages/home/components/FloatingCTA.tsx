@@ -8,14 +8,12 @@ export default function FloatingCTA() {
   useEffect(() => {
     const hero = document.getElementById('hero');
     if (!hero) return;
-
     const observer = new IntersectionObserver(
       ([entry]) => {
         setVisible(!entry.isIntersecting);
       },
       { threshold: 0.1 }
     );
-
     observer.observe(hero);
     return () => observer.disconnect();
   }, []);
@@ -29,11 +27,15 @@ export default function FloatingCTA() {
           : 'opacity-0 translate-y-6 pointer-events-none'}
       `}
       aria-hidden={!visible}
+      role="complementary"
+      aria-label="Quick access to start planning your trip"
     >
       <a
         href={FORM_URL}
         target="_blank"
         rel="noopener noreferrer"
+        aria-label="Start planning my trip with Happy Detour Travel — free travel planning service"
+        tabIndex={visible ? 0 : -1}
         className="
           group flex items-center gap-2.5 rounded-full
           bg-amber-500 hover:bg-amber-600 active:scale-95
@@ -43,7 +45,7 @@ export default function FloatingCTA() {
         "
       >
         <span className="w-4 h-4 flex items-center justify-center">
-          <i className="ri-plane-fill text-base leading-none" />
+          <i className="ri-plane-fill text-base leading-none" aria-hidden="true" />
         </span>
         Start Planning My Trip
       </a>
