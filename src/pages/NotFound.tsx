@@ -42,7 +42,7 @@ export default function NotFound() {
 
           {/* Subtext */}
           <p className="text-base text-gray-500 leading-relaxed mb-8">
-            The page <span className="font-mono text-sm bg-gray-100 px-2 py-0.5 rounded">{location.pathname}</span> doesn't exist or may have moved. But your next great trip is still out there. Let's get you back on track.
+            Looks like this trail went cold. Don't worry — I'll help you get back on the right path.
           </p>
 
           {/* Buttons */}
@@ -52,7 +52,7 @@ export default function NotFound() {
               className="inline-flex items-center gap-2 rounded-full font-bold text-sm px-6 py-3 text-white transition-all"
               style={{ background: "#F59E0B", boxShadow: "0 4px 14px rgba(245,158,11,0.3)" }}
             >
-              🏠 Back to Home
+              🏕️ Back to Base Camp
             </a>
             <a
               href={FORM_URL}
@@ -73,6 +73,11 @@ export default function NotFound() {
             <a href="https://www.happydetour.com/links" className="text-xs font-semibold text-gray-500 bg-white border border-gray-200 rounded-full px-4 py-1.5 hover:border-blue-400 hover:text-blue-600 transition-colors">All Links</a>
             <a href="mailto:eric@happydetour.com" className="text-xs font-semibold text-gray-500 bg-white border border-gray-200 rounded-full px-4 py-1.5 hover:border-blue-400 hover:text-blue-600 transition-colors">Contact Eric</a>
           </div>
+
+          {/* Help link */}
+          <p className="mt-4 text-xs text-gray-400">
+            Still lost? <a href="mailto:eric@happydetour.com" className="text-blue-500 hover:underline font-semibold">Send me a quick email</a> and I'll find what you need.
+          </p>
 
           {/* Tagline */}
           <p className="mt-10 text-sm italic text-gray-400">
