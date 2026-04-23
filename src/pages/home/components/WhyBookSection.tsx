@@ -68,8 +68,6 @@ export default function WhyBookSection() {
               <p className="mt-1 text-sm text-gray-500">Destinations researched for clients</p>
             </div>
           </div>
-            </div>
-          </div>
         </ScrollReveal>
 
         {/* Feature Cards */}
