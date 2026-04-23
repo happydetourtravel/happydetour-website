@@ -1,7 +1,5 @@
 import ScrollReveal from '../../../components/base/ScrollReveal';
-
 const FORM_URL = "https://happydetour.app.n8n.cloud/form/91799171-4079-4ab7-9d13-9417ae57dfba";
-
 const reasons = [
   {
     icon: "ri-map-pin-user-line",
@@ -28,7 +26,6 @@ const reasons = [
       "Flights change. Plans shift. If anything comes up, I take care of it so you\u2019re not stuck dealing with it. You get to enjoy your trip, not manage it.",
   },
 ];
-
 export default function WhyBookSection() {
   return (
     <section id="why" className="bg-white py-20 sm:py-28">
@@ -50,7 +47,7 @@ export default function WhyBookSection() {
 
         {/* Stats Bar */}
         <ScrollReveal direction="up" delay={150} duration={680}>
-         <div className="mt-12 grid grid-cols-2 gap-6 rounded-2xl border border-amber-100 bg-amber-50/50 px-8 py-8 text-center sm:grid-cols-4">
+          <div className="mt-12 grid grid-cols-2 gap-6 rounded-2xl border border-amber-100 bg-amber-50/50 px-8 py-8 text-center sm:grid-cols-4">
             <div>
               <p className="text-3xl font-bold text-amber-500">17+</p>
               <p className="mt-1 text-sm text-gray-500">Cruises taken personally</p>
@@ -74,9 +71,7 @@ export default function WhyBookSection() {
         <div className="mt-16 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {reasons.map((reason, i) => (
             <ScrollReveal key={reason.title} direction="up" delay={i * 110} duration={680}>
-              <div
-                className="rounded-2xl border border-gray-100 bg-gray-50 p-6 hover:border-amber-200 hover:bg-amber-50/30 transition-all duration-200 h-full"
-              >
+              <div className="rounded-2xl border border-gray-100 bg-gray-50 p-6 hover:border-amber-200 hover:bg-amber-50/30 transition-all duration-200 h-full">
                 <div className="flex w-10 h-10 items-center justify-center rounded-xl border border-gray-200 bg-white text-amber-600">
                   <i className={`${reason.icon} text-lg`} />
                 </div>
@@ -94,7 +89,7 @@ export default function WhyBookSection() {
         {/* CTA */}
         <ScrollReveal direction="up" delay={480} duration={680}>
           <div className="mt-14 flex flex-col items-center gap-3">
-            <a
+            
               href={FORM_URL}
               target="_blank"
               rel="noopener noreferrer"
@@ -105,7 +100,6 @@ export default function WhyBookSection() {
               </span>
               Start Planning My Trip
             </a>
-
           </div>
         </ScrollReveal>
       </div>
