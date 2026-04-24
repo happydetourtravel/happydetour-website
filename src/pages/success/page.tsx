@@ -21,7 +21,7 @@ export default function SuccessPage() {
         <div className="max-w-lg w-full">
 
           {/* Plane */}
-          <div className="text-6xl mb-6" style={{ animation: "bounce 1.5s infinite" }}>✈️</div>
+          <div className="text-6xl mb-6 animate-bounce">✈️</div>
 
           {/* Heading */}
           <h1 className="text-4xl md:text-5xl font-bold mb-5 leading-snug" style={{ color: "#007298" }}>
