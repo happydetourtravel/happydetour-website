@@ -44,14 +44,14 @@ export default function SuccessPage() {
           {/* Buttons */}
           <div className="flex flex-wrap gap-3 justify-center mb-8">
             
-             <a href="https://happydetourtravel.wordpress.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full font-bold text-sm px-6 py-3 text-white transition-all"
-              style={{ background: "#F59E0B", boxShadow: "0 4px 14px rgba(245,158,11,0.3)" }}
-            >
-              📝 Read the Blog
-            </a>
+             <a href="https://www.instagram.com/happydetourtravel/"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="inline-flex items-center gap-2 rounded-full font-bold text-sm px-6 py-3 text-white transition-all"
+  style={{ background: "#F59E0B", boxShadow: "0 4px 14px rgba(245,158,11,0.3)" }}
+>
+  📸 Join the Detour on Instagram
+</a>
             
              <a href="https://www.happydetour.com"
               className="inline-flex items-center gap-2 rounded-full font-bold text-sm px-6 py-3 transition-all border-2"
