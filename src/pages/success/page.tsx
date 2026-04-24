@@ -321,7 +321,7 @@
         <ul>
           <li>
             <span class="wi">📖</span>
-            <span>Check out my <a href="https://happydetourtravel.wordpress.com/" target="_blank" rel="noopener">latest cruise tips on the blog.</a> Good stuff in there.</span>
+            <span>Check out <a href="https://happydetourtravel.wordpress.com/" target="_blank" rel="noopener">the blog</a> while you wait. Travel tips, behind the scenes, and more.</span>
           </li>
           <li>
             <span class="wi">☕</span>
