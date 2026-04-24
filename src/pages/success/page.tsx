@@ -301,7 +301,7 @@
       <!-- Message Card -->
       <div class="message-card">
         <p>Thanks for reaching out! I've received your details and I'm already starting to look at the possibilities.</p>
-        <p>I do this personally, so give me a little time to dig in and find the right options for you. I'll be in touch within <strong>24–48 hours</strong> to start our conversation.</p>
+        <p>I'm a real person, not a robot, so give me a little time to dive into the research. I'll be in touch within <strong>24–48 hours</strong> to start our conversation.</p>
         <p class="sign-off">You just made travel planning a whole lot easier. 🙌</p>
       </div>
 
