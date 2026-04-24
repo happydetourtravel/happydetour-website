@@ -44,7 +44,7 @@ export default function SuccessPage() {
           {/* Buttons */}
           <div className="flex flex-wrap gap-3 justify-center mb-8">
             
-              href="https://happydetourtravel.wordpress.com/"
+             <a href="https://happydetourtravel.wordpress.com/"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-full font-bold text-sm px-6 py-3 text-white transition-all"
@@ -53,7 +53,7 @@ export default function SuccessPage() {
               📝 Read the Blog
             </a>
             
-              href="https://www.happydetour.com"
+             <a href="https://www.happydetour.com"
               className="inline-flex items-center gap-2 rounded-full font-bold text-sm px-6 py-3 transition-all border-2"
               style={{ color: "#007298", borderColor: "#007298", background: "#fff" }}
             >
