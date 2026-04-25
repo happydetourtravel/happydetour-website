@@ -48,8 +48,8 @@ export default function HowItWorks() {
             aria-hidden="true"
           />
           {STEPS.map((step, i) => (
-            <ScrollReveal key={step.number} direction="up" delay={i * 140} duration={680}>
-              <li className="relative flex flex-col items-center text-center lg:px-4">
+  <li key={step.number} className="relative flex flex-col items-center text-center lg:px-4">
+    <ScrollReveal direction="up" delay={i * 140} duration={680}>
                 {/* Step number circle */}
                 <div className="relative z-10 flex w-20 h-20 items-center justify-center rounded-full border-2 border-amber-300 bg-white mb-6" aria-hidden="true">
                   <span className="text-2xl font-bold text-amber-500 leading-none">
