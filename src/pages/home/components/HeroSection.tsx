@@ -53,7 +53,7 @@ const [showModal, setShowModal] = React.useState(false);
 
           {/* 3. Supporting line */}
           <ScrollReveal direction="up" delay={310} duration={700} threshold={0.05}>
-            <p className="mt-4 text-sm text-white/65 leading-relaxed mx-auto text-center whitespace-nowrap">
+            <p className="mt-4 text-sm text-white/80 leading-relaxed mx-auto text-center whitespace-nowrap">
               Forget the 'work' of planning. Just tell me you're ready for a break, and I'll do the heavy lifting.
             </p>
           </ScrollReveal>
