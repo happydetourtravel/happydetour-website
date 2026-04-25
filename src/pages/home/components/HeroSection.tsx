@@ -29,7 +29,7 @@ const [showModal, setShowModal] = React.useState(false);
 
           {/* Small label above header */}
           <ScrollReveal direction="up" delay={0} duration={650} threshold={0.05}>
-            <p className="text-[10px] font-semibold uppercase tracking-[0.35em] text-white/45 mb-4">
+            <p className="text-[10px] font-semibold uppercase tracking-[0.35em] text-white/60 mb-4">
               Happy Detour Travel
             </p>
           </ScrollReveal>
