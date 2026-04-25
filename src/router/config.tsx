@@ -2,6 +2,7 @@ import type { RouteObject } from "react-router-dom";
 import NotFound from "../pages/NotFound";
 import Home from "../pages/home/page";
 import Success from "../pages/success/page";
+import Testimonials from "../pages/testimonials/page";
 
 const routes: RouteObject[] = [
   {
@@ -11,6 +12,10 @@ const routes: RouteObject[] = [
   {
     path: "/success",
     element: <Success />,
+  },
+  {
+    path: "/testimonials",
+    element: <Testimonials />,
   },
   {
     path: "*",
