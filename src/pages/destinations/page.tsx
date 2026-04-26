@@ -4,6 +4,7 @@ const FORM_URL = "https://happydetour.app.n8n.cloud/form/91799171-4079-4ab7-9d13
 const VIRGIN_URL = "https://www.virginvoyages.com/book/voyage-planner/find-a-voyage?cabins=1&currencyCode=USD&agentId=278796&agencyId=589&bookingChannel=FMLINK&priceType=cabinPerNight";
 const SANDALS_URL = "https://www.sandals.com/?referral=101731&agentid=ERCA7707";
 const BEACHES_URL = "https://www.beaches.com/?referral=101731&agentid=ERCA7707";
+const BLOG_URL = "https://happydetourtravel.wordpress.com";
 
 const deals = [
   {
@@ -47,7 +48,7 @@ const deals = [
 const otherLines = [
   { name: "Royal Caribbean", emoji: "👑", description: "Perfect for families and first time cruisers. Massive ships, endless activities, and itineraries all over the world." },
   { name: "Norwegian Cruise Line", emoji: "🌊", description: "Freestyle cruising with no set dining times, incredible entertainment, and routes across Alaska, Europe, and the Caribbean." },
-  { name: "MSC Cruises", emoji: "🇮🇹", description: "European elegance at sea. MSC offers stunning ships, Mediterranean routes, and some of the best value in cruising." },
+  { name: "MSC Cruises", emoji: "⚓", description: "European elegance at sea. MSC offers stunning ships, Mediterranean routes, and some of the best value in cruising." },
 ];
 
 export default function DestinationsPage() {
@@ -144,11 +145,20 @@ export default function DestinationsPage() {
         </div>
       </section>
 
-      {/* Footer Slogan */}
-      <section className="py-8 text-center">
-        <p className="text-sm font-semibold" style={{ color: '#F59E0B' }}>
+      {/* Footer */}
+      <section className="py-8 text-center px-6">
+        <p className="text-sm font-semibold mb-2" style={{ color: '#F59E0B' }}>
           Affordable vacations. Fun experiences. Everyone welcome.
         </p>
+        <p className="text-xs mb-1" style={{ color: '#6B7280' }}>
+          © 2026 Happy Detour Travel. All rights reserved. Happy Detour is a proud independent affiliate of WorldVia.
+        </p>
+        <p className="text-xs mb-2" style={{ color: '#9CA3AF' }}>
+          Deals last refreshed: April 2026.
+        </p>
+        <a href={BLOG_URL} target="_blank" rel="noopener noreferrer" className="text-xs underline" style={{ color: '#007298' }}>
+          Check out the Lab Blog to see how I'm building this site.
+        </a>
       </section>
 
     </main>
