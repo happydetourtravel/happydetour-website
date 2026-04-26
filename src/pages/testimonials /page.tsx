@@ -1,17 +1,14 @@
 import ScrollReveal from '../../components/base/ScrollReveal';
 
 const FORM_URL = "https://happydetour.app.n8n.cloud/form/91799171-4079-4ab7-9d13-9417ae57dfba";
-const GOOGLE_REVIEW_URL = "#"; // Replace with your Google Business review link when ready
+const GOOGLE_REVIEW_URL = "#";
 
-const testimonials: { name: string; location: string; trip: string; quote: string }[] = [
-  // Testimonials will go here as you receive them
-];
+const testimonials: { name: string; location: string; trip: string; quote: string }[] = [];
 
 export default function TestimonialsPage() {
   return (
     <main className="min-h-screen bg-[#F9FAFB]">
 
-      {/* Hero */}
       <section className="bg-white border-b border-gray-100 py-20 px-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
           <ScrollReveal direction="up" delay={0} duration={680}>
@@ -29,7 +26,6 @@ export default function TestimonialsPage() {
         </div>
       </section>
 
-      {/* Testimonials Grid or Empty State */}
       <section className="py-20 px-6 lg:px-8">
         <div className="mx-auto max-w-5xl">
           {testimonials.length === 0 ? (
@@ -55,9 +51,7 @@ export default function TestimonialsPage() {
                         <span key={s} className="text-amber-400 text-lg">★</span>
                       ))}
                     </div>
-                    <p className="text-gray-700 text-sm leading-relaxed mb-6">
-                      "{t.quote}"
-                    </p>
+                    <p className="text-gray-700 text-sm leading-relaxed mb-6">"{t.quote}"</p>
                     <div>
                       <p className="font-semibold text-gray-900">{t.name}</p>
                       <p className="text-sm text-gray-400">{t.location} · {t.trip}</p>
@@ -70,7 +64,6 @@ export default function TestimonialsPage() {
         </div>
       </section>
 
-      {/* CTA Section */}
       <section className="bg-white border-t border-gray-100 py-20 px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <ScrollReveal direction="up" delay={100} duration={680}>
