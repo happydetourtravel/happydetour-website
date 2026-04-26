@@ -76,7 +76,7 @@ export default function TestimonialsPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               
-                href={GOOGLE_REVIEW_URL}
+               <a href={GOOGLE_REVIEW_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-amber-500 px-8 py-4 text-base font-semibold text-amber-600 hover:bg-amber-50 transition-colors whitespace-nowrap"
@@ -84,7 +84,7 @@ export default function TestimonialsPage() {
                 ⭐ Leave a Google Review
               </a>
               
-                href={FORM_URL}
+               <a href={FORM_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 rounded-full bg-amber-500 px-8 py-4 text-base font-semibold text-white hover:bg-amber-600 transition-colors whitespace-nowrap"
