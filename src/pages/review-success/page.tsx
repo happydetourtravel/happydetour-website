@@ -50,12 +50,10 @@ export default function ReviewSuccessPage() {
             </p>
            <div className="flex flex-col sm:flex-row gap-3 justify-center">
   <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 rounded-full border-2 px-6 py-3 text-sm font-semibold transition-colors whitespace-nowrap hover:bg-blue-50" style={{ borderColor: '#007298', color: '#007298' }}>
-    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.334 3.608 1.308.975.975 1.246 2.242 1.308 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.334 2.633-1.308 3.608-.975.975-2.242 1.246-3.608 1.308-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.334-3.608-1.308-.975-.975-1.246-2.242-1.308-3.608C2.175 15.584 2.163 15.204 2.163 12s.012-3.584.07-4.85c.062-1.366.334-2.633 1.308-3.608.975-.975 2.242-1.246 3.608-1.308 1.266-.058 1.646-.07 4.85-.07zm0-2.163c-3.259 0-3.667.014-4.947.072-1.609.074-3.031.44-4.171 1.581C1.74 2.793 1.374 4.215 1.3 5.824 1.242 7.104 1.228 7.512 1.228 12c0 4.488.014 4.896.072 6.176.074 1.609.44 3.031 1.581 4.171 1.14 1.141 2.562 1.507 4.171 1.581 1.28.058 1.688.072 4.948.072s3.667-.014 4.947-.072c1.609-.074 3.031-.44 4.171-1.581 1.141-1.14 1.507-2.562 1.581-4.171.058-1.28.072-1.688.072-4.948s-.014-3.667-.072-4.947c-.074-1.609-.44-3.031-1.581-4.171C19.178 1.74 17.756 1.374 16.147 1.3 14.867 1.242 14.459 1.228 12 1.228zm0 5.838a4.934 4.934 0 100 9.868 4.934 4.934 0 000-9.868zm0 8.134a3.2 3.2 0 110-6.4 3.2 3.2 0 010 6.4zm6.406-8.845a1.44 1.44 0 100-2.88 1.44 1.44 0 000 2.88z"/></svg>
-    Instagram
+    📷 @happydetourtravel
   </a>
   <a href={FACEBOOK_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 rounded-full border-2 px-6 py-3 text-sm font-semibold transition-colors whitespace-nowrap hover:bg-blue-50" style={{ borderColor: '#007298', color: '#007298' }}>
-    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.886v2.267h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg>
-    Facebook
+    👍 @happydetourtravel
   </a>
 </div>
           </div>
