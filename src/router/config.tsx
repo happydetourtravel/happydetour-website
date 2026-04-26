@@ -4,6 +4,7 @@ import Home from "../pages/home/page";
 import Success from "../pages/success/page";
 import Testimonials from "../pages/testimonials/page";
 import ReviewSuccess from "../pages/review-success/page";
+import Destinations from "../pages/destinations/page";
 
 const routes: RouteObject[] = [
   {
@@ -21,6 +22,10 @@ const routes: RouteObject[] = [
   {
     path: "/review-success",
     element: <ReviewSuccess />,
+  },
+  {
+    path: "/destinations",
+    element: <Destinations />,
   },
   {
     path: "*",
