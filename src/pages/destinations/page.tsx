@@ -10,8 +10,8 @@ const deals = [
     emoji: "🚢",
     tag: "Adults Only",
     brand: "Virgin Voyages",
-    headline: "Cruising Like You've Never Seen It",
-    description: "No kids. No buffets. No boring. Virgin Voyages flips the script on cruising with included dining, incredible entertainment, and a vibe that feels more like a boutique hotel at sea. Perfect for couples and solo travelers who want something different.",
+    headline: "No Kids. No Buffets. No Boring.",
+    description: "Virgin Voyages flips the script on cruising with included dining, incredible entertainment, and a vibe that feels more like a boutique hotel at sea. Perfect for couples and solo travelers who want something completely different.",
     bestFor: "Couples & Solo Travelers",
     href: VIRGIN_URL,
     buttonText: "Browse Virgin Voyages",
@@ -34,7 +34,7 @@ const deals = [
     emoji: "👨‍👩‍👧‍👦",
     tag: "Families",
     brand: "Beaches Resorts",
-    headline: "Where Families Actually Relax",
+    headline: "Finally, a Vacation for the Parents Too.",
     description: "Beaches is Sandals built for families. Kids clubs, waterparks, family suites, and everything included so parents can actually breathe. Located in Turks and Caicos and Jamaica, Beaches gives every age group something to love while keeping the whole trip stress free.",
     bestFor: "Families with Kids",
     href: BEACHES_URL,
@@ -58,16 +58,16 @@ export default function DestinationsPage() {
       <section className="bg-white border-b border-gray-100 py-20 px-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
           <ScrollReveal direction="up" delay={0} duration={680}>
-            <p className="text-sm font-semibold uppercase tracking-widest text-amber-600 mb-3">
+            <p className="text-sm font-semibold uppercase tracking-widest mb-3" style={{ color: '#007298' }}>
               Handpicked by Eric
             </p>
             <h1 className="text-4xl font-bold tracking-tight sm:text-5xl mb-4" style={{ color: '#1F2937' }}>
               Travel Deals You Can't Miss
             </h1>
             <p className="text-lg leading-relaxed" style={{ color: '#6B7280' }}>
-              I've been on over 17 cruises and visited resorts across the Caribbean.
-              These are the trips I actually recommend. No fluff. No filler.
-              Just the good stuff.
+              I've been on 17 cruises and explored the best Caribbean resorts so you don't have to.
+              These are the trips I actually recommend to my friends.
+              No fluff. No filler. Just the good stuff.
             </p>
           </ScrollReveal>
         </div>
@@ -77,7 +77,7 @@ export default function DestinationsPage() {
       <section className="py-20 px-6 lg:px-8">
         <div className="mx-auto max-w-5xl">
           <ScrollReveal direction="up" delay={0} duration={680}>
-            <p className="text-sm font-semibold uppercase tracking-widest text-amber-600 mb-10 text-center">
+            <p className="text-sm font-semibold uppercase tracking-widest mb-10 text-center" style={{ color: '#007298' }}>
               Featured Picks
             </p>
           </ScrollReveal>
@@ -108,15 +108,15 @@ export default function DestinationsPage() {
         <div className="mx-auto max-w-5xl">
           <ScrollReveal direction="up" delay={0} duration={680}>
             <div className="text-center mb-12">
-              <p className="text-sm font-semibold uppercase tracking-widest text-amber-600 mb-3">
+              <p className="text-sm font-semibold uppercase tracking-widest mb-3" style={{ color: '#007298' }}>
                 More Options
               </p>
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Looking for Something Else?
+                Not Finding the Vibe?
               </h2>
               <p className="text-base text-gray-500 leading-relaxed max-w-xl mx-auto">
                 I also work with Royal Caribbean, Norwegian, and MSC. No direct booking link needed.
-                Just tell me what you're looking for and I'll send you a custom quote personally.
+                Just tell me what you're looking for and I'll get to work in the lab.
               </p>
             </div>
           </ScrollReveal>
@@ -136,7 +136,9 @@ export default function DestinationsPage() {
               <a href={FORM_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 rounded-full bg-amber-500 px-10 py-4 text-base font-semibold text-white hover:bg-amber-600 transition-colors whitespace-nowrap">
                 ✈️ Get a Custom Quote from Eric
               </a>
-              <p className="text-sm text-gray-400 mt-3">Free to work with me. Always.</p>
+              <p className="text-sm text-gray-400 mt-3">
+                My service is always free for you. The vendors pay me, so you can just focus on the packing.
+              </p>
             </div>
           </ScrollReveal>
         </div>
