@@ -25,12 +25,8 @@ export default function ReviewSuccessPage() {
             Thank you for sharing the magic. Your story means everything to this brand.
           </p>
           <p className="text-base leading-relaxed mb-10" style={{ color: '#6B7280' }}>
-            I'm already back in the lab in Ohio, fueled by Dunkin' iced coffee,
+            I am already back in the lab in Ohio, fueled by a cold Coke Zero,
             working on the next big adventure. The work never stops so yours can.
-          </p>
-
-          <p className="text-base font-semibold text-amber-600 mb-10">
-            Affordable vacations. Fun experiences. Everyone welcome.
           </p>
 
           <div className="mb-12">
@@ -42,21 +38,21 @@ export default function ReviewSuccessPage() {
           <div className="bg-white border-2 border-dashed border-amber-200 rounded-2xl p-8 mb-10 shadow-sm">
             <p className="text-2xl mb-3">📸</p>
             <p className="text-base font-semibold mb-2" style={{ color: '#1F2937' }}>
-              Got vacation photos?
+              Show off those shots!
             </p>
             <p className="text-sm leading-relaxed mb-6" style={{ color: '#6B7280' }}>
               Tag me in your best shots. I love seeing these trips out in the wild.
               It reminds me why I do this every single day.
             </p>
-          <div className="flex flex-col sm:flex-row gap-3 justify-center">
-  <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 rounded-full border-2 px-6 py-3 text-sm font-semibold transition-colors whitespace-nowrap hover:bg-blue-50" style={{ borderColor: '#007298', color: '#007298' }}>
-    📸 @happydetourtravel
-  </a>
-  <a href={FACEBOOK_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 rounded-full border-2 px-6 py-3 text-sm font-semibold transition-colors whitespace-nowrap hover:bg-blue-50" style={{ borderColor: '#007298', color: '#007298' }}>
-    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.886v2.267h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg>
-    @happydetourtravel
-  </a>
-</div>
+            <div className="flex flex-col sm:flex-row gap-3 justify-center">
+              <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 rounded-full border-2 px-6 py-3 text-sm font-semibold transition-colors whitespace-nowrap hover:bg-blue-50" style={{ borderColor: '#007298', color: '#007298' }}>
+                📸 @happydetourtravel
+              </a>
+              <a href={FACEBOOK_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 rounded-full border-2 px-6 py-3 text-sm font-semibold transition-colors whitespace-nowrap hover:bg-blue-50" style={{ borderColor: '#007298', color: '#007298' }}>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.886v2.267h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg>
+                @happydetourtravel
+              </a>
+            </div>
           </div>
 
           <div className="bg-amber-50 border border-amber-100 rounded-2xl p-6 mb-10">
@@ -64,22 +60,25 @@ export default function ReviewSuccessPage() {
               ⭐ Extra credit if you have 30 seconds
             </p>
             <p className="text-sm leading-relaxed mb-4" style={{ color: '#6B7280' }}>
-              A quick star rating on my Facebook page goes a long way.
-              It helps real people find Happy Detour when they need it most.
+              Help the next traveler find their way. A quick star rating on Facebook helps real people find Happy Detour when they need a break the most.
             </p>
             <a href={FACEBOOK_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 rounded-full border-2 px-6 py-3 text-sm font-semibold transition-colors whitespace-nowrap hover:bg-blue-50" style={{ borderColor: '#007298', color: '#007298' }}>
               ⭐ Leave a Quick Star Rating
             </a>
           </div>
 
-          <div className="text-center">
+          <div className="text-center mb-12">
             <p className="text-sm mb-3" style={{ color: '#6B7280' }}>
               Curious how all this comes together?
             </p>
             <a href={BLOG_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 rounded-full border-2 px-8 py-3 text-sm font-semibold transition-colors whitespace-nowrap hover:bg-blue-50" style={{ borderColor: '#007298', color: '#007298' }}>
-              🔬 See How the Magic Happens
+              💻 See How the Magic Happens
             </a>
           </div>
+
+          <p className="text-sm" style={{ color: '#6B7280' }}>
+            Affordable vacations. Fun experiences. Everyone welcome.
+          </p>
 
         </ScrollReveal>
       </div>
