@@ -16,6 +16,9 @@ export default function AboutSection() {
               <p className="text-sm font-semibold uppercase tracking-widest text-amber-600 mb-3">
                 Your Travel Advisor
               </p>
+              <p className="text-xs text-gray-400 mb-2">
+                Happy Detour Travel is a personalized, free vacation planning service led by independent travel advisor Eric Carney, specializing in cruises and all-inclusive resorts.
+              </p>
               <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl leading-snug">
                 I'm Eric. I help people plan trips without making it complicated or overwhelming.
               </h2>
