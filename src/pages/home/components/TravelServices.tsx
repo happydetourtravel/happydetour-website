@@ -7,21 +7,21 @@ const services = [
     icon: "ri-ship-line",
     title: "Cruise Vacations",
     description:
-      "I work with all major cruise lines including Royal Caribbean, Norwegian, Carnival, MSC, and Virgin Voyages. Cruises can start as low as $299 per person for a 3-night sailing, with 7-night Caribbean itineraries typically ranging from $499 to $1,200 per person depending on the ship and cabin. I sort through hundreds of options and come back with the ones that actually match what you're looking for.",
+      "I work with all major cruise lines and know each one personally. Virgin Voyages is adults-only with no buffets and included dining — perfect for couples who want something different. Royal Caribbean is ideal for families and first-timers with massive ships and endless activities. Norwegian offers freestyle dining with no set times. MSC brings European elegance with stunning Mediterranean-style ships. Carnival is fun and affordable for groups. Cruises start as low as $299 per person and I sort through hundreds of options to find the right fit for you.",
     accent: "text-amber-600 bg-amber-50 border-amber-200",
   },
   {
     icon: "ri-hotel-line",
     title: "All-Inclusive Resorts",
     description:
-      "I specialize in Sandals and Beaches Resorts, two of the top-rated all-inclusive brands in the Caribbean. Sandals is adults-only and couples-focused, while Beaches welcomes families. All-inclusive resorts bundle meals, drinks, activities, and entertainment into one price — typically starting around $200 per person per night. I've experienced these resorts firsthand and know which ones are genuinely worth it.",
+      "I specialize in Sandals and Beaches Resorts — two of the highest-rated all-inclusive brands in the Caribbean. Sandals is adults-only and couples-focused, with locations in Jamaica, Barbados, Saint Lucia, and more — known for overwater bungalows, gourmet dining, and unlimited premium drinks. Beaches welcomes families with kids clubs, waterparks, and family suites in Turks and Caicos and Jamaica. Both brands bundle meals, drinks, and activities into one price starting around $200 per person per night.",
     accent: "text-teal-600 bg-teal-50 border-teal-200",
   },
   {
     icon: "ri-map-2-line",
     title: "Custom Travel Experiences",
     description:
-      "From a long weekend getaway to a two-week international trip, I build itineraries around your budget, timeline, and travel style. Whether you're planning a honeymoon, a family reunion, a solo trip, or a group vacation, I handle every booking and coordinate every detail. My planning service is always 100% free to you — cruise lines and resorts pay my commission.",
+      "From a long weekend getaway to a two-week international trip, I build itineraries around your budget, timeline, and travel style. Honeymoons, family reunions, destination weddings, solo adventures, group sailings — I handle every booking and coordinate every detail. My planning service is always 100% free to you. Cruise lines and resorts pay my commission, so you get a dedicated travel advisor at no extra cost.",
     accent: "text-rose-500 bg-rose-50 border-rose-200",
   },
 ];
@@ -30,7 +30,6 @@ export default function TravelServices() {
   return (
     <section id="services" aria-labelledby="services-heading" className="bg-white py-20 sm:py-28">
       <div className="mx-auto max-w-7xl px-6 lg:px-10 flex flex-col gap-14">
-        {/* Header */}
         <ScrollReveal direction="up" delay={0} duration={680}>
           <div className="mx-auto max-w-2xl text-center">
             <p className="text-sm font-semibold uppercase tracking-widest text-amber-600 mb-3">
@@ -45,7 +44,6 @@ export default function TravelServices() {
           </div>
         </ScrollReveal>
 
-        {/* Cards */}
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
           {services.map((service, i) => (
             <ScrollReveal key={service.title} direction="up" delay={i * 130} duration={680}>
@@ -70,10 +68,9 @@ export default function TravelServices() {
           ))}
         </div>
 
-        {/* Bottom CTA */}
         <ScrollReveal direction="up" delay={420} duration={680}>
           <div className="flex flex-col items-center gap-3 pt-4">
-            <a
+            
               href={FORM_URL}
               target="_blank"
               rel="noopener noreferrer"
