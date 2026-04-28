@@ -4,11 +4,11 @@ const FORM_URL = "https://happydetour.app.n8n.cloud/form/b122b50f-8f98-43c6-a180
 const GOOGLE_REVIEW_URL = "#";
 
 const currentDetours = [
-  "Scouting a 7-night Caribbean escape for a family of four",
-  "Mapping out a Virgin Voyages adults-only getaway",
-  "Building a Sandals honeymoon package for a couple in Ohio",
-  "Pricing out a Royal Caribbean sailing for a group of eight",
-  "Researching Beaches Turks and Caicos for a family reunion",
+  "Finalizing an MSC cruise getaway with hotels for embarkation day",
+  "Planning a Virgin Voyages adults-only sailing for February",
+  "Preparing for a Virgin Voyages transatlantic crossing departing from Barcelona in October",
+  "Researching Sandals resort options for couples looking for an all-inclusive escape",
+  "Scouting Royal Caribbean itineraries for first time cruisers",
 ];
 
 const testimonials: { name: string; location: string; trip: string; quote: string }[] = [];
