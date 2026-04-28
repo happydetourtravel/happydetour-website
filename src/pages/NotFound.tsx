@@ -69,6 +69,8 @@ export default function NotFound() {
           <p className="text-xs text-gray-400 mb-3">Or jump to one of these:</p>
           <div className="flex flex-wrap gap-2 justify-center">
             <a href="https://www.happydetour.com/about" className="text-xs font-semibold text-gray-500 bg-white border border-gray-200 rounded-full px-4 py-1.5 hover:border-blue-400 hover:text-blue-600 transition-colors">About Eric</a>
+            <a href="https://www.happydetour.com/destinations" className="text-xs font-semibold text-gray-500 bg-white border border-gray-200 rounded-full px-4 py-1.5 hover:border-blue-400 hover:text-blue-600 transition-colors">Destinations</a>
+            <a href="https://www.happydetour.com/testimonials" className="text-xs font-semibold text-gray-500 bg-white border border-gray-200 rounded-full px-4 py-1.5 hover:border-blue-400 hover:text-blue-600 transition-colors">Testimonials</a>
             <a href="https://happydetourtravel.wordpress.com/" target="_blank" rel="noopener noreferrer" className="text-xs font-semibold text-gray-500 bg-white border border-gray-200 rounded-full px-4 py-1.5 hover:border-blue-400 hover:text-blue-600 transition-colors">Blog</a>
             <a href="https://www.happydetour.com/links" className="text-xs font-semibold text-gray-500 bg-white border border-gray-200 rounded-full px-4 py-1.5 hover:border-blue-400 hover:text-blue-600 transition-colors">All Links</a>
             <a href="mailto:eric@happydetour.com" className="text-xs font-semibold text-gray-500 bg-white border border-gray-200 rounded-full px-4 py-1.5 hover:border-blue-400 hover:text-blue-600 transition-colors">Contact Eric</a>
