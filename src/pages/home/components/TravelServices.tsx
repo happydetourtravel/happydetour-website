@@ -71,7 +71,7 @@ export default function TravelServices() {
         <ScrollReveal direction="up" delay={420} duration={680}>
           <div className="flex flex-col items-center gap-3 pt-4">
             
-              href={FORM_URL}
+             <a href={FORM_URL}
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Start planning my trip with Happy Detour Travel"
