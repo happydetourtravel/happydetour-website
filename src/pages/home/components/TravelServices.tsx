@@ -75,8 +75,7 @@ export default function TravelServices() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Start planning my trip with Happy Detour Travel"
-              className="inline-flex items-center justify-center gap-2 rounded-full bg-amber-500 px-10 py-4 text-base font-semibold text-white hover:bg-amber-600 transition-colors whitespace-nowrap cursor-pointer"
-            >
+              className="inline-flex items-center justify-center gap-2 rounded-full bg-amber-500 px-10 py-4 text-base font-semibold text-white hover:bg-amber-600 transition-colors whitespace-nowrap cursor-pointer">
               <span className="w-4 h-4 flex items-center justify-center">
                 <i className="ri-plane-fill text-base leading-none" aria-hidden="true" />
               </span>
