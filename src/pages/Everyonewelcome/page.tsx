@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Camera, Anchor, MapPin, Calendar, Users, Ship, Heart } from 'lucide-react';
 
-const EveryoneWelcomeCruise = () => {
+const EveryoneWelcome = () => {
   const [formSubmitted, setFormSubmitted] = useState(false);
 
   const ports = [
@@ -831,4 +831,4 @@ const EveryoneWelcomeCruise = () => {
   );
 };
 
-export default EveryoneWelcomeCruise;
+export default EveryoneWelcome;
