@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Camera, Anchor, MapPin, Calendar, Users, Ship, Heart } from 'lucide-react';
-
 const EveryoneWelcome = () => {
   const [formSubmitted, setFormSubmitted] = useState(false);
 
