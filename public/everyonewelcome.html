@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Everyone Welcome - MSC Seascape Group Cruise | Happy Detour Travel</title>
+    <title>Everyone Welcome | MSC Seascape Group Cruise | Happy Detour Travel</title>
     <meta name="description" content="Join the Everyone Welcome group cruise aboard MSC Seascape, September 13-20, 2026. 7 nights exploring the Western Caribbean with Happy Detour Travel.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,7 +18,7 @@
         body {
             font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
             color: #1F2937;
-            background: linear-gradient(to bottom, #F9FAFB 0%, #ffffff 100%);
+            background: #F9FAFB;
             line-height: 1.6;
         }
         
@@ -38,8 +38,8 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-            opacity: 0.3;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.08'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.4;
         }
         
         .hero-content {
@@ -51,15 +51,15 @@
         
         .hero-badge {
             display: inline-block;
-            background: rgba(245, 158, 11, 0.2);
+            background: rgba(190, 242, 100, 0.2);
             padding: 0.5rem 1rem;
             border-radius: 50px;
             margin-bottom: 1rem;
-            border: 1px solid rgba(245, 158, 11, 0.3);
+            border: 1px solid rgba(190, 242, 100, 0.4);
         }
         
         .hero-badge span {
-            color: #F59E0B;
+            color: #BEF264;
             font-weight: 600;
             font-size: 0.875rem;
             letter-spacing: 0.05em;
@@ -90,32 +90,33 @@
         }
         
         .btn-primary {
-            background: #F59E0B;
-            color: white;
+            background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+            color: #1F2937;
             padding: 1rem 2rem;
             border-radius: 8px;
             text-decoration: none;
-            font-weight: 600;
+            font-weight: 700;
             font-size: 1.125rem;
             display: inline-block;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);
+            box-shadow: 0 4px 12px rgba(255, 215, 0, 0.4);
             border: none;
             cursor: pointer;
         }
         
         .btn-primary:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(245, 158, 11, 0.4);
+            box-shadow: 0 6px 20px rgba(255, 215, 0, 0.6);
         }
         
         .hero-price {
-            color: rgba(255,255,255,0.9);
+            color: rgba(255,255,255,0.95);
             font-size: 0.95rem;
         }
         
         .hero-price strong {
             font-size: 1.25rem;
+            color: #BEF264;
         }
         
         /* Info Banner */
@@ -189,16 +190,17 @@
             background: white;
             padding: 1.5rem;
             border-radius: 12px;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
             display: grid;
             grid-template-columns: auto 1fr;
             gap: 1.5rem;
             align-items: start;
             transition: all 0.3s ease;
+            border-left: 4px solid #BEF264;
         }
         
         .port-card:hover {
-            box-shadow: 0 10px 25px rgba(0, 114, 152, 0.15);
+            box-shadow: 0 8px 20px rgba(0, 114, 152, 0.15);
             transform: translateY(-2px);
         }
         
@@ -216,8 +218,8 @@
         
         .port-day {
             font-size: 0.875rem;
-            color: #F59E0B;
-            font-weight: 600;
+            color: #FFD700;
+            font-weight: 700;
             margin-bottom: 0.25rem;
             letter-spacing: 0.05em;
         }
@@ -237,7 +239,7 @@
         
         /* Pricing Section */
         .pricing-section {
-            background: linear-gradient(to bottom, #F9FAFB 0%, #ffffff 100%);
+            background: white;
             padding: 4rem 1.5rem;
         }
         
@@ -249,23 +251,25 @@
         }
         
         .pricing-card {
-            background: white;
+            background: linear-gradient(to bottom, #F9FAFB 0%, #ffffff 100%);
             padding: 2rem;
             border-radius: 12px;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
             text-align: center;
-            border: 2px solid transparent;
+            border: 2px solid #E5E7EB;
             position: relative;
             transition: all 0.3s ease;
         }
         
         .pricing-card:hover {
-            box-shadow: 0 10px 25px rgba(0, 114, 152, 0.15);
+            box-shadow: 0 8px 20px rgba(0, 114, 152, 0.15);
             transform: translateY(-4px);
+            border-color: #BEF264;
         }
         
         .pricing-card.popular {
             border-color: #007298;
+            background: linear-gradient(to bottom, #E0F2FE 0%, #ffffff 100%);
         }
         
         .pricing-badge {
@@ -273,8 +277,8 @@
             top: -12px;
             left: 50%;
             transform: translateX(-50%);
-            background: #F59E0B;
-            color: white;
+            background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+            color: #1F2937;
             padding: 0.25rem 1rem;
             border-radius: 50px;
             font-size: 0.75rem;
@@ -314,9 +318,9 @@
         .notice-box {
             margin-top: 2rem;
             padding: 1.5rem;
-            background: #FEF3C7;
+            background: linear-gradient(135deg, #FEF3C7 0%, #FEFCE8 100%);
             border-radius: 12px;
-            border: 1px solid #F59E0B;
+            border: 2px solid #FFD700;
             text-align: center;
         }
         
@@ -344,8 +348,8 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-            opacity: 0.3;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.08'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.4;
         }
         
         .special-pricing-content {
@@ -378,11 +382,11 @@
         }
         
         .special-card {
-            background: rgba(255,255,255,0.15);
+            background: rgba(190, 242, 100, 0.15);
             padding: 1.5rem;
             border-radius: 12px;
             text-align: center;
-            border: 1px solid rgba(255,255,255,0.2);
+            border: 2px solid rgba(190, 242, 100, 0.3);
             backdrop-filter: blur(10px);
         }
         
@@ -411,7 +415,7 @@
             padding: 2.5rem 2rem;
             background: white;
             border-radius: 12px;
-            border: 2px solid #007298;
+            border: 2px solid #BEF264;
         }
         
         .duo-pricing h3 {
@@ -433,17 +437,18 @@
         }
         
         .duo-card {
-            background: #F9FAFB;
+            background: linear-gradient(to bottom, #F0FDF4 0%, #ffffff 100%);
             padding: 1.5rem;
             border-radius: 12px;
             text-align: center;
-            border: 2px solid #E5E7EB;
+            border: 2px solid #BEF264;
             transition: all 0.3s ease;
         }
         
         .duo-card:hover {
             border-color: #007298;
             transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 114, 152, 0.15);
         }
         
         .duo-card .type {
@@ -468,7 +473,7 @@
         
         /* What's Included */
         .included-section {
-            background: white;
+            background: #F9FAFB;
             padding: 4rem 1.5rem;
         }
         
@@ -488,7 +493,7 @@
             width: 24px;
             height: 24px;
             border-radius: 50%;
-            background: #007298;
+            background: #BEF264;
             flex-shrink: 0;
             display: flex;
             align-items: center;
@@ -517,8 +522,8 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-            opacity: 0.3;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.08'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.4;
         }
         
         .why-join-content {
@@ -551,10 +556,10 @@
         }
         
         .highlight-box {
-            background: rgba(255,255,255,0.1);
+            background: rgba(190, 242, 100, 0.15);
             padding: 1.5rem;
             border-radius: 12px;
-            border: 1px solid rgba(255,255,255,0.2);
+            border: 2px solid rgba(190, 242, 100, 0.3);
             margin-top: 2rem;
         }
         
@@ -566,7 +571,7 @@
         
         /* Form Section */
         .form-section {
-            background: #F9FAFB;
+            background: white;
             padding: 4rem 1.5rem;
         }
         
@@ -575,27 +580,28 @@
             margin: 0 auto;
         }
         
-        .form-placeholder {
-            background: white;
-            padding: 3rem 2rem;
+        /* N8N Form Placeholder */
+        #n8n-form-container {
+            background: #F9FAFB;
+            padding: 2rem;
             border-radius: 12px;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-            border: 2px dashed #007298;
-            text-align: center;
+            border: 2px dashed #BEF264;
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         
-        .form-placeholder h3 {
+        .form-placeholder-text {
+            text-align: center;
+            color: #6B7280;
+        }
+        
+        .form-placeholder-text h3 {
             font-size: 1.5rem;
             font-weight: 700;
             color: #1F2937;
             margin-bottom: 1rem;
-        }
-        
-        .form-placeholder p {
-            font-size: 1rem;
-            color: #6B7280;
-            line-height: 1.6;
-            margin-bottom: 1.5rem;
         }
         
         .contact-info {
@@ -621,7 +627,7 @@
         
         /* Footer */
         .footer {
-            background: #F59E0B;
+            background: #1F2937;
             color: white;
             padding: 2rem 1.5rem;
             text-align: center;
@@ -642,12 +648,21 @@
         .footer-tagline {
             font-size: 1rem;
             opacity: 0.95;
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
         }
         
-        .footer-handle {
-            font-size: 0.95rem;
-            opacity: 0.9;
+        .footer-legal {
+            font-size: 0.8rem;
+            opacity: 0.8;
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .footer-updated {
+            font-size: 0.7rem;
+            opacity: 0.6;
+            margin-top: 0.5rem;
         }
     </style>
 </head>
@@ -686,7 +701,7 @@
             </div>
             <div class="info-item">
                 <div class="info-label">DURATION</div>
-                <div class="info-value">7 Nights / 8 Days</div>
+                <div class="info-value">7 Nights | 8 Days</div>
             </div>
         </div>
     </section>
@@ -837,7 +852,7 @@
                 <div class="included-item">
                     <div class="check-icon">
                         <svg width="14" height="10" viewBox="0 0 14 10" fill="none">
-                            <path d="M1 5L5 9L13 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M1 5L5 9L13 1" stroke="#1F2937" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     </div>
                     <span>All meals in main dining rooms</span>
@@ -845,7 +860,7 @@
                 <div class="included-item">
                     <div class="check-icon">
                         <svg width="14" height="10" viewBox="0 0 14 10" fill="none">
-                            <path d="M1 5L5 9L13 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M1 5L5 9L13 1" stroke="#1F2937" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     </div>
                     <span>Complimentary room service</span>
@@ -853,7 +868,7 @@
                 <div class="included-item">
                     <div class="check-icon">
                         <svg width="14" height="10" viewBox="0 0 14 10" fill="none">
-                            <path d="M1 5L5 9L13 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M1 5L5 9L13 1" stroke="#1F2937" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     </div>
                     <span>Entertainment and shows</span>
@@ -861,7 +876,7 @@
                 <div class="included-item">
                     <div class="check-icon">
                         <svg width="14" height="10" viewBox="0 0 14 10" fill="none">
-                            <path d="M1 5L5 9L13 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M1 5L5 9L13 1" stroke="#1F2937" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     </div>
                     <span>Kids clubs and activities</span>
@@ -869,7 +884,7 @@
                 <div class="included-item">
                     <div class="check-icon">
                         <svg width="14" height="10" viewBox="0 0 14 10" fill="none">
-                            <path d="M1 5L5 9L13 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M1 5L5 9L13 1" stroke="#1F2937" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     </div>
                     <span>Fitness center access</span>
@@ -877,7 +892,7 @@
                 <div class="included-item">
                     <div class="check-icon">
                         <svg width="14" height="10" viewBox="0 0 14 10" fill="none">
-                            <path d="M1 5L5 9L13 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M1 5L5 9L13 1" stroke="#1F2937" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     </div>
                     <span>Choose your preferred dining time</span>
@@ -885,7 +900,7 @@
                 <div class="included-item">
                     <div class="check-icon">
                         <svg width="14" height="10" viewBox="0 0 14 10" fill="none">
-                            <path d="M1 5L5 9L13 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M1 5L5 9L13 1" stroke="#1F2937" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     </div>
                     <span>Pools, hot tubs, and sun decks</span>
@@ -893,7 +908,7 @@
                 <div class="included-item">
                     <div class="check-icon">
                         <svg width="14" height="10" viewBox="0 0 14 10" fill="none">
-                            <path d="M1 5L5 9L13 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M1 5L5 9L13 1" stroke="#1F2937" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     </div>
                     <span>Eric handles everything for you</span>
@@ -925,11 +940,12 @@
                 <p>Fill out the form below and I'll get back to you within 24 hours with next steps.</p>
             </div>
             
-            <!-- PLACEHOLDER FOR N8N FORM -->
-            <div class="form-placeholder">
-                <div style="font-size: 3rem; margin-bottom: 1rem;">📋</div>
-                <h3>Form Embed Goes Here</h3>
-                <p>Replace this section with your n8n form embed code.<br>The form should collect: name, email, phone, cabin preference, and any questions.</p>
+            <!-- N8N FORM CONTAINER - Replace the inner HTML with your n8n embed code -->
+            <div id="n8n-form-container">
+                <div class="form-placeholder-text">
+                    <h3>📋 Form Embed Goes Here</h3>
+                    <p>Replace this div's content with your n8n form embed code.</p>
+                </div>
             </div>
 
             <div class="contact-info">
@@ -942,9 +958,15 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
-            <div class="footer-brand">HAPPY DETOUR TRAVEL</div>
-            <div class="footer-tagline">Affordable vacations. Fun experiences. Everyone welcome.</div>
-            <div class="footer-handle">@happydetourtravel</div>
+            <p class="footer-brand">HAPPY DETOUR TRAVEL</p>
+            <p class="footer-tagline">Affordable vacations | Fun experiences | Everyone welcome</p>
+            
+            <div class="footer-legal">
+                <p>Happy Detour Travel is an independent affiliate of WorldVia Travel Network</p>
+                <p>© 2026 Happy Detour Travel | All rights reserved</p>
+            </div>
+            
+            <p class="footer-updated">Last updated April 29, 2026</p>
         </div>
     </footer>
 </body>
