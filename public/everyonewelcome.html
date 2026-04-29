@@ -28,7 +28,10 @@
         
         /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, #007298 0%, #005a7a 100%);
+            background: linear-gradient(135deg, rgba(0, 114, 152, 0.9) 0%, rgba(0, 90, 122, 0.9) 100%), url('MSCSeascapeNYC-allthingscruise.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
             color: white;
             padding: 4rem 1.5rem 3rem;
             position: relative;
@@ -668,54 +671,6 @@
             opacity: 0.6;
             margin-top: 0.5rem;
         }
-        
-        /* Booking Form Styles */
-        .booking-form {
-            background: #F9FAFB;
-            padding: 2.5rem;
-            border-radius: 16px;
-            border: 1px solid #E5E7EB;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-        }
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-        .form-group label {
-            display: block;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-            color: #1F2937;
-            font-size: 0.9rem;
-        }
-        .form-control {
-            width: 100%;
-            padding: 0.75rem 1rem;
-            border: 2px solid #E5E7EB;
-            border-radius: 8px;
-            font-family: inherit;
-            font-size: 1rem;
-            transition: border-color 0.2s;
-        }
-        .form-control:focus {
-            outline: none;
-            border-color: #007298;
-        }
-        .btn-submit {
-            width: 100%;
-            background: #BEF264;
-            color: #1F2937;
-            padding: 1rem;
-            border: none;
-            border-radius: 8px;
-            font-weight: 800;
-            font-size: 1.125rem;
-            cursor: pointer;
-            transition: transform 0.2s, background 0.2s;
-        }
-        .btn-submit:hover {
-            background: #a6d94c;
-            transform: translateY(-1px);
-        }
     </style>
 </head>
 <body>
@@ -730,7 +685,7 @@
             <div class="hero-cta">
                 <a href="#booking-form" class="btn-primary">Reserve Your Spot</a>
                 <div class="hero-price">
-                    <strong>Starting at $710</strong> per person
+                    <strong>Starting at $910</strong> per stateroom
                 </div>
             </div>
         </div>
@@ -808,87 +763,101 @@
         </div>
     </section>
 
+    <!-- Destination Image -->
+    <section style="max-width: 1200px; margin: 0 auto; padding: 0 1.5rem 4rem;">
+        <img src="cozumel.png" alt="MSC Seascape docked in Cozumel, Mexico" style="width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+        <p style="text-align: center; color: #6B7280; margin-top: 1rem; font-size: 0.95rem;">The MSC Seascape docked in Cozumel - one of your stops on this cruise</p>
+    </section>
+
     <!-- Pricing Section -->
     <section class="pricing-section">
         <div class="container">
             <div class="section-header">
-                <h2>Cabin Options</h2>
-                <p>All prices are per person and include taxes and fees</p>
-            </div>
-            <div class="pricing-grid">
-                <div class="pricing-card">
-                    <h3>Interior</h3>
-                    <div class="price">$710</div>
-                    <div class="pricing-label">per person</div>
-                    <p class="description">Cozy inside cabin, perfect for budget-conscious travelers</p>
-                </div>
-                <div class="pricing-card popular">
-                    <div class="pricing-badge">POPULAR</div>
-                    <h3>Ocean View</h3>
-                    <div class="price">$1,130</div>
-                    <div class="pricing-label">per person</div>
-                    <p class="description">Natural light and ocean views from your room</p>
-                </div>
-                <div class="pricing-card">
-                    <h3>Balcony</h3>
-                    <div class="price">$1,290+</div>
-                    <div class="pricing-label">per person</div>
-                    <p class="description">Private balcony, fresh air, and stunning sea views</p>
-                </div>
-            </div>
-            <div class="notice-box">
-                <p><strong>Planning is always free.</strong> All pricing includes government fees and taxes. Final payment due 90 days before departure.</p>
+                <h2>Choose Your Package</h2>
+                <p>All prices are per stateroom for 2 adults. Includes taxes and port fees.</p>
             </div>
 
-            <!-- Solo Traveler Section -->
-            <div class="special-pricing">
-                <div class="special-pricing-content">
-                    <h3>Traveling Solo?</h3>
-                    <p>Solo travelers are absolutely welcome! These rates include the drink package so you can enjoy your vacation worry-free.</p>
-                    <div class="special-grid">
-                        <div class="special-card">
-                            <div class="type">Interior</div>
-                            <div class="price">$1,497</div>
-                            <div class="note">includes drink package</div>
-                        </div>
-                        <div class="special-card">
-                            <div class="type">Ocean View</div>
-                            <div class="price">$1,777</div>
-                            <div class="note">includes drink package</div>
-                        </div>
-                        <div class="special-card">
-                            <div class="type">Balcony</div>
-                            <div class="price">$1,777</div>
-                            <div class="note">includes drink package</div>
-                        </div>
+            <!-- Base Fare Option -->
+            <div style="margin-bottom: 3rem;">
+                <h3 style="text-align: center; font-size: 1.75rem; color: #007298; margin-bottom: 1rem;">Cruise Only</h3>
+                <p style="text-align: center; color: #6B7280; margin-bottom: 2rem;">Base fare with meals and entertainment. Add drinks and wifi later if you want.</p>
+                
+                <div class="pricing-grid">
+                    <div class="pricing-card">
+                        <h3>Interior Bella</h3>
+                        <div class="price">$910</div>
+                        <div class="pricing-label">per stateroom</div>
+                        <p class="description">Comfortable inside cabin</p>
+                    </div>
+                    <div class="pricing-card">
+                        <h3>Deluxe Interior</h3>
+                        <div class="price">$1,030</div>
+                        <div class="pricing-label">per stateroom</div>
+                        <p class="description">Fantastica, Decks 11-15</p>
+                    </div>
+                    <div class="pricing-card">
+                        <h3>Balcony Bella</h3>
+                        <div class="price">$1,290</div>
+                        <div class="pricing-label">per stateroom</div>
+                        <p class="description">Private balcony</p>
+                    </div>
+                    <div class="pricing-card">
+                        <h3>Deluxe Balcony 11-12</h3>
+                        <div class="price">$1,450</div>
+                        <div class="pricing-label">per stateroom</div>
+                        <p class="description">Fantastica with balcony</p>
+                    </div>
+                    <div class="pricing-card">
+                        <h3>Deluxe Balcony 13-14</h3>
+                        <div class="price">$1,470</div>
+                        <div class="pricing-label">per stateroom</div>
+                        <p class="description">Fantastica with balcony</p>
                     </div>
                 </div>
             </div>
 
-            <!-- Two People Section -->
-            <div class="duo-pricing">
-                <h3>Traveling Together?</h3>
-                <p>Cruising with a partner, friend, or family member? Here's pricing per person when you book for two, drink package included.</p>
-                <div class="special-grid">
-                    <div class="duo-card">
-                        <div class="type">Interior</div>
+            <!-- Drinks + Wifi Package -->
+            <div>
+                <h3 style="text-align: center; font-size: 1.75rem; color: #007298; margin-bottom: 1rem;">Everything Included</h3>
+                <p style="text-align: center; color: #6B7280; margin-bottom: 2rem;">Same staterooms plus unlimited drinks and wifi for your whole trip.</p>
+                
+                <div class="pricing-grid">
+                    <div class="pricing-card popular">
+                        <div class="pricing-badge">POPULAR</div>
+                        <h3>Interior Bella</h3>
                         <div class="price">$1,694</div>
-                        <div class="note">per person (2 people)</div>
-                        <div class="note">includes drink package</div>
+                        <div class="pricing-label">per stateroom</div>
+                        <p class="description">Includes drinks + wifi</p>
                     </div>
-                    <div class="duo-card">
-                        <div class="type">Ocean View</div>
-                        <div class="price">$1,974</div>
-                        <div class="note">per person (2 people)</div>
-                        <div class="note">includes drink package</div>
+                    <div class="pricing-card">
+                        <h3>Deluxe Interior</h3>
+                        <div class="price">$1,814</div>
+                        <div class="pricing-label">per stateroom</div>
+                        <p class="description">Includes drinks + wifi</p>
                     </div>
-                    <div class="duo-card">
-                        <div class="type">Balcony</div>
-                        <div class="price">$1,994</div>
-                        <div class="note">per person (2 people)</div>
-                        <div class="note">includes drink package</div>
+                    <div class="pricing-card">
+                        <h3>Balcony Bella</h3>
+                        <div class="price">$2,074</div>
+                        <div class="pricing-label">per stateroom</div>
+                        <p class="description">Includes drinks + wifi</p>
+                    </div>
+                    <div class="pricing-card">
+                        <h3>Deluxe Balcony 11-12</h3>
+                        <div class="price">$2,234</div>
+                        <div class="pricing-label">per stateroom</div>
+                        <p class="description">Includes drinks + wifi</p>
+                    </div>
+                    <div class="pricing-card">
+                        <h3>Deluxe Balcony 13-14</h3>
+                        <div class="price">$2,254</div>
+                        <div class="pricing-label">per stateroom</div>
+                        <p class="description">Includes drinks + wifi</p>
                     </div>
                 </div>
+            </div>
+
+            <div class="notice-box">
+                <p><strong>Planning is always free for you.</strong> Gratuities are not included and will be added to your onboard account. Final payment due 90 days before departure.</p>
             </div>
         </div>
     </section>
@@ -898,7 +867,7 @@
         <div class="container">
             <div class="section-header">
                 <h2>What's Included</h2>
-                <p>MSC Fantastica experience includes cabin choice and these great benefits</p>
+                <p>Your cruise includes these benefits</p>
             </div>
             <div class="included-grid">
                 <div class="included-item">
@@ -908,14 +877,6 @@
                         </svg>
                     </div>
                     <span>All meals in main dining rooms</span>
-                </div>
-                <div class="included-item">
-                    <div class="check-icon">
-                        <svg width="14" height="10" viewBox="0 0 14 10" fill="none">
-                            <path d="M1 5L5 9L13 1" stroke="#1F2937" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
-                    <span>Complimentary room service</span>
                 </div>
                 <div class="included-item">
                     <div class="check-icon">
@@ -980,7 +941,7 @@
                 <p>This cruise is for anyone who wants to travel without the overwhelm. Friends, family, solo travelers, couples, everyone is welcome.</p>
             </div>
             <div class="highlight-box">
-                <p>My planning service is always free. The cruise lines pay me, not you.</p>
+                <p>My planning service is always free for you.</p>
             </div>
         </div>
     </section>
