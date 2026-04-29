@@ -2,6 +2,7 @@ import { useNavigate, type NavigateFunction } from "react-router-dom";
 import { useRoutes } from "react-router-dom";
 import { useEffect } from "react";
 import routes from "./config";
+import EveryoneWelcome from './EveryoneWelcome';
 
 let navigateResolver: (navigate: ReturnType<typeof useNavigate>) => void;
 
