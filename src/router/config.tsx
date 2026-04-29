@@ -6,6 +6,8 @@ import Testimonials from "../pages/testimonials/page";
 import ReviewSuccess from "../pages/review-success/page";
 import Destinations from "../pages/destinations/page";
 import EveryoneWelcome from "../pages/everyone-welcome/page";
+import EveryoneWelcome from "../pages/everyone-welcome";
+
 const routes: RouteObject[] = [
   {
     path: "/",
