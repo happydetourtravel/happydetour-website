@@ -3,6 +3,7 @@
     { "source": "/everyonewelcome", "destination": "/everyonewelcome.html" },
     { "source": "/about", "destination": "/about.html" },
     { "source": "/links", "destination": "/links.html" },
+    { "source": "/anniversarycruise", "destination": "/anniversarycruise.html" },
     { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
