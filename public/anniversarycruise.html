@@ -279,46 +279,18 @@
         }
 
         @media (max-width: 768px) {
-            body {
-                padding: 1rem 0.5rem;
-            }
-
-            .header {
-                padding: 1.5rem 1.5rem;
-            }
-
-            .title-section h2 {
-                font-size: 2rem;
-            }
-
-            .title-section .subtitle {
-                font-size: 1.25rem;
-            }
-
-            .content-section {
-                padding: 0 1.5rem 1.5rem;
-            }
-
-            .pricing-box {
-                margin: 1.5rem 1.5rem;
-                padding: 1.5rem;
-            }
-
-            .total-price .amount {
-                font-size: 1.5rem;
-            }
+            body { padding: 1rem 0.5rem; }
+            .header { padding: 1.5rem 1.5rem; }
+            .title-section h2 { font-size: 2rem; }
+            .title-section .subtitle { font-size: 1.25rem; }
+            .content-section { padding: 0 1.5rem 1.5rem; }
+            .pricing-box { margin: 1.5rem 1.5rem; padding: 1.5rem; }
+            .total-price .amount { font-size: 1.5rem; }
         }
 
         @media print {
-            body {
-                background: white;
-                padding: 0;
-            }
-
-            .flyer-container {
-                box-shadow: none;
-                max-width: 100%;
-            }
+            body { background: white; padding: 0; }
+            .flyer-container { box-shadow: none; max-width: 100%; }
         }
     </style>
 </head>
@@ -330,11 +302,20 @@
             <p>Your Caribbean Adventure Awaits!</p>
         </div>
 
+        <!-- URGENCY BANNER -->
+        <div style="background: var(--coral); color: white; text-align: center; padding: 10px; font-weight: 800; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px;">
+            🚨 72-Hour Sale Ends Tonight! Book by 11:59 PM 🚨
+        </div>
+
         <!-- Title Section -->
         <div class="title-section">
             <h2>SOUTHERN CARIBBEAN</h2>
             <p class="subtitle">Aruba • Bonaire • Curacao</p>
             <p class="cruise-info">8 Days Aboard Carnival Horizon</p>
+            <!-- PRICE DATE STAMP -->
+            <p style="font-size: 0.8rem; color: #6B7280; margin-top: 10px; font-style: italic;">
+                Pricing current as of April 30, 2026
+            </p>
         </div>
 
         <!-- Ship Image -->
