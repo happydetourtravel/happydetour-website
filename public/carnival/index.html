@@ -1,1 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carnival Horizon ABC Islands Cruise | Happy Detour Travel</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            color: #1F2937;
+            line-height: 1.6;
+            background: #F9FAFB;
+        }
+
+        .header {
+            background: #007298;
+            color: white;
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .tagline {
+            font-size: 0.9rem;
+            opacity: 0.95;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #007298 0%, #005a78 100%);
+            color: white;
+            padding: 3rem 1.5rem;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .hero .cruise-line {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            opacity: 0.9;
+        }
+
+        .hero .dates {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-top: 1rem;
+            background: rgba(255,255,255,0.15);
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+        }
+
+        .section {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        .section h3 {
+            color: #007298;
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+
+        .itinerary-item {
+            padding: 1rem 0;
+            border-bottom: 1px solid #E5E7EB;
+        }
+
+        .itinerary-item:last-child {
+            border-bottom: none;
+        }
+
+        .day-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .day-number {
+            background: #007298;
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.1rem;
+            flex-shrink: 0;
+        }
+
+        .day-info {
+            flex: 1;
+        }
+
+        .day-name {
+            font-weight: 600;
+            color: #1F2937;
+            font-size: 1.1rem;
+        }
+
+        .port-name {
+            color: #007298;
+            font-weight: 600;
+            font-size: 1.2rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .port-times {
+            color: #6B7280;
+            font-size: 0.95rem;
+        }
+
+        .fun-fact {
+            background: #FEF3C7;
+            border-left: 4px solid #F59E0B;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 6px;
+        }
+
+        .fun-fact strong {
+            color: #D97706;
+        }
+
+        .pricing-grid {
+            display: grid;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .price-card {
+            border: 2px solid #E5E7EB;
+            border-radius: 8px;
+            padding: 1.25rem;
+            transition: all 0.3s;
+        }
+
+        .price-card:hover {
+            border-color: #007298;
+            box-shadow: 0 4px 12px rgba(0,114,152,0.15);
+        }
+
+        .room-type {
+            font-weight: 700;
+            color: #1F2937;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .cabin-category {
+            color: #6B7280;
+            font-size: 0.9rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .price {
+            color: #007298;
+            font-size: 2rem;
+            font-weight: 700;
+        }
+
+        .per-person {
+            color: #6B7280;
+            font-size: 0.9rem;
+            font-weight: 400;
+        }
+
+        .availability {
+            background: #D1FAE5;
+            color: #065F46;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            display: inline-block;
+            margin-top: 0.75rem;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .highlight-box {
+            background: #EFF6FF;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .highlight-box h4 {
+            color: #007298;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .highlight-box ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .highlight-box li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .highlight-box li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #007298;
+            font-weight: 700;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
+            color: white;
+            padding: 3rem 2rem;
+            border-radius: 12px;
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .cta-section h3 {
+            color: white;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: #D97706;
+            padding: 1rem 2.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+        }
+
+        .contact-info {
+            text-align: center;
+            margin-top: 1.5rem;
+        }
+
+        .contact-info a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .footer {
+            background: #1F2937;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .footer .tagline-footer {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .footer .social {
+            color: #F59E0B;
+            font-weight: 600;
+        }
+
+        @media (max-width: 768px) {
+            .hero h2 {
+                font-size: 2rem;
+            }
+
+            .section {
+                padding: 1.5rem;
+            }
+
+            .price {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>HAPPY DETOUR TRAVEL</h1>
+        <div class="tagline">Affordable vacations. Fun experiences. Everyone welcome.</div>
+    </div>
+
+    <div class="hero">
+        <div class="cruise-line">Carnival Horizon</div>
+        <h2>Southern Caribbean<br>ABC Islands Adventure</h2>
+        <div class="dates">October 10 to 18, 2026</div>
+    </div>
+
+    <div class="container">
+        <div class="section">
+            <h3>🌴 Your 8-Day Caribbean Escape</h3>
+            <p style="font-size: 1.1rem; margin-bottom: 1.5rem;">
+                Get ready for turquoise waters, white sand beaches, and island vibes! This cruise takes you to Aruba, Bonaire, and Curaçao (the ABC islands), plus a fun day at sea to enjoy everything Carnival has to offer.
+            </p>
+
+            <div style="background: linear-gradient(135deg, #10B981 0%, #059669 100%); color: white; padding: 1.5rem; border-radius: 10px; text-align: center; margin-bottom: 1.5rem; box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);">
+                <div style="font-size: 1.4rem; font-weight: 700; margin-bottom: 0.5rem;">🔥 Interior Cabins Starting at Just $644!</div>
+                <div style="font-size: 1.1rem; opacity: 0.95;">That's less than $81 per day for an incredible Caribbean adventure</div>
+            </div>
+
+            <div class="fun-fact">
+                <strong>Fun fact:</strong> The ABC islands are outside the hurricane belt, so you get gorgeous weather year-round. Perfect for October!
+            </div>
+
+            <div class="itinerary">
+                <div class="itinerary-item">
+                    <div class="day-header">
+                        <div class="day-number">1</div>
+                        <div class="day-info">
+                            <div class="day-name">Saturday, Oct 10</div>
+                            <div class="port-name">Miami, Florida</div>
+                            <div class="port-times">Departs 3:30 PM</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="itinerary-item">
+                    <div class="day-header">
+                        <div class="day-number">2</div>
+                        <div class="day-info">
+                            <div class="day-name">Sunday, Oct 11</div>
+                            <div class="port-name">Fun Day At Sea</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="itinerary-item">
+                    <div class="day-header">
+                        <div class="day-number">3</div>
+                        <div class="day-info">
+                            <div class="day-name">Monday, Oct 12</div>
+                            <div class="port-name">Fun Day At Sea</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="itinerary-item">
+                    <div class="day-header">
+                        <div class="day-number">4</div>
+                        <div class="day-info">
+                            <div class="day-name">Tuesday, Oct 13</div>
+                            <div class="port-name">Aruba</div>
+                            <div class="port-times">8:00 AM to 10:00 PM</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="itinerary-item">
+                    <div class="day-header">
+                        <div class="day-number">5</div>
+                        <div class="day-info">
+                            <div class="day-name">Wednesday, Oct 14</div>
+                            <div class="port-name">Bonaire</div>
+                            <div class="port-times">8:00 AM to 10:00 PM</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="itinerary-item">
+                    <div class="day-header">
+                        <div class="day-number">6</div>
+                        <div class="day-info">
+                            <div class="day-name">Thursday, Oct 15</div>
+                            <div class="port-name">Curaçao</div>
+                            <div class="port-times">8:00 AM to 5:00 PM</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="itinerary-item">
+                    <div class="day-header">
+                        <div class="day-number">7</div>
+                        <div class="day-info">
+                            <div class="day-name">Friday, Oct 16</div>
+                            <div class="port-name">Fun Day At Sea</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="itinerary-item">
+                    <div class="day-header">
+                        <div class="day-number">8</div>
+                        <div class="day-info">
+                            <div class="day-name">Saturday, Oct 17</div>
+                            <div class="port-name">Fun Day At Sea</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="itinerary-item">
+                    <div class="day-header">
+                        <div class="day-number">9</div>
+                        <div class="day-info">
+                            <div class="day-name">Sunday, Oct 18</div>
+                            <div class="port-name">Miami, Florida</div>
+                            <div class="port-times">Arrives 8:00 AM</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>🎉 Why You'll Love This Trip</h3>
+            
+            <div class="highlight-box">
+                <h4>Onboard Fun</h4>
+                <ul>
+                    <li>WaterWorks aqua park with epic water slides</li>
+                    <li>SkyRide, a suspended bike track around the ship</li>
+                    <li>Comedy shows, live music, and late-night fun</li>
+                    <li>Multiple pools, hot tubs, and deck parties</li>
+                    <li>Guy's Burger Joint, BlueIguana Cantina, and more dining</li>
+                </ul>
+            </div>
+
+            <div class="highlight-box">
+                <h4>Island Adventures</h4>
+                <ul>
+                    <li>Aruba: Eagle Beach (one of the world's best beaches!)</li>
+                    <li>Bonaire: Amazing snorkeling and diving</li>
+                    <li>Curaçao: Colorful Willemstad and hidden coves</li>
+                    <li>Long port days so you have time to explore</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>💰 Amazing Pricing for an Incredible Trip</h3>
+            <p style="margin-bottom: 0.5rem; font-size: 1.15rem; font-weight: 600; color: #059669;">These prices won't last long!</p>
+            <p style="margin-bottom: 1.5rem;">Choose the cabin that fits your style. All prices are per person based on double occupancy.</p>
+
+            <div class="pricing-grid">
+                <div class="price-card">
+                    <div class="room-type">Interior Cabin</div>
+                    <div class="cabin-category">Cozy and affordable</div>
+                    <div class="price">$644 to $654<span class="per-person"> per person</span></div>
+                    <p style="margin-top: 1rem; color: #6B7280; font-size: 0.95rem;">Pricing varies by deck location</p>
+                </div>
+
+                <div class="price-card">
+                    <div class="room-type">Balcony Cabin</div>
+                    <div class="cabin-category">Private balcony with ocean views</div>
+                    <div class="price">$1,204 to $1,229<span class="per-person"> per person</span></div>
+                    <p style="margin-top: 1rem; color: #6B7280; font-size: 0.95rem;">Pricing varies by deck location</p>
+                </div>
+            </div>
+
+            <div class="fun-fact" style="margin-top: 2rem;">
+                <strong>What's included:</strong> Your cabin, all meals, entertainment, pools, waterpark, and most activities onboard. Add excursions, specialty dining, and drinks as you like!
+            </div>
+        </div>
+
+        <div class="cta-section">
+            <h3>Don't Miss Out on This Amazing Deal!</h3>
+            <p>I've got 16 cabins reserved for this trip at these special group rates. Once they're gone, they're gone!</p>
+            <p style="font-size: 1.3rem; font-weight: 700; margin-bottom: 1.5rem;">Let's get you booked today.</p>
+            <div class="contact-info">
+                <p style="font-size: 1.2rem; margin-bottom: 0.5rem;">📱 Text or call me at <a href="tel:312-460-2501">312-460-2501</a></p>
+                <p style="font-size: 1.2rem;">📧 Email <a href="mailto:eric@happydetour.com">eric@happydetour.com</a></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="tagline-footer">Affordable vacations. Fun experiences. Everyone welcome.</div>
+        <div class="social" style="margin-top: 1rem;">
+            <a href="https://www.instagram.com/happydetourtravel" style="color: #F59E0B; text-decoration: none;">@happydetourtravel</a> | 
+            <a href="https://happydetour.com" style="color: #F59E0B; text-decoration: none;">happydetour.com</a> | 
+            <a href="mailto:eric@happydetour.com" style="color: #F59E0B; text-decoration: none;">eric@happydetour.com</a>
+        </div>
+        <p style="margin-top: 1rem; font-size: 0.85rem; opacity: 0.7;">© 2026 Happy Detour Travel LLC</p>
+        <p style="margin-top: 0.5rem; font-size: 0.8rem; opacity: 0.6;">Last updated: <span id="lastModified"></span></p>
+    </div>
+    <script>
+        // Display last modified date and time
+        const lastMod = new Date(document.lastModified);
+        const options = { 
+            year: 'numeric', 
+            month: 'long', 
+            day: 'numeric', 
+            hour: 'numeric', 
+            minute: '2-digit',
+            hour12: true 
+        };
+        document.getElementById('lastModified').textContent = lastMod.toLocaleDateString('en-US', options);
+    </script>
+</body>
+</html>
