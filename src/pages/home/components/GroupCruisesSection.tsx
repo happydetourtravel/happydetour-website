@@ -30,7 +30,7 @@ export default function GroupCruisesSection() {
                     <div style={{ background: 'white', borderRadius: '12px', overflow: 'hidden', boxShadow: '0 4px 20px rgba(0,0,0,0.08)', transition: 'transform 0.3s' }}>
                         <img src="/Aruba.jpg" alt="Carnival ABC Islands Cruise" style={{ width: '100%', height: '240px', objectFit: 'cover' }} />
                         <div style={{ padding: '1.75rem' }}>
-                            <div style={{ display: 'inline-block', background: '#FF6B35', color: 'white', fontSize: '0.75rem', fontWeight: 700, padding: '0.4rem 0.9rem', borderRadius: '100px', marginBottom: '1rem', textTransform: 'uppercase', letterSpacing: '0.05em' }}>October 2026</div>
+                            <div style={{ display: 'inline-block', background: '#FF6B35', color: 'white', fontSize: '0.75rem', fontWeight: 700, padding: '0.4rem 0.9rem', borderRadius: '100px', marginBottom: '1rem', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Oct 10–18, 2026</div>
                             <h3 style={{ fontSize: '1.5rem', fontWeight: 700, color: '#1F2937', marginBottom: '0.75rem' }}>ABC Islands</h3>
                             <p style={{ color: '#6B7280', fontSize: '0.95rem', lineHeight: 1.6, marginBottom: '1.25rem' }}>8 days aboard Carnival Horizon. Aruba, Bonaire, Curaçao. Pure Caribbean paradise.</p>
                             <div style={{ marginBottom: '1.5rem' }}>
