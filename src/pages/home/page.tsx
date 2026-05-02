@@ -1,5 +1,6 @@
 import NavBar from "./components/NavBar";
 import HeroSection from "./components/HeroSection";
+import GroupCruisesSection from "./components/GroupCruisesSection";  // ← ADD THIS LINE
 import ScrollReveal from "../../components/base/ScrollReveal";
 import TravelServices from "./components/TravelServices";
 import HowItWorks from "./components/HowItWorks";
@@ -17,7 +18,7 @@ export default function Home() {
       <NavBar />
       <main>
         <HeroSection />
-
+        <GroupCruisesSection />  
         {/* Reassurance strip */}
         <div className="bg-amber-50 border-b border-amber-100 py-6 px-6">
           <ScrollReveal direction="up" delay={0} duration={600}>
@@ -28,7 +29,6 @@ export default function Home() {
             </p>
           </ScrollReveal>
         </div>
-
         <AboutSection />
         <TravelServices />
         <HowItWorks />
