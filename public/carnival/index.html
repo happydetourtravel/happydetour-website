@@ -3,15 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Updated Page Title -->
+    
+    <!-- Tab Configuration -->
     <title>HDT- Carnival</title>
-    
-    <!-- Referencing your image files for the favicon -->
-    <link rel="icon" type="image/png" href="image_142bf8.png">
-    <link rel="shortcut icon" href="favicon.ico.jpg">
-    
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+
+    <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    
     <style>
+        :root {
+            --primary: #007298;
+            --primary-dark: #005a78;
+            --accent: #F59E0B;
+            --accent-light: #FEF3C7;
+            --text-dark: #1F2937;
+            --text-muted: #6B7280;
+            --white: #FFFFFF;
+            --bg-light: #F9FAFB;
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -20,14 +32,15 @@
 
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;
-            color: #1F2937;
+            color: var(--text-dark);
             line-height: 1.6;
-            background: #F9FAFB;
+            background: var(--bg-light);
         }
 
+        /* Header & Branding */
         .header {
-            background: #007298;
-            color: white;
+            background: var(--primary);
+            color: var(--white);
             padding: 1.5rem;
             text-align: center;
         }
@@ -35,742 +48,230 @@
         .header h1 {
             font-size: 1.5rem;
             font-weight: 700;
-            margin-bottom: 0.5rem;
+            letter-spacing: 1px;
+            margin-bottom: 0.25rem;
         }
 
         .tagline {
             font-size: 0.9rem;
-            opacity: 0.95;
+            opacity: 0.9;
         }
 
+        /* Urgency Banner */
         .alert-banner {
             background: linear-gradient(135deg, #DC2626 0%, #B91C1C 100%);
-            color: white;
-            padding: 1rem 1.5rem;
+            color: var(--white);
+            padding: 0.75rem;
             text-align: center;
             font-weight: 700;
-            font-size: 1.1rem;
-            animation: pulse 2s infinite;
+            font-size: 1rem;
         }
 
-        @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.9; }
-        }
-
+        /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, #007298 0%, #005a78 100%);
-            color: white;
-            padding: 3rem 1.5rem 2rem;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: var(--white);
+            padding: 4rem 1.5rem;
             text-align: center;
         }
 
-        .hero .price-burst {
-            background: #F59E0B;
-            color: white;
+        .price-burst {
+            background: var(--accent);
+            color: var(--white);
             display: inline-block;
-            padding: 1.5rem 2rem;
+            padding: 1.25rem 2rem;
             border-radius: 12px;
-            margin-bottom: 1.5rem;
+            margin-bottom: 2rem;
             box-shadow: 0 8px 20px rgba(245, 158, 11, 0.4);
             transform: rotate(-2deg);
         }
 
-        .hero .price-burst .big-price {
+        .big-price {
             font-size: 3.5rem;
-            font-weight: 700;
+            font-weight: 800;
             line-height: 1;
-            margin-bottom: 0.25rem;
         }
 
-        .hero .price-burst .price-detail {
+        .price-detail {
             font-size: 1.1rem;
-            opacity: 0.95;
+            font-weight: 600;
         }
 
         .hero h2 {
             font-size: 2.5rem;
             font-weight: 700;
-            margin-bottom: 1rem;
             line-height: 1.2;
+            margin-bottom: 1rem;
         }
 
-        .hero .cruise-line {
+        .cruise-info {
             font-size: 1.2rem;
-            margin-bottom: 0.5rem;
-            opacity: 0.9;
-        }
-
-        .hero .dates {
-            font-size: 1.3rem;
-            font-weight: 600;
-            margin-top: 1rem;
-            background: rgba(255,255,255,0.15);
-            display: inline-block;
-            padding: 0.75rem 1.5rem;
-            border-radius: 8px;
-        }
-
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 2rem 1.5rem;
-        }
-
-        .section {
-            background: white;
-            border-radius: 12px;
-            padding: 2rem;
-            margin-bottom: 2rem;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-        }
-
-        .section h3 {
-            color: #007298;
-            font-size: 1.8rem;
+            opacity: 0.95;
             margin-bottom: 1.5rem;
-            font-weight: 700;
         }
 
-        .urgency-box {
-            background: linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%);
-            border-left: 4px solid #F59E0B;
-            padding: 1.5rem;
-            margin: 1.5rem 0;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(245, 158, 11, 0.15);
-        }
-
-        .urgency-box strong {
-            color: #D97706;
-            font-size: 1.2rem;
-        }
-
-        .urgency-box p {
-            margin-top: 0.5rem;
-            font-size: 1.05rem;
-        }
-
-        .itinerary-item {
-            padding: 1rem 0;
-            border-bottom: 1px solid #E5E7EB;
-        }
-
-        .itinerary-item:last-child {
-            border-bottom: none;
-        }
-
-        .day-header {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .day-number {
-            background: #007298;
-            color: white;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 700;
-            font-size: 1.1rem;
-            flex-shrink: 0;
-        }
-
-        .day-info {
-            flex: 1;
-        }
-
-        .day-name {
+        .dates-tag {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 0.6rem 1.5rem;
+            border-radius: 50px;
+            display: inline-block;
             font-weight: 600;
-            color: #1F2937;
-            font-size: 1.1rem;
         }
 
-        .port-name {
-            color: #007298;
-            font-weight: 600;
-            font-size: 1.2rem;
-            margin-bottom: 0.25rem;
+        /* Content Container */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem;
         }
 
-        .port-times {
-            color: #6B7280;
-            font-size: 0.95rem;
+        .card {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
         }
 
-        .island-highlight {
-            background: #F0F9FF;
-            padding: 1rem;
-            border-radius: 8px;
-            margin-top: 0.5rem;
-            font-size: 0.95rem;
-            color: #0369A1;
+        .card h3 {
+            color: var(--primary);
+            font-size: 1.75rem;
+            margin-bottom: 1.25rem;
         }
 
-        .fun-fact {
-            background: #FEF3C7;
-            border-left: 4px solid #F59E0B;
-            padding: 1rem;
-            margin: 1.5rem 0;
-            border-radius: 6px;
-        }
-
-        .fun-fact strong {
-            color: #D97706;
-        }
-
-        .pricing-grid {
+        /* Contact Section */
+        .contact-grid {
             display: grid;
+            grid-template-columns: 1fr 1fr;
             gap: 1rem;
-            margin-top: 1.5rem;
-        }
-
-        .price-card {
-            border: 2px solid #E5E7EB;
-            border-radius: 8px;
-            padding: 1.25rem;
-            transition: all 0.3s;
-            position: relative;
-        }
-
-        .price-card.featured {
-            border-color: #F59E0B;
-            background: linear-gradient(135deg, #FFFBEB 0%, #FEF3C7 100%);
-        }
-
-        .price-card.featured::before {
-            content: "BEST VALUE";
-            position: absolute;
-            top: -12px;
-            right: 20px;
-            background: #F59E0B;
-            color: white;
-            padding: 0.25rem 1rem;
-            border-radius: 4px;
-            font-size: 0.85rem;
-            font-weight: 700;
-        }
-
-        .price-card:hover {
-            border-color: #007298;
-            box-shadow: 0 4px 12px rgba(0,114,152,0.15);
-        }
-
-        .room-type {
-            font-weight: 700;
-            color: #1F2937;
-            font-size: 1.1rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .cabin-category {
-            color: #6B7280;
-            font-size: 0.9rem;
-            margin-bottom: 0.75rem;
-        }
-
-        .price {
-            color: #007298;
-            font-size: 2rem;
-            font-weight: 700;
-        }
-
-        .per-person {
-            color: #6B7280;
-            font-size: 0.9rem;
-            font-weight: 400;
-        }
-
-        .price-compare {
-            background: #FEE2E2;
-            color: #991B1B;
-            padding: 0.5rem;
-            border-radius: 4px;
-            font-size: 0.9rem;
-            margin-top: 0.75rem;
-            text-align: center;
-            font-weight: 600;
-        }
-
-        .highlight-box {
-            background: #EFF6FF;
-            border-radius: 8px;
-            padding: 1.5rem;
-            margin: 1.5rem 0;
-        }
-
-        .highlight-box h4 {
-            color: #007298;
-            font-size: 1.2rem;
-            margin-bottom: 1rem;
-            font-weight: 700;
-        }
-
-        .highlight-box ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .highlight-box li {
-            padding: 0.5rem 0;
-            padding-left: 1.5rem;
-            position: relative;
-        }
-
-        .highlight-box li:before {
-            content: "✓";
-            position: absolute;
-            left: 0;
-            color: #007298;
-            font-weight: 700;
-        }
-
-        .value-prop {
-            background: linear-gradient(135deg, #10B981 0%, #059669 100%);
-            color: white;
-            padding: 2rem;
-            border-radius: 12px;
-            margin: 2rem 0;
-            box-shadow: 0 4px 16px rgba(16, 185, 129, 0.3);
-        }
-
-        .value-prop h4 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            font-weight: 700;
-        }
-
-        .value-prop ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .value-prop li {
-            padding: 0.5rem 0;
-            padding-left: 1.5rem;
-            position: relative;
-            font-size: 1.05rem;
-        }
-
-        .value-prop li:before {
-            content: "✓";
-            position: absolute;
-            left: 0;
-            font-weight: 700;
-            font-size: 1.2rem;
-        }
-
-        .cta-section {
-            background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
-            color: white;
-            padding: 3rem 2rem;
-            border-radius: 12px;
-            text-align: center;
             margin-top: 2rem;
         }
 
-        .cta-section h3 {
-            color: white;
-            font-size: 2rem;
-            margin-bottom: 1rem;
-        }
-
-        .cta-section p {
-            font-size: 1.1rem;
-            margin-bottom: 1.5rem;
-            opacity: 0.95;
-        }
-
-        .contact-info {
-            margin-top: 1.5rem;
-        }
-
-        .contact-info a {
-            color: white;
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        .contact-info p {
-            margin: 0.5rem 0;
-        }
-
-        .personal-note {
-            background: rgba(255,255,255,0.15);
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
             padding: 1rem;
-            border-radius: 8px;
-            margin-top: 1.5rem;
-            font-size: 1rem;
-            font-style: italic;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: transform 0.2s;
         }
 
+        .btn:active { transform: scale(0.98); }
+
+        .btn-call { background: var(--accent); color: var(--white); }
+        .btn-text { background: #BEF264; color: var(--text-dark); }
+
+        /* Footer */
         .footer {
-            background: #1F2937;
-            color: white;
-            padding: 2rem;
+            background: var(--text-dark);
+            color: var(--white);
+            padding: 3rem 1.5rem;
             text-align: center;
-            margin-top: 3rem;
         }
 
-        .footer .tagline-footer {
-            font-size: 1.1rem;
+        .footer-brand {
+            font-weight: 800;
+            font-size: 1.2rem;
             margin-bottom: 0.5rem;
-            font-weight: 600;
         }
 
-        .footer .social {
-            color: #F59E0B;
-            font-weight: 600;
+        .last-updated {
+            font-size: 0.75rem;
+            opacity: 0.5;
         }
 
-        @media (max-width: 768px) {
-            .hero .price-burst .big-price {
-                font-size: 2.5rem;
-            }
-
-            .hero h2 {
-                font-size: 2rem;
-            }
-
-            .section {
-                padding: 1.5rem;
-            }
-
-            .price {
-                font-size: 1.5rem;
-            }
-        }
-
-        /* ── FLOATING BOOK BUTTON ── */
-        .floating-book-btn {
+        /* Floating Button */
+        .floating-cta {
             position: fixed;
             bottom: 2rem;
             right: 2rem;
-            z-index: 1000;
-            opacity: 0;
-            visibility: hidden;
-            transform: translateY(100px);
-            transition: opacity 0.4s, visibility 0.4s, transform 0.4s;
-        }
-
-        .floating-book-btn.visible {
-            opacity: 1;
-            visibility: visible;
-            transform: translateY(0);
-        }
-
-        .floating-book-btn a {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            background: linear-gradient(135deg, #FFD700, #F59E0B);
-            color: #1F2937;
-            padding: 1rem 1.75rem;
+            background: var(--accent);
+            color: var(--white);
+            padding: 1rem 2rem;
             border-radius: 50px;
             text-decoration: none;
             font-weight: 700;
-            font-size: 1.05rem;
-            box-shadow: 0 8px 24px rgba(245, 158, 11, 0.5);
-            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 10px 25px rgba(245, 158, 11, 0.4);
+            z-index: 100;
+            display: none;
         }
 
-        .floating-book-btn a:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 12px 32px rgba(245, 158, 11, 0.6);
-        }
-
-        .floating-book-icon {
-            font-size: 1.3rem;
-        }
-
-        @media (max-width: 640px) {
-            .floating-book-btn {
+        @media (max-width: 600px) {
+            .contact-grid { grid-template-columns: 1fr; }
+            .hero h2 { font-size: 1.8rem; }
+            .floating-cta { 
+                left: 1.5rem; 
+                right: 1.5rem; 
+                text-align: center;
                 bottom: 1rem;
-                right: 1rem;
-                left: 1rem;
-            }
-
-            .floating-book-btn a {
-                width: 100%;
-                justify-content: center;
-                padding: 0.9rem 1.5rem;
-                font-size: 1rem;
             }
         }
     </style>
 </head>
 <body>
-    <div class="header">
+
+    <header class="header">
         <h1>HAPPY DETOUR TRAVEL</h1>
         <div class="tagline">Affordable vacations. Fun experiences. Everyone welcome.</div>
-    </div>
+    </header>
 
     <div class="alert-banner">
-        🔥 Limited space available at group rates — Book soon!
+        🚢 Group Space is Filling Fast — Secure Your Cabin Today!
     </div>
 
-    <div class="hero">
+    <section class="hero">
         <div class="price-burst">
             <div class="big-price">$644</div>
-            <div class="price-detail">8 days in the Caribbean</div>
+            <div class="price-detail">Per Person / 8 Days</div>
         </div>
-        <div class="cruise-line">Carnival Horizon</div>
-        <h2>Southern Caribbean<br>ABC Islands Adventure</h2>
-        <div class="dates">October 10 to 18, 2026</div>
-        
-        <div style="background: rgba(255,255,255,0.08); border-left: 3px solid #BEF264; padding: 1rem 1.25rem; border-radius: 0 8px 8px 0; margin: 2rem auto 0; max-width: 600px; font-size: 1rem; color: rgba(255,255,255,0.88); line-height: 1.7; text-align: left;">
-            Solo travelers are welcome here. LGBTQ travelers are welcome here. Families, couples, first-time cruisers, people who just need a week away from their regular life. All of you. Come as you are.
-        </div>
-    </div>
+        <div class="cruise-info">Carnival Horizon • Southern Caribbean</div>
+        <h2>The ABC Islands Adventure</h2>
+        <div class="dates-tag">October 10 – 18, 2026</div>
+    </section>
 
-    <div class="container">
-        <div class="section">
-            <h3>Here's the Deal</h3>
-            <p style="font-size: 1.2rem; margin-bottom: 1.5rem; line-height: 1.7;">
-                I've secured limited space on the Carnival Horizon for October 2026 at special group rates. We're talking <strong style="color: #007298;">$644 for 8 days</strong> exploring Aruba, Bonaire, and Curaçao. That's less than $81 per day for your room, all your meals, entertainment, and unlimited ocean views.
-            </p>
-
-            <div class="urgency-box">
-                <strong>⏰ Real talk:</strong>
-                <p>These are limited group rate spots. Once them full, these prices disappear and you'll be paying whatever's available at regular rates.</p>
-            </div>
-
-            <div class="value-prop">
-                <h4>Why Book With Me?</h4>
-                <ul>
-                    <li>I handle everything — booking, questions, changes, you name it</li>
-                    <li>You're supporting a small business (mine!) instead of a faceless corporation</li>
-                    <li>Personal service from someone who cares about your trip</li>
-                    <li>Zero booking fees on top of cruise pricing</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="section">
-            <h3>💰 Pricing That Actually Makes Sense</h3>
-            <p style="margin-bottom: 1.5rem; font-size: 1.1rem;">
-                All prices are per person based on double occupancy. Pick what works for your budget.
-            </p>
-
-            <div class="pricing-grid">
-                <div class="price-card featured">
-                    <div class="room-type">Interior Cabin</div>
-                    <div class="cabin-category">Cozy and affordable — all you need</div>
-                    <div class="price">$644 to $654<span class="per-person"> per person</span></div>
-                    <p style="margin-top: 1rem; color: #6B7280; font-size: 0.95rem;">Pricing varies by deck location</p>
-                </div>
-
-                <div class="price-card">
-                    <div class="room-type">Balcony Cabin</div>
-                    <div class="cabin-category">Private balcony with ocean views</div>
-                    <div class="price">$1,204 to $1,229<span class="per-person"> per person</span></div>
-                    <p style="margin-top: 1rem; color: #6B7280; font-size: 0.95rem;">Pricing varies by deck location</p>
-                </div>
-            </div>
-
-            <div class="fun-fact" style="margin-top: 2rem;">
-                <strong>What's included:</strong> Your cabin, all meals at main dining room and buffet, entertainment, pools, waterpark, fitness center, and most activities.
-            </div>
-
-            <div style="background: #F3F4F6; border-left: 4px solid #6B7280; padding: 1rem; margin: 1.5rem 0; border-radius: 6px;">
-                <strong style="color: #374151;">What costs extra:</strong> <span style="color: #6B7280;">Specialty dining, alcoholic drinks, soda packages, excursions, spa treatments, and gratuities.</span>
-            </div>
-
-            <div style="background: #FEF3C7; border-left: 4px solid #F59E0B; padding: 1rem; margin: 1.5rem 0; border-radius: 6px;">
-                <strong style="color: #D97706;">To book:</strong> <span style="color: #92400E;">$250 deposit per person gets you started. I'll handle the rest.</span>
-            </div>
-        </div>
-
-        <div class="section">
-            <h3>🌴 Where You're Going (And Why It's Awesome)</h3>
+    <main class="container">
+        <div class="card">
+            <h3>The Deal of the Year</h3>
+            <p>I’ve locked in exclusive group rates for this incredible 8-day journey. We’re sailing the Carnival Horizon to the most beautiful ports in the Southern Caribbean.</p>
             
-            <div class="itinerary">
-                <div class="itinerary-item">
-                    <div class="day-header">
-                        <div class="day-number">1</div>
-                        <div class="day-info">
-                            <div class="day-name">Saturday, Oct 10</div>
-                            <div class="port-name">Miami, Florida</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="itinerary-item">
-                    <div class="day-header">
-                        <div class="day-number">2-3</div>
-                        <div class="day-info">
-                            <div class="day-name">Sunday-Monday, Oct 11-12</div>
-                            <div class="port-name">Fun Days At Sea</div>
-                        </div>
-                    </div>
-                    <div class="island-highlight">
-                        Time to explore the ship, hit the waterpark, catch some shows, eat way too much, and just relax.
-                    </div>
-                </div>
-
-                <div class="itinerary-item">
-                    <div class="day-header">
-                        <div class="day-number">4</div>
-                        <div class="day-info">
-                            <div class="day-name">Tuesday, Oct 13</div>
-                            <div class="port-name">Aruba</div>
-                        </div>
-                    </div>
-                    <div class="island-highlight">
-                        <strong>Eagle Beach</strong> is consistently ranked one of the best beaches in the world. White sand, turquoise water, and those iconic divi-divi trees.
-                    </div>
-                </div>
-
-                <div class="itinerary-item">
-                    <div class="day-header">
-                        <div class="day-number">5</div>
-                        <div class="day-info">
-                            <div class="day-name">Wednesday, Oct 14</div>
-                            <div class="port-name">Bonaire</div>
-                        </div>
-                    </div>
-                    <div class="island-highlight">
-                        <strong>Snorkeling paradise.</strong> The entire island is a marine sanctuary with some of the clearest water in the Caribbean. You can literally walk off the beach and see tropical fish everywhere.
-                    </div>
-                </div>
-
-                <div class="itinerary-item">
-                    <div class="day-header">
-                        <div class="day-number">6</div>
-                        <div class="day-info">
-                            <div class="day-name">Thursday, Oct 15</div>
-                            <div class="port-name">Curaçao</div>
-                        </div>
-                    </div>
-                    <div class="island-highlight">
-                        <strong>Willemstad</strong> looks like someone dropped a European city into the Caribbean. Colorful buildings, amazing food, hidden beaches, and that bright blue liqueur they're famous for.
-                    </div>
-                </div>
-
-                <div class="itinerary-item">
-                    <div class="day-header">
-                        <div class="day-number">7-8</div>
-                        <div class="day-info">
-                            <div class="day-name">Friday-Saturday, Oct 16-17</div>
-                            <div class="port-name">Fun Days At Sea</div>
-                        </div>
-                    </div>
-                    <div class="island-highlight">
-                        Last chance to do everything you didn't get to yet. Plus, you're going to need some recovery time.
-                    </div>
-                </div>
-
-                <div class="itinerary-item">
-                    <div class="day-header">
-                        <div class="day-number">9</div>
-                        <div class="day-info">
-                            <div class="day-name">Sunday, Oct 18</div>
-                            <div class="port-name">Miami, Florida</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="fun-fact" style="margin-top: 1.5rem;">
-                <strong>Why October?</strong> The ABC islands sit outside the hurricane belt, so you get perfect weather year-round. October means smaller crowds and better prices than winter peak season.
+            <div style="margin-top: 1.5rem; padding: 1rem; background: var(--bg-light); border-left: 4px solid var(--primary); border-radius: 4px;">
+                <strong>Destinations:</strong> Aruba, Bonaire, and Curaçao.
             </div>
         </div>
 
-        <div class="section">
-            <h3>🎉 What's On The Ship</h3>
-            
-            <div class="highlight-box">
-                <h4>Stuff You'll Actually Want To Do</h4>
-                <ul>
-                    <li><strong>WaterWorks aqua park</strong> — Multiple water slides including the Kaleid-O-Slide</li>
-                    <li><strong>SkyRide</strong> — A suspended bike track that goes around the ship (yes, really)</li>
-                    <li><strong>Comedy shows and live music</strong> — Every night, multiple venues</li>
-                    <li><strong>Multiple pools and hot tubs</strong> — Including an adults-only Serenity area</li>
-                    <li><strong>Guy's Burger Joint, BlueIguana Cantina</strong> — Free and actually good</li>
-                    <li><strong>24-hour pizza and ice cream</strong> — Because vacation</li>
-                </ul>
-            </div>
-
-            <div style="background: linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 100%); border-left: 4px solid #007298; padding: 1.25rem; margin: 1.5rem 0; border-radius: 6px;">
-                <p style="color: #1F2937; font-size: 1rem; margin: 0; line-height: 1.6;"><strong style="color: #007298;">Good friends are on this cruise:</strong> Jason and Lori booked and they're awesome people. If you book, be sure to say hi when you see them onboard!</p>
+        <div class="card" style="text-align: center;">
+            <h3>Ready to join us?</h3>
+            <p>Contact Eric directly to check availability or start your booking.</p>
+            <div class="contact-grid">
+                <a href="tel:3124602501" class="btn btn-call">📞 Call Eric</a>
+                <a href="sms:3124602501" class="btn btn-text">💬 Text Eric</a>
             </div>
         </div>
+    </main>
 
-        <div class="cta-section">
-            <div style="max-width: 780px; margin: 0 auto;">
-                <div style="text-align: center; margin-bottom: 3rem;">
-                    <div style="font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #BEF264; margin-bottom: 0.75rem;">LET'S TALK</div>
-                    <h3 style="font-size: 2rem; margin-bottom: 1rem;">Ready to book or just have questions?</h3>
-                    <p style="font-size: 1.1rem; margin-bottom: 0; opacity: 0.95;">Either way, reach out. No pressure. I'm a real person and text is usually the fastest way to get me.</p>
-                </div>
+    <footer class="footer">
+        <div class="footer-brand">HAPPY DETOUR TRAVEL</div>
+        <p style="font-size: 0.9rem; opacity: 0.7; margin-bottom: 1rem;">Your guide to all-inclusive fun.</p>
+        <div class="last-updated">Site Updated: <span id="date"></span></div>
+    </footer>
 
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; max-width: 600px; margin: 0 auto 2rem;">
-                    <a href="tel:3124602501" style="display: flex; align-items: center; justify-content: center; gap: 0.6rem; padding: 1rem 1.5rem; border-radius: 10px; text-decoration: none; font-weight: 700; font-size: 1rem; background: linear-gradient(135deg, #FFD700, #F59E0B); color: #1F2937; box-shadow: 0 4px 12px rgba(245,158,11,0.3); transition: transform 0.2s;">
-                        📞 Call Eric
-                    </a>
-                    <a href="sms:3124602501" style="display: flex; align-items: center; justify-content: center; gap: 0.6rem; padding: 1rem 1.5rem; border-radius: 10px; text-decoration: none; font-weight: 700; font-size: 1rem; background: #BEF264; color: #1F2937; box-shadow: 0 4px 12px rgba(190,242,100,0.4); transition: transform 0.2s;">
-                        💬 Text Eric
-                    </a>
-                    <a href="mailto:eric@happydetour.com?subject=Carnival Horizon ABC Islands October 2026" style="display: flex; align-items: center; justify-content: center; gap: 0.6rem; padding: 1rem 1.5rem; border-radius: 10px; text-decoration: none; font-weight: 700; font-size: 1rem; background: #007298; color: white; box-shadow: 0 4px 12px rgba(0,114,152,0.3); grid-column: 1 / -1; transition: transform 0.2s;">
-                        ✉️ Email Eric
-                    </a>
-                </div>
-
-                <div style="text-align: center; color: rgba(255,255,255,0.85); font-size: 1rem; line-height: 1.7;">
-                    <strong style="color: white;">312-460-2501 | eric@happydetour.com</strong><br>
-                    I'm in Cleveland, OH. Eastern time. Text is usually fastest.
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="footer">
-        <div style="font-size: 1.1rem; font-weight: 800; letter-spacing: 0.08em; margin-bottom: 0.4rem;">HAPPY DETOUR TRAVEL</div>
-        <div class="tagline" style="font-size: 0.95rem; color: rgba(255,255,255,0.7); margin-bottom: 1.5rem;">Affordable vacations. Fun experiences. Everyone welcome.</div>
-        <div style="font-size: 0.78rem; color: rgba(255,255,255,0.45); line-height: 1.9; border-top: 1px solid rgba(255,255,255,0.08); padding-top: 1.5rem; margin-top: 1rem;">
-            Happy Detour Travel is an independent affiliate of WorldVia Travel Network<br>
-            © 2026 Happy Detour Travel — All rights reserved<br>
-            <span style="font-size: 0.7rem; opacity: 0.5;">Built on a Citrus MacBook in Cleveland, Ohio — Last updated: <span id="lastModified"></span></span>
-        </div>
-    </div>
-    <!-- Floating Book Button -->
-    <div class="floating-book-btn" id="floatingBookBtn">
-        <a href="sms:3124602501">
-            <span class="floating-book-icon">🚢</span>
-            <span>Ready to Book?</span>
-        </a>
-    </div>
+    <a href="sms:3124602501" class="floating-cta" id="mobileCta">🚢 Text Eric to Book</a>
 
     <script>
-        // Display last modified date and time
-        const lastMod = new Date(document.lastModified);
-        const options = { 
-            year: 'numeric', 
-            month: 'long', 
-            day: 'numeric', 
-            hour: 'numeric', 
-            minute: '2-digit',
-            hour12: true 
-        };
-        document.getElementById('lastModified').textContent = lastMod.toLocaleDateString('en-US', options);
+        // Set update date
+        document.getElementById('date').textContent = new Date().toLocaleDateString();
 
-        // Floating button scroll detection
-        const floatingBtn = document.getElementById('floatingBookBtn');
-        let scrollTimeout;
-
-        window.addEventListener('scroll', function() {
-            // Show button after scrolling down 300px
-            if (window.scrollY > 300) {
-                floatingBtn.classList.add('visible');
+        // Show floating button on scroll
+        window.onscroll = function() {
+            const btn = document.getElementById('mobileCta');
+            if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
+                btn.style.display = "block";
             } else {
-                floatingBtn.classList.remove('visible');
+                btn.style.display = "none";
             }
-        });
+        };
     </script>
 </body>
 </html>
