@@ -439,6 +439,63 @@
                 font-size: 1.5rem;
             }
         }
+
+        /* ── FLOATING BOOK BUTTON ── */
+        .floating-book-btn {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(100px);
+            transition: opacity 0.4s, visibility 0.4s, transform 0.4s;
+        }
+
+        .floating-book-btn.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .floating-book-btn a {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            background: linear-gradient(135deg, #FFD700, #F59E0B);
+            color: #1F2937;
+            padding: 1rem 1.75rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.05rem;
+            box-shadow: 0 8px 24px rgba(245, 158, 11, 0.5);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .floating-book-btn a:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 32px rgba(245, 158, 11, 0.6);
+        }
+
+        .floating-book-icon {
+            font-size: 1.3rem;
+        }
+
+        @media (max-width: 640px) {
+            .floating-book-btn {
+                bottom: 1rem;
+                right: 1rem;
+                left: 1rem;
+            }
+
+            .floating-book-btn a {
+                width: 100%;
+                justify-content: center;
+                padding: 0.9rem 1.5rem;
+                font-size: 1rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -675,6 +732,14 @@
             <span style="font-size: 0.7rem; opacity: 0.5;">Built on a Citrus MacBook in Cleveland, Ohio — Last updated: <span id="lastModified"></span></span>
         </div>
     </div>
+    <!-- Floating Book Button -->
+    <div class="floating-book-btn" id="floatingBookBtn">
+        <a href="sms:3124602501">
+            <span class="floating-book-icon">🚢</span>
+            <span>Ready to Book?</span>
+        </a>
+    </div>
+
     <script>
         // Display last modified date and time
         const lastMod = new Date(document.lastModified);
@@ -687,6 +752,19 @@
             hour12: true 
         };
         document.getElementById('lastModified').textContent = lastMod.toLocaleDateString('en-US', options);
+
+        // Floating button scroll detection
+        const floatingBtn = document.getElementById('floatingBookBtn');
+        let scrollTimeout;
+
+        window.addEventListener('scroll', function() {
+            // Show button after scrolling down 300px
+            if (window.scrollY > 300) {
+                floatingBtn.classList.add('visible');
+            } else {
+                floatingBtn.classList.remove('visible');
+            }
+        });
     </script>
 </body>
 </html>
