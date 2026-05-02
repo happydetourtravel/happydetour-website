@@ -4,10 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- Tab Configuration -->
+    <!-- Updated Tab Name -->
     <title>HDT- Carnival</title>
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    
+    <!-- Updated Favicon to use your PNG logo from the public folder -->
+    <!-- Replace "image_142bf8.png" with the exact filename in your public folder -->
+    <link rel="icon" type="image/png" href="/image_142bf8.png">
+    <link rel="apple-touch-icon" href="/image_142bf8.png">
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
@@ -15,29 +18,20 @@
     <style>
         :root {
             --primary: #007298;
-            --primary-dark: #005a78;
             --accent: #F59E0B;
-            --accent-light: #FEF3C7;
-            --text-dark: #1F2937;
-            --text-muted: #6B7280;
             --white: #FFFFFF;
             --bg-light: #F9FAFB;
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;
-            color: var(--text-dark);
+            color: #1F2937;
             line-height: 1.6;
             background: var(--bg-light);
         }
 
-        /* Header & Branding */
         .header {
             background: var(--primary);
             color: var(--white);
@@ -45,31 +39,10 @@
             text-align: center;
         }
 
-        .header h1 {
-            font-size: 1.5rem;
-            font-weight: 700;
-            letter-spacing: 1px;
-            margin-bottom: 0.25rem;
-        }
+        .header h1 { font-size: 1.5rem; font-weight: 700; }
 
-        .tagline {
-            font-size: 0.9rem;
-            opacity: 0.9;
-        }
-
-        /* Urgency Banner */
-        .alert-banner {
-            background: linear-gradient(135deg, #DC2626 0%, #B91C1C 100%);
-            color: var(--white);
-            padding: 0.75rem;
-            text-align: center;
-            font-weight: 700;
-            font-size: 1rem;
-        }
-
-        /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            background: linear-gradient(135deg, var(--primary) 0%, #005a78 100%);
             color: var(--white);
             padding: 4rem 1.5rem;
             text-align: center;
@@ -77,136 +50,43 @@
 
         .price-burst {
             background: var(--accent);
-            color: var(--white);
             display: inline-block;
-            padding: 1.25rem 2rem;
+            padding: 1rem 2rem;
             border-radius: 12px;
             margin-bottom: 2rem;
-            box-shadow: 0 8px 20px rgba(245, 158, 11, 0.4);
             transform: rotate(-2deg);
+            box-shadow: 0 8px 20px rgba(245, 158, 11, 0.4);
         }
 
-        .big-price {
-            font-size: 3.5rem;
-            font-weight: 800;
-            line-height: 1;
-        }
+        .big-price { font-size: 3.5rem; font-weight: 800; }
 
-        .price-detail {
-            font-size: 1.1rem;
-            font-weight: 600;
-        }
-
-        .hero h2 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            line-height: 1.2;
-            margin-bottom: 1rem;
-        }
-
-        .cruise-info {
-            font-size: 1.2rem;
-            opacity: 0.95;
-            margin-bottom: 1.5rem;
-        }
-
-        .dates-tag {
-            background: rgba(255, 255, 255, 0.2);
-            padding: 0.6rem 1.5rem;
-            border-radius: 50px;
-            display: inline-block;
-            font-weight: 600;
-        }
-
-        /* Content Container */
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 3rem 1.5rem;
-        }
+        .container { max-width: 800px; margin: 0 auto; padding: 3rem 1.5rem; }
 
         .card {
             background: var(--white);
             border-radius: 16px;
             padding: 2.5rem;
             margin-bottom: 2rem;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
         }
 
-        .card h3 {
-            color: var(--primary);
-            font-size: 1.75rem;
-            margin-bottom: 1.25rem;
-        }
-
-        /* Contact Section */
-        .contact-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1rem;
-            margin-top: 2rem;
-        }
+        .btn-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 2rem; }
 
         .btn {
-            display: flex;
-            align-items: center;
-            justify-content: center;
             padding: 1rem;
             border-radius: 10px;
             text-decoration: none;
             font-weight: 700;
-            transition: transform 0.2s;
-        }
-
-        .btn:active { transform: scale(0.98); }
-
-        .btn-call { background: var(--accent); color: var(--white); }
-        .btn-text { background: #BEF264; color: var(--text-dark); }
-
-        /* Footer */
-        .footer {
-            background: var(--text-dark);
-            color: var(--white);
-            padding: 3rem 1.5rem;
             text-align: center;
         }
 
-        .footer-brand {
-            font-weight: 800;
-            font-size: 1.2rem;
-            margin-bottom: 0.5rem;
-        }
+        .btn-call { background: var(--accent); color: var(--white); }
+        .btn-text { background: #BEF264; color: #1F2937; }
 
-        .last-updated {
-            font-size: 0.75rem;
-            opacity: 0.5;
-        }
-
-        /* Floating Button */
-        .floating-cta {
-            position: fixed;
-            bottom: 2rem;
-            right: 2rem;
-            background: var(--accent);
-            color: var(--white);
-            padding: 1rem 2rem;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 700;
-            box-shadow: 0 10px 25px rgba(245, 158, 11, 0.4);
-            z-index: 100;
-            display: none;
-        }
+        .footer { background: #1F2937; color: var(--white); padding: 3rem; text-align: center; }
 
         @media (max-width: 600px) {
-            .contact-grid { grid-template-columns: 1fr; }
-            .hero h2 { font-size: 1.8rem; }
-            .floating-cta { 
-                left: 1.5rem; 
-                right: 1.5rem; 
-                text-align: center;
-                bottom: 1rem;
-            }
+            .btn-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -214,37 +94,26 @@
 
     <header class="header">
         <h1>HAPPY DETOUR TRAVEL</h1>
-        <div class="tagline">Affordable vacations. Fun experiences. Everyone welcome.</div>
     </header>
-
-    <div class="alert-banner">
-        🚢 Group Space is Filling Fast — Secure Your Cabin Today!
-    </div>
 
     <section class="hero">
         <div class="price-burst">
             <div class="big-price">$644</div>
-            <div class="price-detail">Per Person / 8 Days</div>
+            <p>8 Days / Southern Caribbean</p>
         </div>
-        <div class="cruise-info">Carnival Horizon • Southern Caribbean</div>
         <h2>The ABC Islands Adventure</h2>
-        <div class="dates-tag">October 10 – 18, 2026</div>
+        <p style="margin-top: 1rem; font-weight: 600;">October 10 – 18, 2026</p>
     </section>
 
     <main class="container">
         <div class="card">
-            <h3>The Deal of the Year</h3>
-            <p>I’ve locked in exclusive group rates for this incredible 8-day journey. We’re sailing the Carnival Horizon to the most beautiful ports in the Southern Caribbean.</p>
-            
-            <div style="margin-top: 1.5rem; padding: 1rem; background: var(--bg-light); border-left: 4px solid var(--primary); border-radius: 4px;">
-                <strong>Destinations:</strong> Aruba, Bonaire, and Curaçao.
-            </div>
+            <h3 style="color: var(--primary); margin-bottom: 1rem;">Exclusive Group Rate</h3>
+            <p>Sailing on the <strong>Carnival Horizon</strong> to Aruba, Bonaire, and Curaçao. This is an incredible opportunity to see the best of the Southern Caribbean at a locked-in price.</p>
         </div>
 
         <div class="card" style="text-align: center;">
-            <h3>Ready to join us?</h3>
-            <p>Contact Eric directly to check availability or start your booking.</p>
-            <div class="contact-grid">
+            <h3 style="margin-bottom: 1.5rem;">Ready to Book?</h3>
+            <div class="btn-grid">
                 <a href="tel:3124602501" class="btn btn-call">📞 Call Eric</a>
                 <a href="sms:3124602501" class="btn btn-text">💬 Text Eric</a>
             </div>
@@ -252,26 +121,12 @@
     </main>
 
     <footer class="footer">
-        <div class="footer-brand">HAPPY DETOUR TRAVEL</div>
-        <p style="font-size: 0.9rem; opacity: 0.7; margin-bottom: 1rem;">Your guide to all-inclusive fun.</p>
-        <div class="last-updated">Site Updated: <span id="date"></span></div>
+        <p style="font-weight: 800; margin-bottom: 0.5rem;">HAPPY DETOUR TRAVEL</p>
+        <p style="font-size: 0.8rem; opacity: 0.5;">Updated: <span id="date"></span></p>
     </footer>
 
-    <a href="sms:3124602501" class="floating-cta" id="mobileCta">🚢 Text Eric to Book</a>
-
     <script>
-        // Set update date
         document.getElementById('date').textContent = new Date().toLocaleDateString();
-
-        // Show floating button on scroll
-        window.onscroll = function() {
-            const btn = document.getElementById('mobileCta');
-            if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
-                btn.style.display = "block";
-            } else {
-                btn.style.display = "none";
-            }
-        };
     </script>
 </body>
 </html>
