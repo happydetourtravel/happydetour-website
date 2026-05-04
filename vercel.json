@@ -1,11 +1,4 @@
 {
-  "redirects": [
-    {
-      "source": "/:path*",
-      "destination": "https://happydetour.com/:path*",
-      "permanent": true
-    }
-  ],
   "rewrites": [
     { "source": "/everyonewelcome", "destination": "/everyonewelcome.html" },
     { "source": "/about", "destination": "/about.html" },
@@ -15,16 +8,5 @@
     { "source": "/testimonials", "destination": "/testimonials.html" },
     { "source": "/success", "destination": "/success.html" },
     { "source": "/review-success", "destination": "/review-success.html" }
-  ],
-  "headers": [
-    {
-      "source": "/sitemap.xml",
-      "headers": [
-        {
-          "key": "Content-Type",
-          "value": "application/xml"
-        }
-      ]
-    }
   ]
 }
