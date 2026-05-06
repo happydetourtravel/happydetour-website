@@ -4,7 +4,6 @@
     { "source": "/about", "destination": "/about.html" },
     { "source": "/links", "destination": "/links.html" },
     { "source": "/anniversarycruise", "destination": "/anniversarycruise.html" },
-    { "source": "/destinations", "destination": "/destinations.html" },
     { "source": "/testimonials", "destination": "/testimonials.html" },
     { "source": "/success", "destination": "/success.html" },
     { "source": "/review-success", "destination": "/review-success.html" },
