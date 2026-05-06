@@ -498,7 +498,7 @@
 <body>
     <!-- Floating Reserve Button -->
     <div class="floating-reserve">
-        <a href="sms:312-460-2501">💬 Reserve Now</a>
+        <a href="#contact">💬 Reserve Now</a>
     </div>
 
     <!-- Hero Section -->
@@ -515,7 +515,7 @@
             </div>
 
             <div class="cta-buttons">
-                <a href="sms:312-460-2501" class="btn btn-primary">💬 Reserve Now</a>
+                <a href="#contact" class="btn btn-primary">💬 Reserve Now</a>
             </div>
         </div>
     </section>
@@ -588,12 +588,53 @@
     </section>
 
     <!-- Final CTA -->
-    <section class="final-cta">
+    <section class="final-cta" id="contact">
         <div class="container">
             <h2>Ready to book or just have questions?</h2>
             <p style="font-size: 1.2rem; opacity: 0.9; max-width: 700px; margin: 0 auto 1rem;">
                 Either way, reach out. No pressure. I'm a real person and text is usually the fastest way to get me.
             </p>
+
+            <!-- Contact Form -->
+            <div style="max-width: 540px; margin: 0 auto 3rem; background: rgba(255,255,255,0.1); border: 1.5px solid rgba(255,255,255,0.2); border-radius: 12px; padding: 2rem;">
+                <p style="font-size: 1.05rem; margin-bottom: 1.5rem; text-align: center; font-weight: 500;">Let's see if this fits your calendar and your budget.</p>
+                
+                <form action="https://formspree.io/f/xojrwlzv" method="POST" style="display: flex; flex-direction: column; gap: 1rem;">
+                    <div>
+                        <label for="name" style="display: block; font-size: 0.9rem; font-weight: 600; color: white; margin-bottom: 0.4rem;">First Name</label>
+                        <input type="text" id="name" name="name" required placeholder="Keep it casual" style="width: 100%; padding: 0.75rem; border: 1.5px solid rgba(255,255,255,0.3); border-radius: 8px; font-size: 1rem; font-family: inherit; background: rgba(255,255,255,0.15); color: white;">
+                    </div>
+                    
+                    <div>
+                        <label for="email" style="display: block; font-size: 0.9rem; font-weight: 600; color: white; margin-bottom: 0.4rem;">Email Address</label>
+                        <input type="email" id="email" name="email" required placeholder="Where you want the info sent" style="width: 100%; padding: 0.75rem; border: 1.5px solid rgba(255,255,255,0.3); border-radius: 8px; font-size: 1rem; font-family: inherit; background: rgba(255,255,255,0.15); color: white;">
+                    </div>
+                    
+                    <div>
+                        <label for="phone" style="display: block; font-size: 0.9rem; font-weight: 600; color: white; margin-bottom: 0.4rem;">Phone <span style="font-weight: 400; opacity: 0.8;">(Only if you prefer a text or call)</span></label>
+                        <input type="tel" id="phone" name="phone" placeholder="Optional" style="width: 100%; padding: 0.75rem; border: 1.5px solid rgba(255,255,255,0.3); border-radius: 8px; font-size: 1rem; font-family: inherit; background: rgba(255,255,255,0.15); color: white;">
+                    </div>
+                    
+                    <div>
+                        <label for="travelers" style="display: block; font-size: 0.9rem; font-weight: 600; color: white; margin-bottom: 0.4rem;">How many people traveling?</label>
+                        <select id="travelers" name="travelers" required style="width: 100%; padding: 0.75rem; border: 1.5px solid rgba(255,255,255,0.3); border-radius: 8px; font-size: 1rem; font-family: inherit; background: rgba(255,255,255,0.15); color: white;">
+                            <option value="" style="background: var(--dark); color: white;">Select...</option>
+                            <option value="1" style="background: var(--dark); color: white;">1 (Solo traveler)</option>
+                            <option value="2" style="background: var(--dark); color: white;">2</option>
+                            <option value="3" style="background: var(--dark); color: white;">3</option>
+                            <option value="4+" style="background: var(--dark); color: white;">4 or more</option>
+                        </select>
+                    </div>
+                    
+                    <button type="submit" style="background: var(--sunset); color: white; font-weight: 700; font-size: 1.05rem; padding: 0.9rem 2rem; border-radius: 50px; border: none; cursor: pointer; font-family: inherit; margin-top: 0.5rem; box-shadow: 0 8px 25px rgba(255, 107, 53, 0.4); transition: all 0.3s ease;">
+                        Send Me Details
+                    </button>
+                    
+                    <p style="font-size: 0.85rem; opacity: 0.8; text-align: center; margin: 0.5rem 0 0; font-style: italic;">No bots here. I will personally look this up and get back to you.</p>
+                </form>
+            </div>
+
+            <p style="text-align: center; font-size: 0.95rem; opacity: 0.7; margin-bottom: 1.5rem;">Or reach out directly:</p>
 
             <div class="contact-cards">
                 <a href="tel:312-460-2501" class="contact-card">
@@ -633,5 +674,5 @@
         <p style="font-size: 0.85rem; opacity: 0.6; margin-top: 0.5rem;">© 2026 Happy Detour Travel LLC</p>
         <p style="font-size: 0.8rem; opacity: 0.5; margin-top: 1rem;">Built on a Citrus MacBook in Cleveland, Ohio<br>Last updated May 1, 2026 at 12:00 PM ET</p>
     </footer>
-   </body>
+</body>
 </html>
