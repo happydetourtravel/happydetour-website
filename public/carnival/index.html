@@ -12,17 +12,18 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&family=Fraunces:wght@600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <style>
         :root {
             --ocean: #007298;
-            --sand: #F5E6D3;
+            --sand: #F5DEB3;
             --sunset: #FF6B35;
-            --coral: #FF8E72;
-            --wave: #00A8CC;
+            --palm: #2D5016;
+            --sky: #87CEEB;
+            --coral: #FFB6A3;
             --dark: #1A1A2E;
-            --cream: #FFFBF5;
+            --cream: #FFFEF9;
         }
 
         * {
@@ -32,425 +33,545 @@
         }
 
         body {
-            font-family: 'Outfit', sans-serif;
+            font-family: 'Work Sans', sans-serif;
             color: var(--dark);
             background: var(--cream);
             overflow-x: hidden;
         }
 
-        /* Hero Section - Full Impact */
+        /* Hero Section */
         .hero {
             position: relative;
-            min-height: 100vh;
-            background: linear-gradient(135deg, #00A8CC 0%, #007298 50%, #005a78 100%);
+            min-height: 90vh;
+            background: linear-gradient(165deg, #87CEEB 0%, #4A9FD8 50%, #007298 100%);
             display: flex;
             align-items: center;
             justify-content: center;
             overflow: hidden;
+            padding: 2rem;
         }
 
         .hero::before {
             content: '';
             position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: 
-                radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 80% 70%, rgba(255, 107, 53, 0.15) 0%, transparent 50%);
-            animation: float 20s ease-in-out infinite;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, transparent 70%);
+            border-radius: 50%;
+            top: -200px;
+            right: -200px;
+            animation: float 15s ease-in-out infinite;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(255,107,53,0.1) 0%, transparent 70%);
+            border-radius: 50%;
+            bottom: -100px;
+            left: -100px;
+            animation: float 20s ease-in-out infinite reverse;
         }
 
         @keyframes float {
-            0%, 100% { transform: translate(0, 0); }
-            50% { transform: translate(30px, -30px); }
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            50% { transform: translate(30px, -30px) scale(1.1); }
         }
 
         .hero-content {
             position: relative;
             z-index: 2;
             text-align: center;
-            padding: 2rem;
-            max-width: 1200px;
-            animation: fadeInUp 1s ease-out;
+            max-width: 900px;
         }
 
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(40px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .tag {
+        .hero-tag {
             display: inline-block;
-            background: var(--sunset);
+            background: rgba(255,255,255,0.25);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.4);
             color: white;
             padding: 0.5rem 1.5rem;
             border-radius: 50px;
             font-weight: 600;
-            font-size: 0.9rem;
-            letter-spacing: 1px;
+            font-size: 0.85rem;
+            letter-spacing: 1.5px;
             text-transform: uppercase;
             margin-bottom: 2rem;
-            animation: pulse 2s ease-in-out infinite;
-        }
-
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.05); }
         }
 
         h1 {
-            font-family: 'Fraunces', serif;
-            font-size: clamp(3rem, 8vw, 6rem);
-            font-weight: 800;
+            font-family: 'DM Serif Display', serif;
+            font-size: clamp(3.5rem, 10vw, 7rem);
+            font-weight: 400;
             color: white;
-            line-height: 1.1;
+            line-height: 1;
             margin-bottom: 1.5rem;
-            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            text-shadow: 0 2px 30px rgba(0, 0, 0, 0.15);
+            font-style: italic;
         }
 
         .hero-subtitle {
-            font-size: clamp(1.2rem, 3vw, 1.8rem);
+            font-size: clamp(1.1rem, 2.5vw, 1.4rem);
             color: rgba(255, 255, 255, 0.95);
-            margin-bottom: 2rem;
+            margin-bottom: 3rem;
             font-weight: 400;
+            line-height: 1.6;
         }
 
-        .price-box {
+        .price-display {
             background: white;
             display: inline-block;
-            padding: 2rem 3rem;
-            border-radius: 20px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-            margin: 2rem 0;
-            transform: rotate(-2deg);
-            animation: priceReveal 1.2s ease-out 0.5s both;
-        }
-
-        @keyframes priceReveal {
-            from {
-                opacity: 0;
-                transform: rotate(-2deg) scale(0.8);
-            }
-            to {
-                opacity: 1;
-                transform: rotate(-2deg) scale(1);
-            }
+            padding: 2rem 3.5rem;
+            border-radius: 16px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+            margin-bottom: 2.5rem;
         }
 
         .price-label {
-            font-size: 0.9rem;
+            font-size: 0.8rem;
             color: var(--ocean);
             font-weight: 600;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 2px;
+            margin-bottom: 0.5rem;
         }
 
-        .price-big {
-            font-family: 'Fraunces', serif;
+        .price-amount {
+            font-family: 'DM Serif Display', serif;
             font-size: 5rem;
-            font-weight: 800;
+            font-weight: 400;
             color: var(--sunset);
             line-height: 1;
-            margin: 0.5rem 0;
+            margin-bottom: 0.25rem;
         }
 
         .price-detail {
             font-size: 1rem;
             color: #666;
+            font-weight: 500;
         }
 
-        .cta-buttons {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-top: 2rem;
-        }
-
-        .btn {
-            padding: 1.2rem 2.5rem;
-            border-radius: 50px;
-            font-weight: 600;
-            font-size: 1.1rem;
-            text-decoration: none;
-            transition: all 0.3s ease;
+        .cta-button {
             display: inline-flex;
             align-items: center;
-            gap: 0.5rem;
-        }
-
-        .btn-primary {
+            gap: 0.75rem;
+            padding: 1.25rem 3rem;
             background: var(--sunset);
             color: white;
-            box-shadow: 0 8px 25px rgba(255, 107, 53, 0.4);
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 12px 35px rgba(255, 107, 53, 0.5);
-        }
-
-        .btn-secondary {
-            background: white;
-            color: var(--ocean);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-        }
-
-        .btn-secondary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
-        }
-
-        /* Urgency Banner */
-        .urgency {
-            background: var(--sunset);
-            color: white;
-            text-align: center;
-            padding: 1.5rem;
-            font-weight: 600;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 700;
             font-size: 1.1rem;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 12px 35px rgba(255, 107, 53, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 16px 45px rgba(255, 107, 53, 0.5);
+        }
+
+        /* Welcome Section */
+        .welcome {
+            background: var(--ocean);
+            color: white;
+            padding: 4rem 2rem;
+        }
+
+        .welcome-inner {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .welcome-text {
+            font-size: 1.3rem;
+            line-height: 1.8;
+            border-left: 4px solid var(--coral);
+            padding-left: 2rem;
+            font-weight: 400;
         }
 
         /* Islands Section */
         .islands {
-            padding: 6rem 2rem;
+            padding: 5rem 2rem;
             background: var(--cream);
         }
 
         .container {
-            max-width: 1200px;
+            max-width: 1100px;
             margin: 0 auto;
         }
 
         .section-title {
-            font-family: 'Fraunces', serif;
-            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-family: 'DM Serif Display', serif;
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
             text-align: center;
-            margin-bottom: 3rem;
+            margin-bottom: 1rem;
             color: var(--dark);
+            font-weight: 400;
+            font-style: italic;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 3.5rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .islands-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
-            margin-top: 3rem;
+            margin-bottom: 2.5rem;
         }
 
         .island-card {
-            background: white;
+            position: relative;
             border-radius: 20px;
             overflow: hidden;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
+            transition: transform 0.4s ease;
+            cursor: pointer;
         }
 
         .island-card:hover {
-            transform: translateY(-10px);
+            transform: translateY(-8px);
         }
 
-        .island-img {
+        .island-photo {
             width: 100%;
-            height: 250px;
+            height: 320px;
             background-size: cover;
             background-position: center;
+            position: relative;
+        }
+
+        .island-photo::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.6) 0%, transparent 50%);
         }
 
         .aruba { background-image: url('/Aruba.jpg'); }
         .bonaire { background-image: url('/Bonaire.jpg'); }
         .curacao { background-image: url('/Curaçao.jpg'); }
 
-        .island-content {
-            padding: 2rem;
-        }
-
         .island-name {
-            font-family: 'Fraunces', serif;
-            font-size: 2rem;
-            font-weight: 800;
-            color: var(--ocean);
-            margin-bottom: 1rem;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 1.75rem;
+            z-index: 2;
+            font-family: 'DM Serif Display', serif;
+            font-size: 2.25rem;
+            font-weight: 400;
+            color: white;
+            font-style: italic;
         }
 
-        .island-desc {
-            color: #666;
-            line-height: 1.6;
+        .islands-cta {
+            background: linear-gradient(135deg, var(--sand) 0%, #F5E6D3 100%);
+            border-radius: 16px;
+            padding: 2rem;
+            text-align: center;
+            border: 2px solid rgba(0,0,0,0.05);
+        }
+
+        .islands-cta p {
+            font-size: 1.1rem;
+            color: var(--dark);
+            margin: 0;
+            line-height: 1.7;
+            font-weight: 500;
         }
 
         /* Pricing Section */
         .pricing {
-            padding: 6rem 2rem;
-            background: linear-gradient(135deg, var(--ocean) 0%, var(--wave) 100%);
+            padding: 5rem 2rem;
+            background: var(--dark);
             color: white;
         }
 
-        .pricing-cards {
+        .pricing-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
-            max-width: 900px;
+            max-width: 800px;
             margin: 3rem auto 0;
         }
 
         .pricing-card {
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.08);
             backdrop-filter: blur(10px);
-            border: 2px solid rgba(255, 255, 255, 0.2);
+            border: 1.5px solid rgba(255, 255, 255, 0.15);
             border-radius: 20px;
             padding: 2.5rem;
             text-align: center;
-            transition: all 0.3s ease;
+            transition: all 0.4s ease;
+            position: relative;
         }
 
         .pricing-card:hover {
-            background: rgba(255, 255, 255, 0.15);
-            transform: scale(1.05);
+            background: rgba(255, 255, 255, 0.12);
+            transform: translateY(-6px);
+            border-color: rgba(255, 255, 255, 0.3);
         }
 
-        .cabin-type {
-            font-size: 1.3rem;
-            font-weight: 800;
+        .pricing-card.featured {
+            border-color: var(--coral);
+            background: rgba(255, 182, 163, 0.1);
+        }
+
+        .featured-badge {
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--sunset);
+            color: white;
+            padding: 0.35rem 1.25rem;
+            border-radius: 50px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+
+        .cabin-label {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: rgba(255,255,255,0.7);
             margin-bottom: 1rem;
+            font-weight: 600;
         }
 
         .cabin-price {
-            font-family: 'Fraunces', serif;
-            font-size: 2.5rem;
-            font-weight: 800;
-            color: var(--coral);
-            margin: 1rem 0;
-        }
-
-        .cabin-desc {
-            font-size: 0.95rem;
-            opacity: 0.9;
-        }
-
-        /* Included Section */
-        .included {
-            padding: 6rem 2rem;
-            background: var(--sand);
-        }
-
-        .perks-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .perk {
-            background: white;
-            padding: 2rem;
-            border-radius: 15px;
-            text-align: center;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-        }
-
-        .perk-icon {
+            font-family: 'DM Serif Display', serif;
             font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-
-        .perk-title {
-            font-weight: 700;
-            font-size: 1.2rem;
-            margin-bottom: 0.5rem;
-            color: var(--ocean);
-        }
-
-        /* Final CTA */
-        .final-cta {
-            padding: 6rem 2rem;
-            background: var(--dark);
+            font-weight: 400;
             color: white;
-            text-align: center;
+            margin-bottom: 0.5rem;
+            line-height: 1;
         }
 
-        .final-cta h2 {
-            font-family: 'Fraunces', serif;
-            font-size: clamp(2.5rem, 5vw, 4rem);
-            margin-bottom: 2rem;
+        .cabin-per {
+            font-size: 0.95rem;
+            color: rgba(255,255,255,0.8);
+            margin-bottom: 1.5rem;
+            font-weight: 500;
         }
 
-        .contact-cards {
-            display: flex;
-            gap: 1.5rem;
-            justify-content: center;
-            flex-wrap: wrap;
+        .cabin-type {
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.7);
+            line-height: 1.6;
+        }
+
+        .pricing-note {
+            background: rgba(255, 182, 163, 0.15);
+            border: 1.5px solid var(--coral);
+            border-radius: 16px;
+            padding: 1.75rem 2rem;
             margin-top: 3rem;
+            text-align: center;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
-        .contact-card {
-            background: white;
+        .pricing-note p {
+            font-size: 1.05rem;
+            line-height: 1.7;
+            margin: 0;
+            font-weight: 500;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 5rem 2rem;
+            background: var(--cream);
+        }
+
+        .contact-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .contact-title {
+            font-family: 'DM Serif Display', serif;
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            margin-bottom: 1rem;
             color: var(--dark);
-            padding: 2rem 3rem;
-            border-radius: 15px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1.2rem;
-            transition: all 0.3s ease;
+            font-weight: 400;
+            font-style: italic;
+        }
+
+        .contact-subtitle {
+            font-size: 1.15rem;
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        .contact-form-wrap {
+            max-width: 540px;
+            margin: 0 auto 3rem;
+            background: white;
+            border: 2px solid rgba(0,0,0,0.08);
+            border-radius: 20px;
+            padding: 2.5rem;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+        }
+
+        .contact-form-wrap form {
             display: flex;
             flex-direction: column;
-            gap: 0.5rem;
+            gap: 1.25rem;
         }
 
-        .contact-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(255, 255, 255, 0.2);
-        }
-
-        .contact-label {
+        .contact-form-wrap label {
+            display: block;
             font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-form-wrap input,
+        .contact-form-wrap select {
+            width: 100%;
+            padding: 0.85rem 1rem;
+            border: 1.5px solid #E0E0E0;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-family: inherit;
+            transition: border-color 0.3s;
+            background: white;
+        }
+
+        .contact-form-wrap input:focus,
+        .contact-form-wrap select:focus {
+            outline: none;
+            border-color: var(--ocean);
+        }
+
+        .contact-form-wrap button[type="submit"] {
+            background: var(--sunset);
+            color: white;
+            font-weight: 700;
+            font-size: 1.05rem;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            border: none;
+            cursor: pointer;
+            font-family: inherit;
+            margin-top: 0.5rem;
+            box-shadow: 0 8px 25px rgba(255, 107, 53, 0.35);
+            transition: all 0.3s ease;
+        }
+
+        .contact-form-wrap button[type="submit"]:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(255, 107, 53, 0.45);
+        }
+
+        .contact-divider {
+            text-align: center;
+            font-size: 0.95rem;
+            color: #999;
+            margin: 2.5rem 0 2rem;
+        }
+
+        .contact-buttons {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact-btn {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1.5rem;
+            background: white;
+            border: 2px solid rgba(0,0,0,0.08);
+            border-radius: 16px;
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+        }
+
+        .contact-btn:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+            border-color: var(--ocean);
+        }
+
+        .contact-btn-label {
+            font-size: 0.85rem;
+            color: #999;
+            font-weight: 500;
+        }
+
+        .contact-btn-value {
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .contact-note {
+            text-align: center;
+            margin-top: 2rem;
             color: #666;
+            font-size: 0.95rem;
         }
 
         /* Footer */
         footer {
-            background: #0f0f1a;
+            background: var(--dark);
             color: white;
             padding: 3rem 2rem;
             text-align: center;
         }
 
-        .footer-links {
-            margin: 1rem 0;
+        .footer-brand {
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            font-style: italic;
         }
 
-        .footer-links a {
-            color: var(--coral);
-            text-decoration: none;
-            margin: 0 1rem;
+        .footer-tagline {
+            font-size: 0.95rem;
+            opacity: 0.8;
+            margin-bottom: 1.5rem;
         }
 
-        @media (max-width: 768px) {
-            .price-big {
-                font-size: 3.5rem;
-            }
-
-            .cta-buttons {
-                flex-direction: column;
-            }
-
-            .btn {
-                width: 100%;
-                justify-content: center;
-            }
+        .footer-legal {
+            font-size: 0.8rem;
+            opacity: 0.6;
+            line-height: 1.8;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 1.5rem;
+            margin-top: 1.5rem;
         }
 
-        /* Floating Reserve Button */
+        /* Floating Button */
         .floating-reserve {
             position: fixed;
             bottom: 2rem;
@@ -461,28 +582,42 @@
 
         @keyframes floatButton {
             0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
+            50% { transform: translateY(-8px); }
         }
 
         .floating-reserve a {
-            display: block;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
             background: var(--sunset);
             color: white;
-            padding: 1.2rem 2rem;
+            padding: 1.1rem 2rem;
             border-radius: 50px;
             text-decoration: none;
             font-weight: 700;
-            font-size: 1.1rem;
-            box-shadow: 0 8px 30px rgba(255, 107, 53, 0.5);
+            font-size: 1rem;
+            box-shadow: 0 10px 35px rgba(255, 107, 53, 0.5);
             transition: all 0.3s ease;
         }
 
         .floating-reserve a:hover {
             transform: scale(1.05);
-            box-shadow: 0 12px 40px rgba(255, 107, 53, 0.6);
+            box-shadow: 0 14px 45px rgba(255, 107, 53, 0.6);
         }
 
         @media (max-width: 768px) {
+            .price-amount {
+                font-size: 3.5rem;
+            }
+
+            .islands-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+
             .floating-reserve {
                 bottom: 1rem;
                 right: 1rem;
@@ -490,12 +625,13 @@
 
             .floating-reserve a {
                 padding: 1rem 1.5rem;
-                font-size: 1rem;
+                font-size: 0.95rem;
             }
         }
     </style>
 </head>
 <body>
+
     <!-- Floating Reserve Button -->
     <div class="floating-reserve">
         <a href="#contact">💬 Reserve Now</a>
@@ -504,26 +640,26 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <div class="tag">Limited Time Offer</div>
-            <h1>Escape to Paradise</h1>
-            <p class="hero-subtitle">8 Days in the ABC Islands • October 2026</p>
+            <div class="hero-tag">October 2026</div>
+            <h1>ABC Islands</h1>
+            <p class="hero-subtitle">Eight days in the Caribbean aboard Carnival Horizon.<br>Aruba. Bonaire. Curaçao.</p>
             
-            <div class="price-box">
-                <div class="price-label">Starting at Only</div>
-                <div class="price-big">$644</div>
-                <div class="price-detail">Per Person • Cruise Package</div>
+            <div class="price-display">
+                <div class="price-label">Starting at</div>
+                <div class="price-amount">$644</div>
+                <div class="price-detail">per person</div>
             </div>
 
-            <div class="cta-buttons">
-                <a href="#contact" class="btn btn-primary">💬 Reserve Now</a>
-            </div>
+            <a href="#contact" class="cta-button">
+                💬 Text or Call Me
+            </a>
         </div>
     </section>
 
-    <!-- Everyone Welcome Section -->
-    <section style="background: var(--ocean); color: white; padding: 3rem 2rem; text-align: center;">
-        <div class="container" style="max-width: 900px;">
-            <p style="font-size: 1.3rem; line-height: 1.8; border-left: 4px solid var(--coral); padding-left: 2rem; text-align: left;">
+    <!-- Welcome Section -->
+    <section class="welcome">
+        <div class="welcome-inner">
+            <p class="welcome-text">
                 Solo travelers are welcome here. LGBTQ travelers are welcome here. Families, couples, first-time cruisers, people who just need a week away from their regular life. All of you. Come as you are.
             </p>
         </div>
@@ -532,32 +668,31 @@
     <!-- Islands Section -->
     <section class="islands">
         <div class="container">
-            <h2 class="section-title">Three Incredible Islands Await</h2>
+            <h2 class="section-title">Three Caribbean Islands</h2>
+            <p class="section-subtitle">Turquoise water, white sand beaches, and Dutch Caribbean charm.</p>
             
             <div class="islands-grid">
                 <div class="island-card">
-                    <div class="island-img aruba"></div>
-                    <div class="island-content">
-                        <h3 class="island-name">Aruba</h3>
-                        <p class="island-desc">White sand beaches, crystal clear water, and Eagle Beach (one of the world's top 10 beaches).</p>
+                    <div class="island-photo aruba">
+                        <div class="island-name">Aruba</div>
                     </div>
                 </div>
 
                 <div class="island-card">
-                    <div class="island-img bonaire"></div>
-                    <div class="island-content">
-                        <h3 class="island-name">Bonaire</h3>
-                        <p class="island-desc">Snorkeling and diving paradise. Pristine coral reefs and marine life like nowhere else.</p>
+                    <div class="island-photo bonaire">
+                        <div class="island-name">Bonaire</div>
                     </div>
                 </div>
 
                 <div class="island-card">
-                    <div class="island-img curacao"></div>
-                    <div class="island-content">
-                        <h3 class="island-name">Curaçao</h3>
-                        <p class="island-desc">Colorful Willemstad, hidden coves, and Dutch Caribbean charm.</p>
+                    <div class="island-photo curacao">
+                        <div class="island-name">Curaçao</div>
                     </div>
                 </div>
+            </div>
+
+            <div class="islands-cta">
+                <p><strong>Want to know what to do in each port?</strong> I can help you figure out what makes sense for your group.</p>
             </div>
         </div>
     </section>
@@ -565,95 +700,97 @@
     <!-- Pricing Section -->
     <section class="pricing">
         <div class="container">
-            <h2 class="section-title" style="color: white;">Choose Your Cabin</h2>
+            <h2 class="section-title" style="color: white;">How much does this cost?</h2>
+            <p class="section-subtitle" style="color: rgba(255,255,255,0.8); margin-bottom: 3.5rem;">Here are a few options. Double occupancy.</p>
             
-            <div class="pricing-cards">
-                <div class="pricing-card">
-                    <div class="cabin-type">Interior Cabin</div>
-                    <div class="cabin-price">$644-$654</div>
-                    <p class="cabin-desc">Cozy and affordable. Perfect for adventure seekers who want to spend their time exploring, not in the room.</p>
+            <div class="pricing-grid">
+                <div class="pricing-card featured">
+                    <div class="featured-badge">Most Affordable</div>
+                    <div class="cabin-label">Interior Cabin</div>
+                    <div class="cabin-price">$644</div>
+                    <div class="cabin-per">per person</div>
+                    <div class="cabin-type">Cruise only</div>
                 </div>
 
                 <div class="pricing-card">
-                    <div class="cabin-type">Balcony Cabin</div>
-                    <div class="cabin-price">$1,204-$1,229</div>
-                    <p class="cabin-desc">Private balcony with stunning ocean views. Wake up to sunrise over the Caribbean every morning.</p>
+                    <div class="cabin-label">Balcony Cabin</div>
+                    <div class="cabin-price">$1,204</div>
+                    <div class="cabin-per">per person</div>
+                    <div class="cabin-type">Private balcony<br>Cruise only</div>
                 </div>
             </div>
 
-            <p style="text-align: center; margin-top: 2rem; font-size: 0.95rem; opacity: 0.9;">
-                All prices per person based on double occupancy • Pricing varies by deck location
-            </p>
+            <div class="pricing-note">
+                <p><strong>Other cabin types available.</strong> Want to know which one makes sense for your budget? Traveling solo or with a third person? Need flights or hotels? Reach out and I'll get you exact pricing.</p>
+            </div>
         </div>
     </section>
 
-    <!-- Final CTA -->
-    <section class="final-cta" id="contact">
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
         <div class="container">
-            <h2>Ready to book or just have questions?</h2>
-            <p style="font-size: 1.2rem; opacity: 0.9; max-width: 700px; margin: 0 auto 1rem;">
-                Either way, reach out. No pressure. I'm a real person and text is usually the fastest way to get me.
-            </p>
+            <div class="contact-header">
+                <h2 class="contact-title">Ready to book or have questions?</h2>
+                <p class="contact-subtitle">Text is usually fastest. I'm a real person and my planning service is free to you.</p>
+            </div>
 
             <!-- Contact Form -->
-            <div style="max-width: 540px; margin: 0 auto 3rem; background: rgba(255,255,255,0.1); border: 1.5px solid rgba(255,255,255,0.2); border-radius: 12px; padding: 2rem;">
-                <p style="font-size: 1.05rem; margin-bottom: 1.5rem; text-align: center; font-weight: 500;">Let's see if this fits your calendar and your budget.</p>
+            <div class="contact-form-wrap">
+                <p style="font-size: 1.05rem; color: #666; margin-bottom: 1.5rem; text-align: center; font-weight: 500;">Let's see if this fits your calendar and your budget.</p>
                 
-                <form action="https://formspree.io/f/xojrwlzv" method="POST" style="display: flex; flex-direction: column; gap: 1rem;">
+                <form action="https://formspree.io/f/xojrwlzv" method="POST">
                     <div>
-                        <label for="name" style="display: block; font-size: 0.9rem; font-weight: 600; color: white; margin-bottom: 0.4rem;">First Name</label>
-                        <input type="text" id="name" name="name" required placeholder="Keep it casual" style="width: 100%; padding: 0.75rem; border: 1.5px solid rgba(255,255,255,0.3); border-radius: 8px; font-size: 1rem; font-family: inherit; background: rgba(255,255,255,0.15); color: white;">
+                        <label for="name">First Name</label>
+                        <input type="text" id="name" name="name" required placeholder="Keep it casual">
                     </div>
                     
                     <div>
-                        <label for="email" style="display: block; font-size: 0.9rem; font-weight: 600; color: white; margin-bottom: 0.4rem;">Email Address</label>
-                        <input type="email" id="email" name="email" required placeholder="Where you want the info sent" style="width: 100%; padding: 0.75rem; border: 1.5px solid rgba(255,255,255,0.3); border-radius: 8px; font-size: 1rem; font-family: inherit; background: rgba(255,255,255,0.15); color: white;">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required placeholder="Where you want the info sent">
                     </div>
                     
                     <div>
-                        <label for="phone" style="display: block; font-size: 0.9rem; font-weight: 600; color: white; margin-bottom: 0.4rem;">Phone <span style="font-weight: 400; opacity: 0.8;">(Only if you prefer a text or call)</span></label>
-                        <input type="tel" id="phone" name="phone" placeholder="Optional" style="width: 100%; padding: 0.75rem; border: 1.5px solid rgba(255,255,255,0.3); border-radius: 8px; font-size: 1rem; font-family: inherit; background: rgba(255,255,255,0.15); color: white;">
+                        <label for="phone">Phone <span style="font-weight: 400; color: #999;">(Only if you prefer a text or call)</span></label>
+                        <input type="tel" id="phone" name="phone" placeholder="Optional">
                     </div>
                     
                     <div>
-                        <label for="travelers" style="display: block; font-size: 0.9rem; font-weight: 600; color: white; margin-bottom: 0.4rem;">How many people traveling?</label>
-                        <select id="travelers" name="travelers" required style="width: 100%; padding: 0.75rem; border: 1.5px solid rgba(255,255,255,0.3); border-radius: 8px; font-size: 1rem; font-family: inherit; background: rgba(255,255,255,0.15); color: white;">
-                            <option value="" style="background: var(--dark); color: white;">Select...</option>
-                            <option value="1" style="background: var(--dark); color: white;">1 (Solo traveler)</option>
-                            <option value="2" style="background: var(--dark); color: white;">2</option>
-                            <option value="3" style="background: var(--dark); color: white;">3</option>
-                            <option value="4+" style="background: var(--dark); color: white;">4 or more</option>
+                        <label for="travelers">How many people traveling?</label>
+                        <select id="travelers" name="travelers" required>
+                            <option value="">Select...</option>
+                            <option value="1">1 (Solo traveler)</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4+">4 or more</option>
                         </select>
                     </div>
                     
-                    <button type="submit" style="background: var(--sunset); color: white; font-weight: 700; font-size: 1.05rem; padding: 0.9rem 2rem; border-radius: 50px; border: none; cursor: pointer; font-family: inherit; margin-top: 0.5rem; box-shadow: 0 8px 25px rgba(255, 107, 53, 0.4); transition: all 0.3s ease;">
-                        Send Me Details
-                    </button>
+                    <button type="submit">Send Me Details</button>
                     
-                    <p style="font-size: 0.85rem; opacity: 0.8; text-align: center; margin: 0.5rem 0 0; font-style: italic;">No bots here. I will personally look this up and get back to you.</p>
+                    <p style="font-size: 0.85rem; color: #999; text-align: center; margin: 0.75rem 0 0; font-style: italic;">No bots here. I will personally look this up and get back to you.</p>
                 </form>
             </div>
 
-            <p style="text-align: center; font-size: 0.95rem; opacity: 0.7; margin-bottom: 1.5rem;">Or reach out directly:</p>
+            <div class="contact-divider">Or reach out directly:</div>
 
-            <div class="contact-cards">
-                <a href="tel:312-460-2501" class="contact-card">
-                    <span class="contact-label">Call Eric</span>
-                    <span>📞 312-460-2501</span>
+            <div class="contact-buttons">
+                <a href="tel:3124602501" class="contact-btn">
+                    <span class="contact-btn-label">Call Eric</span>
+                    <span class="contact-btn-value">📞 312-460-2501</span>
                 </a>
 
-                <a href="sms:312-460-2501" class="contact-card">
-                    <span class="contact-label">Text Eric</span>
-                    <span>💬 312-460-2501</span>
+                <a href="sms:3124602501" class="contact-btn">
+                    <span class="contact-btn-label">Text Eric</span>
+                    <span class="contact-btn-value">💬 312-460-2501</span>
                 </a>
 
-                <a href="mailto:eric@happydetour.com" class="contact-card">
-                    <span class="contact-label">Email Eric</span>
-                    <span>📧 eric@happydetour.com</span>
+                <a href="mailto:eric@happydetour.com" class="contact-btn">
+                    <span class="contact-btn-label">Email Eric</span>
+                    <span class="contact-btn-value">📧 eric@happydetour.com</span>
                 </a>
             </div>
 
-            <p style="font-size: 0.95rem; opacity: 0.7; margin-top: 2rem;">
+            <p class="contact-note">
                 I'm in Cleveland, OH. Eastern time. Text is usually fastest.
             </p>
         </div>
@@ -661,18 +798,14 @@
 
     <!-- Footer -->
     <footer>
-        <p style="font-size: 1.3rem; font-weight: 700; margin-bottom: 1rem;">HAPPY DETOUR TRAVEL</p>
-        <p style="opacity: 0.8;">Affordable vacations. Fun experiences. Everyone welcome.</p>
+        <div class="footer-brand">Happy Detour Travel</div>
+        <div class="footer-tagline">Affordable vacations. Fun experiences. Everyone welcome.</div>
         
-        <div class="footer-links">
-            <a href="https://www.instagram.com/happydetourtravel">@happydetourtravel</a>
-            <a href="https://happydetour.com">happydetour.com</a>
-            <a href="mailto:eric@happydetour.com">eric@happydetour.com</a>
+        <div class="footer-legal">
+            Happy Detour Travel is an independent affiliate of WorldVia Travel Network<br>
+            © 2026 Happy Detour Travel. All rights reserved<br>
+            <span style="opacity: 0.5; font-size: 0.75rem;">Built on a Citrus MacBook in Cleveland, Ohio. Last updated May 8, 2026 at 12:35 AM ET</span>
         </div>
-
-        <p style="font-size: 0.85rem; opacity: 0.7; margin-top: 2rem;">Happy Detour Travel is an independent affiliate of WorldVia Travel Network</p>
-        <p style="font-size: 0.85rem; opacity: 0.6; margin-top: 0.5rem;">© 2026 Happy Detour Travel LLC</p>
-        <p style="font-size: 0.8rem; opacity: 0.5; margin-top: 1rem;">Built on a Citrus MacBook in Cleveland, Ohio<br>Last updated May 1, 2026 at 12:00 PM ET</p>
     </footer>
 </body>
 </html>
