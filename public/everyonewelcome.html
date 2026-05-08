@@ -210,7 +210,7 @@
 
         /* ── SECTION WRAPPERS ── */
         .section {
-            padding: 4.5rem 1.5rem;
+            padding: 4rem 1.5rem;
         }
 
         .section-alt {
@@ -219,11 +219,6 @@
 
         .inner {
             max-width: 900px;
-            margin: 0 auto;
-        }
-
-        .inner-wide {
-            max-width: 1100px;
             margin: 0 auto;
         }
 
@@ -253,7 +248,7 @@
         }
 
         .section-header {
-            margin-bottom: 3rem;
+            margin-bottom: 2.5rem;
         }
 
         .section-header.centered {
@@ -264,95 +259,73 @@
             margin: 0 auto;
         }
 
-        /* ── ITINERARY ── */
-        .itinerary-summary {
-            background: var(--blue-light);
-            border-radius: 12px;
-            padding: 1.5rem;
+        /* ── PORTS GRID ── */
+        .ports-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
             margin-bottom: 2rem;
-            border-left: 4px solid var(--blue);
         }
 
-        .itinerary-summary p {
-            font-size: 1rem;
-            color: var(--text-mid);
-            line-height: 1.7;
-            margin: 0;
-        }
-
-        .itinerary-list {
-            display: flex;
-            flex-direction: column;
-            gap: 1px;
-        }
-
-        .port-card {
+        .port-visual {
             background: var(--bg-white);
             border-radius: 12px;
-            padding: 1.5rem;
-            display: grid;
-            grid-template-columns: 56px 1fr;
-            gap: 1.25rem;
-            align-items: start;
+            overflow: hidden;
             border: 1px solid var(--border);
-            transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
-            margin-bottom: 12px;
+            transition: transform 0.2s, box-shadow 0.2s;
         }
 
-        .port-card:hover {
-            border-color: var(--blue);
-            box-shadow: 0 4px 20px rgba(0,114,152,0.1);
-            transform: translateX(4px);
+        .port-visual:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0,114,152,0.15);
         }
 
-        .port-icon-wrap {
-            width: 56px;
-            height: 56px;
-            border-radius: 12px;
-            background: var(--blue-light);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-            font-size: 1.4rem;
-        }
-
-        .port-day-tag {
-            font-size: 0.7rem;
-            font-weight: 700;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            color: var(--amber);
-            margin-bottom: 0.2rem;
-        }
-
-        .port-card h3 {
-            font-size: 1.25rem;
-            font-weight: 700;
-            color: var(--text-dark);
-            margin-bottom: 0.4rem;
-        }
-
-        .port-card p {
-            font-size: 0.95rem;
-            color: var(--text-soft);
-            line-height: 1.6;
-        }
-
-        .port-image {
+        .port-photo {
             width: 100%;
-            height: 200px;
+            height: 220px;
             background-size: cover;
             background-position: center;
-            border-radius: 8px;
-            margin-top: 1rem;
         }
 
         .costa-maya { background-image: url('/CostaMaya.jpg'); }
         .roatan { background-image: url('/Roatán.jpg'); }
         .cozumel { background-image: url('/Cozumel.jpg'); }
 
-        /* ── WHY ERIC ── */
+        .port-info {
+            padding: 1.25rem;
+        }
+
+        .port-info h3 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 0.25rem;
+        }
+
+        .port-info .port-day {
+            font-size: 0.85rem;
+            color: var(--amber);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .ports-cta {
+            background: var(--blue-light);
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-align: center;
+            border-left: 4px solid var(--blue);
+        }
+
+        .ports-cta p {
+            font-size: 1.05rem;
+            color: var(--text-mid);
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        /* ── ERIC SECTION ── */
         .eric-section {
             background: linear-gradient(160deg, #003d52 0%, #007298 100%);
             color: white;
@@ -383,17 +356,6 @@
             color: white;
         }
 
-        .eric-quote {
-            font-size: 1.2rem;
-            font-weight: 600;
-            color: #BEF264;
-            border-left: 3px solid #BEF264;
-            padding: 0.75rem 1.25rem;
-            margin-bottom: 2rem;
-            font-style: italic;
-            line-height: 1.6;
-        }
-
         .eric-paragraphs {
             display: flex;
             flex-direction: column;
@@ -412,10 +374,11 @@
             border: 1px solid rgba(190,242,100,0.3);
             border-radius: 12px;
             padding: 1.5rem;
+            text-align: center;
         }
 
         .eric-highlight p {
-            font-size: 1.05rem;
+            font-size: 1.1rem;
             color: white;
             font-weight: 600;
             line-height: 1.6;
@@ -423,43 +386,18 @@
         }
 
         /* ── PRICING ── */
-        .pricing-group {
-            margin-bottom: 3rem;
-        }
-
-        .pricing-group-label {
-            font-size: 0.75rem;
-            font-weight: 700;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            color: var(--text-soft);
-            margin-bottom: 0.5rem;
-        }
-
-        .pricing-group-title {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--text-dark);
-            margin-bottom: 0.5rem;
-        }
-
-        .pricing-group-desc {
-            font-size: 0.95rem;
-            color: var(--text-soft);
-            margin-bottom: 1.5rem;
-        }
-
         .pricing-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
-            gap: 1rem;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
         }
 
         .pricing-card {
             background: var(--bg-white);
-            border: 1.5px solid var(--border);
+            border: 2px solid var(--border);
             border-radius: 12px;
-            padding: 1.5rem;
+            padding: 2rem 1.5rem;
             text-align: center;
             position: relative;
             transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
@@ -467,8 +405,8 @@
 
         .pricing-card:hover {
             border-color: var(--blue);
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(0,114,152,0.12);
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0,114,152,0.15);
         }
 
         .pricing-card.featured {
@@ -478,7 +416,7 @@
 
         .popular-badge {
             position: absolute;
-            top: -11px;
+            top: -12px;
             left: 50%;
             transform: translateX(-50%);
             background: linear-gradient(135deg, #FFD700, #F59E0B);
@@ -487,123 +425,58 @@
             font-weight: 800;
             letter-spacing: 0.08em;
             text-transform: uppercase;
-            padding: 0.2rem 0.75rem;
+            padding: 0.25rem 0.85rem;
             border-radius: 100px;
             white-space: nowrap;
         }
 
         .pricing-card h4 {
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             font-weight: 600;
             color: var(--text-soft);
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
         }
 
         .pricing-card .price {
-            font-size: 2.25rem;
+            font-size: 2.75rem;
             font-weight: 800;
             color: var(--blue);
-            line-height: 1.1;
+            line-height: 1;
+            margin-bottom: 0.5rem;
         }
 
         .pricing-card .per {
-            font-size: 0.8rem;
+            font-size: 0.9rem;
             color: var(--text-soft);
-            margin-top: 0.25rem;
+            font-weight: 600;
         }
 
-        .pricing-card .desc {
-            font-size: 0.8rem;
-            color: var(--text-soft);
-            margin-top: 0.75rem;
-            line-height: 1.5;
+        .pricing-card .cabin-type {
+            font-size: 0.85rem;
+            color: var(--text-mid);
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid var(--border);
         }
 
-        .pricing-divider {
-            border: none;
-            border-top: 2px dashed var(--border);
-            margin: 2.5rem 0;
-        }
-
-        .notice-box {
+        .pricing-note {
             background: var(--amber-light);
             border: 1.5px solid #FCD34D;
             border-radius: 12px;
             padding: 1.25rem 1.5rem;
             margin-top: 2rem;
+            text-align: center;
         }
 
-        .notice-box p {
+        .pricing-note p {
             color: #92400E;
-            font-size: 0.95rem;
+            font-size: 1rem;
             line-height: 1.6;
             margin: 0;
+            font-weight: 500;
         }
-
-        /* ── SOLO / DUO CALLOUT ── */
-        .solo-duo-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1.5rem;
-            margin-top: 2rem;
-        }
-
-        @media (max-width: 560px) {
-            .solo-duo-grid { grid-template-columns: 1fr; }
-        }
-
-        .solo-card {
-            background: linear-gradient(135deg, #003d52, #005a7a);
-            border-radius: 12px;
-            padding: 1.75rem;
-            color: white;
-            text-align: center;
-        }
-
-        .duo-card {
-            background: var(--bg-white);
-            border: 2px solid var(--green);
-            border-radius: 12px;
-            padding: 1.75rem;
-            text-align: center;
-        }
-
-        .sdc-type {
-            font-size: 0.75rem;
-            font-weight: 700;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            margin-bottom: 0.5rem;
-        }
-
-        .solo-card .sdc-type { color: #BEF264; }
-        .duo-card .sdc-type { color: var(--blue); }
-
-        .sdc-room {
-            font-size: 1.1rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-        }
-
-        .solo-card .sdc-room { color: white; }
-        .duo-card .sdc-room { color: var(--text-dark); }
-
-        .sdc-price {
-            font-size: 2.5rem;
-            font-weight: 800;
-            line-height: 1;
-        }
-
-        .solo-card .sdc-price { color: white; }
-        .duo-card .sdc-price { color: var(--blue); }
-
-        .sdc-note {
-            font-size: 0.8rem;
-            margin-top: 0.5rem;
-        }
-
-        .solo-card .sdc-note { color: rgba(255,255,255,0.65); }
-        .duo-card .sdc-note { color: var(--text-soft); }
 
         /* ── CONTACT ── */
         .contact-section {
@@ -657,13 +530,10 @@
 
         .contact-note {
             text-align: center;
-            margin-top: 2.5rem;
+            margin-top: 2rem;
             color: var(--text-soft);
             font-size: 0.95rem;
             line-height: 1.7;
-            max-width: 480px;
-            margin-left: auto;
-            margin-right: auto;
         }
 
         .contact-note strong {
@@ -673,7 +543,7 @@
         /* ── FORM STYLES ── */
         .contact-form-wrap {
             max-width: 540px;
-            margin: 0 auto 3rem;
+            margin: 0 auto 2.5rem;
             background: var(--bg-light);
             border: 1.5px solid var(--border);
             border-radius: 12px;
@@ -767,6 +637,7 @@
             .hero { padding: 3.5rem 1.25rem 3rem; }
             .section { padding: 3rem 1.25rem; }
             .hero-cta { flex-direction: column; align-items: flex-start; }
+            .pricing-grid { grid-template-columns: 1fr; }
         }
 
         /* ── FLOATING RESERVE BUTTON ── */
@@ -840,7 +711,7 @@
             </p>
 
             <p class="hero-details">
-                Three ports: Costa Maya, Roatán, and Cozumel. Two sea days to do absolutely nothing if that's what you need. Seven nights total.
+                Three ports. Two sea days. Seven nights total. No pressure. No judgment. Just a really good trip.
             </p>
 
             <div class="hero-welcome-note">
@@ -860,201 +731,107 @@
                         <path d="M12 3v7"></path>
                         <path d="M19 10h-7"></path>
                     </svg>
-                    Reserve Your Spot
+                    Text or Call Me
                 </a>
-                <a href="#pricing" class="btn-outline">See Pricing</a>
                 <span class="hero-starting">Starting at <strong>$455</strong> per person</span>
             </div>
         </div>
     </section>
 
-    <!-- ITINERARY -->
+    <!-- PORTS -->
     <section class="section">
         <div class="inner">
             <div class="section-header">
                 <div class="section-label">The Journey</div>
-                <h2 class="section-title">Where we're going</h2>
-                <p class="section-body">Three Caribbean ports and a whole lot of nothing on your schedule if that's what you want.</p>
+                <h2 class="section-title">Costa Maya. Roatán. Cozumel.</h2>
+                <p class="section-body">Three Caribbean ports. Two sea days to do nothing if that's what you need.</p>
             </div>
 
-            <div class="itinerary-summary">
-                <p><strong>September 13:</strong> Board in Galveston, find the pool bar, settle in. <strong>September 20:</strong> Back in Galveston with a tan and probably a few souvenirs you didn't plan on buying.</p>
+            <div class="ports-grid">
+                <div class="port-visual">
+                    <div class="port-photo costa-maya"></div>
+                    <div class="port-info">
+                        <div class="port-day">Day 3</div>
+                        <h3>Costa Maya</h3>
+                    </div>
+                </div>
+
+                <div class="port-visual">
+                    <div class="port-photo roatan"></div>
+                    <div class="port-info">
+                        <div class="port-day">Day 4</div>
+                        <h3>Roatán</h3>
+                    </div>
+                </div>
+
+                <div class="port-visual">
+                    <div class="port-photo cozumel"></div>
+                    <div class="port-info">
+                        <div class="port-day">Day 5</div>
+                        <h3>Cozumel</h3>
+                    </div>
+                </div>
             </div>
 
-            <div class="itinerary-list">
-                <div class="port-card">
-                    <div class="port-icon-wrap">🏝️</div>
-                    <div>
-                        <div class="port-day-tag">Day 3</div>
-                        <h3>Costa Maya, Mexico</h3>
-                        <p>Pristine beaches, turquoise water, and ancient Mayan ruins nearby if you want to explore. Or just find a chair and a drink. Both are valid.</p>
-                        <div class="port-image costa-maya"></div>
-                    </div>
-                </div>
-
-                <div class="port-card">
-                    <div class="port-icon-wrap">🦎</div>
-                    <div>
-                        <div class="port-day-tag">Day 4</div>
-                        <h3>Isla de Roatán, Honduras</h3>
-                        <p>One of the best diving spots in the world. Even if you don't dive, the island is beautiful and the beaches are worth the stop.</p>
-                        <div class="port-image roatan"></div>
-                    </div>
-                </div>
-
-                <div class="port-card">
-                    <div class="port-icon-wrap">🏖️</div>
-                    <div>
-                        <div class="port-day-tag">Day 5</div>
-                        <h3>Cozumel, Mexico</h3>
-                        <p>Shopping, great food, beaches, snorkeling. Something for everyone. Cozumel never disappoints.</p>
-                        <div class="port-image cozumel"></div>
-                    </div>
-                </div>
+            <div class="ports-cta">
+                <p><strong>Want to know what to do in each port?</strong> I've been there. Let's talk about what makes sense for you.</p>
             </div>
         </div>
     </section>
 
     <!-- WHY ERIC -->
-    <section class="section eric-section" id="about">
+    <section class="section eric-section">
         <div class="eric-inner">
             <div class="section-label">Why book with me</div>
             <h2 class="section-title" style="color:white; margin-bottom:1.5rem;">I'll be on this ship<br>right alongside you.</h2>
-
-            <blockquote class="eric-quote">
-                "Planning a trip should feel exciting, not overwhelming. My job is to make it simple."
-            </blockquote>
 
             <div class="eric-paragraphs">
                 <p>I've sailed MSC three times. I know the brand, I know how their ships run, and I know what questions you haven't thought to ask yet. The Seascape will be a first for both of us, which makes this trip even better.</p>
 
                 <p>I'm booking my own cabin on this sailing. That means if you need anything before, during, or after the trip, I'm right there. No phone tag. No waiting for an email. Just come find me on the ship.</p>
-
-                <p>Need airfare to Galveston? I can help. Want a hotel the night before so you're not rushing to the port? Done. Want to know which stateroom is actually worth the upgrade? I have an opinion on that.</p>
             </div>
 
             <div class="eric-highlight">
-                <p>My planning service is free to you. So there's really no reason not to reach out.</p>
+                <p>Want to know which cabin I'm choosing and why? Text me.</p>
             </div>
         </div>
     </section>
 
     <!-- PRICING -->
     <section class="section section-alt" id="pricing">
-        <div class="inner-wide">
+        <div class="inner">
             <div class="section-header centered">
                 <div class="section-label">Pricing</div>
-                <h2 class="section-title">Choose your stateroom</h2>
-                <p class="section-body">All prices are per stateroom, double occupancy. Taxes and port fees included. Gratuities added onboard.</p>
+                <h2 class="section-title">How much does this cost?</h2>
+                <p class="section-body">Here are a few options. Prices include taxes and port fees. Double occupancy.</p>
             </div>
 
-            <!-- Cruise Only -->
-            <div class="pricing-group">
-                <div class="pricing-group-label">Option 1</div>
-                <div class="pricing-group-title">Cruise Only</div>
-                <div class="pricing-group-desc">Base fare covers meals, entertainment, and everything on the ship. You add drinks and wifi if you want.</div>
-                <div class="pricing-grid">
-                    <div class="pricing-card">
-                        <h4>Interior Bella</h4>
-                        <div class="price">$910</div>
-                        <div class="per">per stateroom, double occupancy</div>
-                        <div class="desc">Just $455 per person</div>
-                    </div>
-                    <div class="pricing-card">
-                        <h4>Deluxe Interior</h4>
-                        <div class="price">$1,030</div>
-                        <div class="per">per stateroom, double occupancy</div>
-                        <div class="desc">Fantastica, Decks 11-15</div>
-                    </div>
-                    <div class="pricing-card">
-                        <h4>Balcony Bella</h4>
-                        <div class="price">$1,290</div>
-                        <div class="per">per stateroom, double occupancy</div>
-                        <div class="desc">Private balcony</div>
-                    </div>
-                    <div class="pricing-card">
-                        <h4>Deluxe Balcony 11-12</h4>
-                        <div class="price">$1,450</div>
-                        <div class="per">per stateroom, double occupancy</div>
-                        <div class="desc">Fantastica with balcony</div>
-                    </div>
-                    <div class="pricing-card">
-                        <h4>Deluxe Balcony 13-14</h4>
-                        <div class="price">$1,470</div>
-                        <div class="per">per stateroom, double occupancy</div>
-                        <div class="desc">Fantastica with balcony</div>
-                    </div>
+            <div class="pricing-grid">
+                <div class="pricing-card featured">
+                    <div class="popular-badge">Most Affordable</div>
+                    <h4>Inside Cabin</h4>
+                    <div class="price">$455</div>
+                    <div class="per">per person</div>
+                    <div class="cabin-type">Interior Bella<br>Cruise only</div>
+                </div>
+
+                <div class="pricing-card">
+                    <h4>Balcony Cabin</h4>
+                    <div class="price">$645</div>
+                    <div class="per">per person</div>
+                    <div class="cabin-type">Balcony Bella<br>Cruise only</div>
+                </div>
+
+                <div class="pricing-card">
+                    <h4>Everything Included</h4>
+                    <div class="price">$847</div>
+                    <div class="per">per person</div>
+                    <div class="cabin-type">Interior Bella<br>Drinks + wifi</div>
                 </div>
             </div>
 
-            <hr class="pricing-divider">
-
-            <!-- Everything Included -->
-            <div class="pricing-group">
-                <div class="pricing-group-label">Option 2</div>
-                <div class="pricing-group-title">Everything Included</div>
-                <div class="pricing-group-desc">Same cabins, but unlimited drinks and wifi are bundled in. One price, no surprises at the bar.</div>
-                <div class="pricing-grid">
-                    <div class="pricing-card featured">
-                        <div class="popular-badge">Most Popular</div>
-                        <h4>Interior Bella</h4>
-                        <div class="price">$1,694</div>
-                        <div class="per">per stateroom, double occupancy</div>
-                        <div class="desc">Drinks + wifi included</div>
-                    </div>
-                    <div class="pricing-card">
-                        <h4>Deluxe Interior</h4>
-                        <div class="price">$1,814</div>
-                        <div class="per">per stateroom, double occupancy</div>
-                        <div class="desc">Drinks + wifi included</div>
-                    </div>
-                    <div class="pricing-card">
-                        <h4>Balcony Bella</h4>
-                        <div class="price">$2,074</div>
-                        <div class="per">per stateroom, double occupancy</div>
-                        <div class="desc">Drinks + wifi included</div>
-                    </div>
-                    <div class="pricing-card">
-                        <h4>Deluxe Balcony 11-12</h4>
-                        <div class="price">$2,234</div>
-                        <div class="per">per stateroom, double occupancy</div>
-                        <div class="desc">Drinks + wifi included</div>
-                    </div>
-                    <div class="pricing-card">
-                        <h4>Deluxe Balcony 13-14</h4>
-                        <div class="price">$2,254</div>
-                        <div class="per">per stateroom, double occupancy</div>
-                        <div class="desc">Drinks + wifi included</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Solo / Third Passenger -->
-            <hr class="pricing-divider">
-
-            <div class="pricing-group">
-                <div class="pricing-group-label">Traveling solo or with a third person?</div>
-                <div class="pricing-group-title">Solo Traveler & Third Passenger Rates</div>
-                <div class="pricing-group-desc">Reach out and I'll get you the exact pricing. MSC has specific rates for single occupancy and for third passengers in a cabin.</div>
-
-                <div class="solo-duo-grid">
-                    <div class="solo-card">
-                        <div class="sdc-type">Solo Traveler</div>
-                        <div class="sdc-room">Interior Cabin</div>
-                        <div class="sdc-price">Ask Me</div>
-                        <div class="sdc-note">Solo rates vary. Reach out and I'll get you the real number.</div>
-                    </div>
-                    <div class="duo-card">
-                        <div class="sdc-type">Third Passenger</div>
-                        <div class="sdc-room">Any Cabin</div>
-                        <div class="sdc-price">Ask Me</div>
-                        <div class="sdc-note">Third passenger rates are different and often very affordable.</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="notice-box">
-                <p><strong>A couple of things to know:</strong> Gratuities are not included and will be added to your onboard account. Final payment is due 90 days before departure. Deposits start the booking. Reach out and I'll walk you through everything.</p>
+            <div class="pricing-note">
+                <p><strong>Other cabin types available.</strong> Want to know which one makes sense for your budget? Traveling solo or with a third person? Need flights or hotels? Reach out and I'll get you exact pricing.</p>
             </div>
         </div>
     </section>
@@ -1064,8 +841,8 @@
         <div class="inner">
             <div class="section-header centered">
                 <div class="section-label">Let's talk</div>
-                <h2 class="section-title">Ready to book or just have questions?</h2>
-                <p class="section-body">Either way, reach out. No pressure. I'm a real person and text is usually the fastest way to get me.</p>
+                <h2 class="section-title">Ready to book or have questions?</h2>
+                <p class="section-body">Text is usually fastest. I'm a real person and my planning service is free to you.</p>
             </div>
 
             <!-- Contact Form -->
@@ -1133,7 +910,7 @@
         <div class="footer-legal">
             Happy Detour Travel is an independent affiliate of WorldVia Travel Network<br>
             © 2026 Happy Detour Travel. All rights reserved<br>
-            <span style="font-size:0.7rem; opacity:0.5;">Built on a Citrus MacBook in Cleveland, Ohio. Last updated May 1, 2026 at 12:00 PM ET</span>
+            <span style="font-size:0.7rem; opacity:0.5;">Built on a Citrus MacBook in Cleveland, Ohio. Last updated May 8, 2026 at 12:29 AM ET</span>
         </div>
     </footer>
 </body>
