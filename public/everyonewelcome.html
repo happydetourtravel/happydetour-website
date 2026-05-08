@@ -125,8 +125,17 @@
             line-height: 1.7;
             opacity: 0.95;
             max-width: 640px;
-            margin-bottom: 2.5rem;
+            margin-bottom: 1.25rem;
             color: rgba(255,255,255,0.92);
+        }
+
+        .hero-details {
+            font-size: 1rem;
+            line-height: 1.6;
+            opacity: 0.85;
+            max-width: 600px;
+            margin-bottom: 2.5rem;
+            color: rgba(255,255,255,0.8);
         }
 
         .hero-welcome-note {
@@ -199,45 +208,6 @@
             font-size: 1rem;
         }
 
-        /* ── QUICK STATS BAR ── */
-        .stats-bar {
-            background: var(--text-dark);
-            padding: 1.5rem;
-        }
-
-        .stats-inner {
-            max-width: 900px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-            gap: 1rem;
-            text-align: center;
-        }
-
-        .stat-item {
-            color: white;
-        }
-
-        .stat-label {
-            font-size: 0.7rem;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            color: rgba(255,255,255,0.5);
-            margin-bottom: 0.25rem;
-        }
-
-        .stat-value {
-            font-size: 1.05rem;
-            font-weight: 700;
-            color: white;
-        }
-
-        .stat-divider {
-            width: 1px;
-            background: rgba(255,255,255,0.1);
-            align-self: stretch;
-        }
-
         /* ── SECTION WRAPPERS ── */
         .section {
             padding: 4.5rem 1.5rem;
@@ -295,6 +265,21 @@
         }
 
         /* ── ITINERARY ── */
+        .itinerary-summary {
+            background: var(--blue-light);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            border-left: 4px solid var(--blue);
+        }
+
+        .itinerary-summary p {
+            font-size: 1rem;
+            color: var(--text-mid);
+            line-height: 1.7;
+            margin: 0;
+        }
+
         .itinerary-list {
             display: flex;
             flex-direction: column;
@@ -435,46 +420,6 @@
             font-weight: 600;
             line-height: 1.6;
             margin: 0;
-        }
-
-        /* ── INCLUDED ── */
-        .included-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 1rem;
-        }
-
-        .included-item {
-            display: flex;
-            gap: 0.75rem;
-            align-items: flex-start;
-            padding: 1rem;
-            background: var(--bg-light);
-            border-radius: 10px;
-            border: 1px solid var(--border);
-        }
-
-        .check-circle {
-            width: 22px;
-            height: 22px;
-            border-radius: 50%;
-            background: var(--green);
-            flex-shrink: 0;
-            margin-top: 2px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .check-circle svg {
-            width: 12px;
-            height: 12px;
-        }
-
-        .included-item span {
-            font-size: 0.95rem;
-            color: var(--text-mid);
-            font-weight: 500;
         }
 
         /* ── PRICING ── */
@@ -885,14 +830,17 @@
         <div class="hero-content">
             <div class="hero-badge">
                 <div class="hero-badge-dot"></div>
-                <span>September 13 &ndash; 20, 2026</span>
+                <span>September 13 – 20, 2026</span>
             </div>
 
             <h1>Everyone<br>Welcome</h1>
 
             <p class="hero-sub">
-                Seven nights in the Western Caribbean aboard MSC Seascape.
-                Departing Galveston, Texas. No pressure. No judgment. Just a really good trip.
+                Seven nights in the Western Caribbean aboard MSC Seascape. Departing Galveston, Texas.
+            </p>
+
+            <p class="hero-details">
+                Three ports: Costa Maya, Roatán, and Cozumel. Two sea days to do absolutely nothing if that's what you need. Seven nights total.
             </p>
 
             <div class="hero-welcome-note">
@@ -915,62 +863,27 @@
                     Reserve Your Spot
                 </a>
                 <a href="#pricing" class="btn-outline">See Pricing</a>
-                <span class="hero-starting">Starting at <strong>$910</strong> per stateroom, double occupancy</span>
+                <span class="hero-starting">Starting at <strong>$455</strong> per person</span>
             </div>
         </div>
     </section>
-
-    <!-- STATS BAR -->
-    <div class="stats-bar">
-        <div class="stats-inner">
-            <div class="stat-item">
-                <div class="stat-label">Ship</div>
-                <div class="stat-value">MSC Seascape</div>
-            </div>
-            <div class="stat-divider"></div>
-            <div class="stat-item">
-                <div class="stat-label">Departs</div>
-                <div class="stat-value">Sept 13, 2026</div>
-            </div>
-            <div class="stat-divider"></div>
-            <div class="stat-item">
-                <div class="stat-label">From</div>
-                <div class="stat-value">Galveston, TX</div>
-            </div>
-            <div class="stat-divider"></div>
-            <div class="stat-item">
-                <div class="stat-label">Duration</div>
-                <div class="stat-value">7 Nights</div>
-            </div>
-            <div class="stat-divider"></div>
-            <div class="stat-item">
-                <div class="stat-label">Ports</div>
-                <div class="stat-value">3 Caribbean Stops</div>
-            </div>
-        </div>
-    </div>
 
     <!-- ITINERARY -->
     <section class="section">
         <div class="inner">
             <div class="section-header">
                 <div class="section-label">The Journey</div>
-                <h2 class="section-title">Where we&rsquo;re going</h2>
-                <p class="section-body">Three ports, two sea days, and a whole lot of nothing on your schedule if that&rsquo;s what you want.</p>
+                <h2 class="section-title">Where we're going</h2>
+                <p class="section-body">Three Caribbean ports and a whole lot of nothing on your schedule if that's what you want.</p>
+            </div>
+
+            <div class="itinerary-summary">
+                <p><strong>September 13:</strong> Board in Galveston, find the pool bar, settle in. <strong>September 20:</strong> Back in Galveston with a tan and probably a few souvenirs you didn't plan on buying.</p>
             </div>
 
             <div class="itinerary-list">
                 <div class="port-card">
-                    <div class="port-icon-wrap">&#128674;</div>
-                    <div>
-                        <div class="port-day-tag">Day 1 &mdash; Embarkation</div>
-                        <h3>Galveston, Texas</h3>
-                        <p>Board the Seascape, drop your bags, and figure out where the pool bar is. That&rsquo;s the whole agenda.</p>
-                    </div>
-                </div>
-
-                <div class="port-card">
-                    <div class="port-icon-wrap">&#127965;</div>
+                    <div class="port-icon-wrap">🏝️</div>
                     <div>
                         <div class="port-day-tag">Day 3</div>
                         <h3>Costa Maya, Mexico</h3>
@@ -980,31 +893,22 @@
                 </div>
 
                 <div class="port-card">
-                    <div class="port-icon-wrap">&#129446;</div>
+                    <div class="port-icon-wrap">🦎</div>
                     <div>
                         <div class="port-day-tag">Day 4</div>
-                        <h3>Isla de Roat&aacute;n, Honduras</h3>
-                        <p>One of the best diving spots in the world. Even if you don&rsquo;t dive, the island is beautiful and the beaches are worth the stop.</p>
+                        <h3>Isla de Roatán, Honduras</h3>
+                        <p>One of the best diving spots in the world. Even if you don't dive, the island is beautiful and the beaches are worth the stop.</p>
                         <div class="port-image roatan"></div>
                     </div>
                 </div>
 
                 <div class="port-card">
-                    <div class="port-icon-wrap">&#127964;</div>
+                    <div class="port-icon-wrap">🏖️</div>
                     <div>
                         <div class="port-day-tag">Day 5</div>
                         <h3>Cozumel, Mexico</h3>
                         <p>Shopping, great food, beaches, snorkeling. Something for everyone. Cozumel never disappoints.</p>
                         <div class="port-image cozumel"></div>
-                    </div>
-                </div>
-
-                <div class="port-card">
-                    <div class="port-icon-wrap">&#128674;</div>
-                    <div>
-                        <div class="port-day-tag">Day 8 &mdash; Home</div>
-                        <h3>Back to Galveston</h3>
-                        <p>Disembarkation day. You&rsquo;ll leave with a tan, a lot of memories, and probably a few souvenirs you didn&rsquo;t plan on buying.</p>
                     </div>
                 </div>
             </div>
@@ -1015,113 +919,33 @@
     <section class="section eric-section" id="about">
         <div class="eric-inner">
             <div class="section-label">Why book with me</div>
-            <h2 class="section-title" style="color:white; margin-bottom:1.5rem;">I know the MSC brand.<br>And I&rsquo;ll be on this ship<br>right alongside you.</h2>
+            <h2 class="section-title" style="color:white; margin-bottom:1.5rem;">I'll be on this ship<br>right alongside you.</h2>
 
             <blockquote class="eric-quote">
-                &ldquo;Planning a trip should feel exciting, not overwhelming. My job is to make it simple.&rdquo;
+                "Planning a trip should feel exciting, not overwhelming. My job is to make it simple."
             </blockquote>
 
             <div class="eric-paragraphs">
-                <p>I&rsquo;ve sailed MSC before. I know the brand, I know how their ships run, and I know what questions you haven&rsquo;t thought to ask yet. The Seascape will be a first for both of us, and that makes this trip even better.</p>
+                <p>I've sailed MSC three times. I know the brand, I know how their ships run, and I know what questions you haven't thought to ask yet. The Seascape will be a first for both of us, which makes this trip even better.</p>
 
-                <p>I&rsquo;m booking my own cabin on this sailing. That means if you need anything before, during, or after the trip, I&rsquo;m right there. No phone tag. No waiting for an email. Just come find me on the ship. I&rsquo;ll be the one at the pool bar with a Coke Zero.</p>
+                <p>I'm booking my own cabin on this sailing. That means if you need anything before, during, or after the trip, I'm right there. No phone tag. No waiting for an email. Just come find me on the ship.</p>
 
-                <p>My first client just booked. She needed flights, hotels before and after, and the cruise itself. One conversation. Done. That&rsquo;s what I do. You tell me what you need. I figure out the rest. And if something goes sideways, I handle it.</p>
-
-                <p>Need airfare to Galveston? I can help. Want a hotel the night before so you&rsquo;re not rushing to the port? Done. Want to know which stateroom is actually worth the upgrade? I have an opinion on that.</p>
+                <p>Need airfare to Galveston? I can help. Want a hotel the night before so you're not rushing to the port? Done. Want to know which stateroom is actually worth the upgrade? I have an opinion on that.</p>
             </div>
 
             <div class="eric-highlight">
-                <p>My planning service is free to you. So there&rsquo;s really no reason not to reach out.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- WHAT'S INCLUDED -->
-    <section class="section section-alt">
-        <div class="inner">
-            <div class="section-header">
-                <div class="section-label">What comes with it</div>
-                <h2 class="section-title">What&rsquo;s included</h2>
-                <p class="section-body">Your base cruise fare covers all of this. Add drinks and wifi on top if you want the full-package pricing below.</p>
-            </div>
-
-            <div class="included-grid">
-                <div class="included-item">
-                    <div class="check-circle">
-                        <svg viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1 5L4.5 8.5L11 1" stroke="#1F2937" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
-                    <span>All meals in main dining rooms</span>
-                </div>
-                <div class="included-item">
-                    <div class="check-circle">
-                        <svg viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1 5L4.5 8.5L11 1" stroke="#1F2937" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
-                    <span>Live entertainment and shows</span>
-                </div>
-                <div class="included-item">
-                    <div class="check-circle">
-                        <svg viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1 5L4.5 8.5L11 1" stroke="#1F2937" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
-                    <span>Pools, hot tubs, and sun decks</span>
-                </div>
-                <div class="included-item">
-                    <div class="check-circle">
-                        <svg viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1 5L4.5 8.5L11 1" stroke="#1F2937" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
-                    <span>Kids clubs and family activities</span>
-                </div>
-                <div class="included-item">
-                    <div class="check-circle">
-                        <svg viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1 5L4.5 8.5L11 1" stroke="#1F2937" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
-                    <span>Fitness center access</span>
-                </div>
-                <div class="included-item">
-                    <div class="check-circle">
-                        <svg viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1 5L4.5 8.5L11 1" stroke="#1F2937" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
-                    <span>Your choice of dining time</span>
-                </div>
-                <div class="included-item">
-                    <div class="check-circle">
-                        <svg viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1 5L4.5 8.5L11 1" stroke="#1F2937" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
-                    <span>Eric handles everything for you</span>
-                </div>
-                <div class="included-item">
-                    <div class="check-circle">
-                        <svg viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1 5L4.5 8.5L11 1" stroke="#1F2937" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
-                    <span>Planning is always free</span>
-                </div>
+                <p>My planning service is free to you. So there's really no reason not to reach out.</p>
             </div>
         </div>
     </section>
 
     <!-- PRICING -->
-    <section class="section" id="pricing">
+    <section class="section section-alt" id="pricing">
         <div class="inner-wide">
             <div class="section-header centered">
                 <div class="section-label">Pricing</div>
                 <h2 class="section-title">Choose your stateroom</h2>
-                <p class="section-body">All prices are per stateroom, double occupancy, including taxes and port fees. Gratuities are added onboard and are not included here.</p>
+                <p class="section-body">All prices are per stateroom, double occupancy. Taxes and port fees included. Gratuities added onboard.</p>
             </div>
 
             <!-- Cruise Only -->
@@ -1134,13 +958,13 @@
                         <h4>Interior Bella</h4>
                         <div class="price">$910</div>
                         <div class="per">per stateroom, double occupancy</div>
-                        <div class="desc">Comfortable inside cabin</div>
+                        <div class="desc">Just $455 per person</div>
                     </div>
                     <div class="pricing-card">
                         <h4>Deluxe Interior</h4>
                         <div class="price">$1,030</div>
                         <div class="per">per stateroom, double occupancy</div>
-                        <div class="desc">Fantastica, Decks 11&ndash;15</div>
+                        <div class="desc">Fantastica, Decks 11-15</div>
                     </div>
                     <div class="pricing-card">
                         <h4>Balcony Bella</h4>
@@ -1149,13 +973,13 @@
                         <div class="desc">Private balcony</div>
                     </div>
                     <div class="pricing-card">
-                        <h4>Deluxe Balcony 11&ndash;12</h4>
+                        <h4>Deluxe Balcony 11-12</h4>
                         <div class="price">$1,450</div>
                         <div class="per">per stateroom, double occupancy</div>
                         <div class="desc">Fantastica with balcony</div>
                     </div>
                     <div class="pricing-card">
-                        <h4>Deluxe Balcony 13&ndash;14</h4>
+                        <h4>Deluxe Balcony 13-14</h4>
                         <div class="price">$1,470</div>
                         <div class="per">per stateroom, double occupancy</div>
                         <div class="desc">Fantastica with balcony</div>
@@ -1191,13 +1015,13 @@
                         <div class="desc">Drinks + wifi included</div>
                     </div>
                     <div class="pricing-card">
-                        <h4>Deluxe Balcony 11&ndash;12</h4>
+                        <h4>Deluxe Balcony 11-12</h4>
                         <div class="price">$2,234</div>
                         <div class="per">per stateroom, double occupancy</div>
                         <div class="desc">Drinks + wifi included</div>
                     </div>
                     <div class="pricing-card">
-                        <h4>Deluxe Balcony 13&ndash;14</h4>
+                        <h4>Deluxe Balcony 13-14</h4>
                         <div class="price">$2,254</div>
                         <div class="per">per stateroom, double occupancy</div>
                         <div class="desc">Drinks + wifi included</div>
@@ -1210,7 +1034,7 @@
 
             <div class="pricing-group">
                 <div class="pricing-group-label">Traveling solo or with a third person?</div>
-                <div class="pricing-group-title">Solo Traveler &amp; Third Passenger Rates</div>
+                <div class="pricing-group-title">Solo Traveler & Third Passenger Rates</div>
                 <div class="pricing-group-desc">Reach out and I'll get you the exact pricing. MSC has specific rates for single occupancy and for third passengers in a cabin.</div>
 
                 <div class="solo-duo-grid">
@@ -1218,7 +1042,7 @@
                         <div class="sdc-type">Solo Traveler</div>
                         <div class="sdc-room">Interior Cabin</div>
                         <div class="sdc-price">Ask Me</div>
-                        <div class="sdc-note">Solo rates vary. Reach out and I&rsquo;ll get you the real number.</div>
+                        <div class="sdc-note">Solo rates vary. Reach out and I'll get you the real number.</div>
                     </div>
                     <div class="duo-card">
                         <div class="sdc-type">Third Passenger</div>
@@ -1239,9 +1063,9 @@
     <section class="section contact-section" id="contact">
         <div class="inner">
             <div class="section-header centered">
-                <div class="section-label">Let&rsquo;s talk</div>
+                <div class="section-label">Let's talk</div>
                 <h2 class="section-title">Ready to book or just have questions?</h2>
-                <p class="section-body">Either way, reach out. No pressure. I&rsquo;m a real person and text is usually the fastest way to get me.</p>
+                <p class="section-body">Either way, reach out. No pressure. I'm a real person and text is usually the fastest way to get me.</p>
             </div>
 
             <!-- Contact Form -->
@@ -1285,19 +1109,19 @@
 
             <div class="contact-grid">
                 <a href="tel:3124602501" class="contact-btn contact-btn-call">
-                    <span>&#128222;</span> Call Eric
+                    <span>📞</span> Call Eric
                 </a>
                 <a href="sms:3124602501" class="contact-btn contact-btn-text">
-                    <span>&#128172;</span> Text Eric
+                    <span>💬</span> Text Eric
                 </a>
                 <a href="mailto:eric@happydetour.com?subject=MSC Seascape September 2026" class="contact-btn contact-btn-email">
-                    <span>&#9993;</span> Email Eric
+                    <span>✉️</span> Email Eric
                 </a>
             </div>
 
             <div class="contact-note">
                 <strong>312-460-2501 | eric@happydetour.com</strong><br>
-                I&rsquo;m in Cleveland, OH. Eastern time. Text is usually fastest.
+                I'm in Cleveland, OH. Eastern time. Text is usually fastest.
             </div>
         </div>
     </section>
@@ -1308,8 +1132,8 @@
         <div class="footer-tagline">Affordable vacations. Fun experiences. Everyone welcome.</div>
         <div class="footer-legal">
             Happy Detour Travel is an independent affiliate of WorldVia Travel Network<br>
-            &copy; 2026 Happy Detour Travel &mdash; All rights reserved<br>
-            <span style="font-size:0.7rem; opacity:0.5;">Built on a Citrus MacBook in Cleveland, Ohio &mdash; Last updated May 1, 2026 at 12:00 PM ET</span>
+            © 2026 Happy Detour Travel. All rights reserved<br>
+            <span style="font-size:0.7rem; opacity:0.5;">Built on a Citrus MacBook in Cleveland, Ohio. Last updated May 1, 2026 at 12:00 PM ET</span>
         </div>
     </footer>
 </body>
