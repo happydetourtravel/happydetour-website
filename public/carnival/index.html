@@ -154,24 +154,82 @@
             font-weight: 500;
         }
 
-        .cta-button {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.75rem;
-            padding: 1.25rem 3rem;
+        /* Pricing Teaser (NEW) */
+        .pricing-teaser {
+            background: #FFF3E0;
+            border-bottom: 2px solid #FFCC80;
+            padding: 2.5rem 2rem;
+        }
+
+        .pricing-teaser-inner {
+            max-width: 540px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .pricing-teaser h2 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.8rem;
+            font-weight: 400;
+            font-style: italic;
+            color: var(--dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .pricing-teaser p {
+            font-size: 1rem;
+            color: #BF5B00;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .pricing-teaser-form {
+            display: flex;
+            flex-direction: column;
+            gap: 0.85rem;
+        }
+
+        .pricing-teaser-form input {
+            width: 100%;
+            padding: 0.85rem 1rem;
+            border: 1.5px solid #FFCC80;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-family: inherit;
+            background: white;
+            color: var(--dark);
+            transition: border-color 0.2s;
+        }
+
+        .pricing-teaser-form input:focus {
+            outline: none;
+            border-color: var(--ocean);
+        }
+
+        .pricing-teaser-form button {
             background: var(--sunset);
             color: white;
-            text-decoration: none;
-            border-radius: 50px;
             font-weight: 700;
-            font-size: 1.1rem;
-            box-shadow: 0 12px 35px rgba(255, 107, 53, 0.4);
+            font-size: 1.05rem;
+            padding: 0.95rem;
+            border-radius: 50px;
+            border: none;
+            cursor: pointer;
+            font-family: inherit;
+            box-shadow: 0 8px 25px rgba(255, 107, 53, 0.35);
             transition: all 0.3s ease;
         }
 
-        .cta-button:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 16px 45px rgba(255, 107, 53, 0.5);
+        .pricing-teaser-form button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(255, 107, 53, 0.45);
+        }
+
+        .pricing-teaser-note {
+            font-size: 0.82rem;
+            color: #BF5B00;
+            margin-top: 0.75rem;
+            opacity: 0.8;
         }
 
         /* Welcome Section */
@@ -649,10 +707,21 @@
                 <div class="price-amount">$644</div>
                 <div class="price-detail">per person</div>
             </div>
+        </div>
+    </section>
 
-            <a href="#contact" class="cta-button">
-                💬 Text or Call Me
-            </a>
+    <!-- PRICING TEASER (NEW) -->
+    <section class="pricing-teaser">
+        <div class="pricing-teaser-inner">
+            <h2>Want the full pricing breakdown?</h2>
+            <p>Drop your name and number. I'll text it to you personally. No pressure, no sales pitch.</p>
+            <form class="pricing-teaser-form" action="https://formspree.io/f/xvzyppnz" method="POST">
+                <input type="text" name="name" placeholder="First name" required>
+                <input type="tel" name="phone" placeholder="Your phone number" required>
+                <input type="hidden" name="_subject" value="Carnival ABC Islands Pricing Request">
+                <button type="submit">Send Details, No Pressure! 📲</button>
+            </form>
+            <p class="pricing-teaser-note">I'm a real person. You'll hear from me, not a bot.</p>
         </div>
     </section>
 
@@ -791,7 +860,7 @@
             </div>
 
             <p class="contact-note">
-                I'm in Cleveland, OH. Eastern time. Text is usually fastest.
+                I'm in Alliance, OH. Eastern time. Text is usually fastest.
             </p>
         </div>
     </section>
@@ -804,7 +873,7 @@
         <div class="footer-legal">
             Happy Detour Travel is an independent affiliate of WorldVia Travel Network<br>
             © 2026 Happy Detour Travel. All rights reserved<br>
-            <span style="opacity: 0.5; font-size: 0.75rem;">Built on a Citrus MacBook in Cleveland, Ohio. Last updated May 8, 2026 at 12:35 AM ET</span>
+            <span style="opacity: 0.5; font-size: 0.75rem;">Built on a Citrus MacBook in Alliance, Ohio. Last updated May 16, 2026</span>
         </div>
     </footer>
 </body>
