@@ -208,6 +208,83 @@
             font-size: 1rem;
         }
 
+        /* ── PRICING TEASER (NEW) ── */
+        .pricing-teaser {
+            background: var(--amber-light);
+            border-bottom: 2px solid #FCD34D;
+            padding: 2.5rem 1.5rem;
+        }
+
+        .pricing-teaser-inner {
+            max-width: 540px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .pricing-teaser h2 {
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: var(--text-dark);
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.01em;
+        }
+
+        .pricing-teaser p {
+            font-size: 1rem;
+            color: #92400E;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .pricing-teaser-form {
+            display: flex;
+            flex-direction: column;
+            gap: 0.85rem;
+        }
+
+        .pricing-teaser-form input {
+            width: 100%;
+            padding: 0.85rem 1rem;
+            border: 1.5px solid #FCD34D;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-family: inherit;
+            background: white;
+            color: var(--text-dark);
+            transition: border-color 0.2s;
+        }
+
+        .pricing-teaser-form input:focus {
+            outline: none;
+            border-color: var(--blue);
+        }
+
+        .pricing-teaser-form button {
+            background: linear-gradient(135deg, #FFD700, #F59E0B);
+            color: #1F2937;
+            font-weight: 700;
+            font-size: 1.05rem;
+            padding: 0.9rem;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            font-family: inherit;
+            box-shadow: 0 4px 16px rgba(245,158,11,0.4);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .pricing-teaser-form button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 24px rgba(245,158,11,0.5);
+        }
+
+        .pricing-teaser-note {
+            font-size: 0.82rem;
+            color: #92400E;
+            margin-top: 0.75rem;
+            opacity: 0.8;
+        }
+
         /* ── SECTION WRAPPERS ── */
         .section {
             padding: 4rem 1.5rem;
@@ -724,17 +801,23 @@
             </div>
 
             <div class="hero-cta">
-                <a href="#contact" class="btn-primary" style="display:inline-flex;align-items:center;gap:0.6rem;">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;">
-                        <path d="M2 21c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1 .6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"></path>
-                        <path d="M19.38 20L21 7l-9-4-9 4 1.62 13"></path>
-                        <path d="M12 3v7"></path>
-                        <path d="M19 10h-7"></path>
-                    </svg>
-                    Text or Call Me
-                </a>
                 <span class="hero-starting">Starting at <strong>$455</strong> per person</span>
             </div>
+        </div>
+    </section>
+
+    <!-- PRICING TEASER (NEW) -->
+    <section class="pricing-teaser">
+        <div class="pricing-teaser-inner">
+            <h2>Want the full pricing breakdown?</h2>
+            <p>Drop your name and number. I'll text it to you personally. No pressure, no sales pitch.</p>
+            <form class="pricing-teaser-form" action="https://formspree.io/f/xpqnaajq" method="POST">
+                <input type="text" name="name" placeholder="First name" required>
+                <input type="tel" name="phone" placeholder="Your phone number" required>
+                <input type="hidden" name="_subject" value="MSC Pricing Request">
+                <button type="submit">Send Details, No Pressure! 📲</button>
+            </form>
+            <p class="pricing-teaser-note">I'm a real person. You'll hear from me, not a bot.</p>
         </div>
     </section>
 
@@ -898,7 +981,7 @@
 
             <div class="contact-note">
                 <strong>312-460-2501 | eric@happydetour.com</strong><br>
-                I'm in Cleveland, OH. Eastern time. Text is usually fastest.
+                I'm in Alliance, OH. Eastern time. Text is usually fastest.
             </div>
         </div>
     </section>
@@ -910,7 +993,7 @@
         <div class="footer-legal">
             Happy Detour Travel is an independent affiliate of WorldVia Travel Network<br>
             © 2026 Happy Detour Travel. All rights reserved<br>
-            <span style="font-size:0.7rem; opacity:0.5;">Built on a Citrus MacBook in Cleveland, Ohio. Last updated May 8, 2026 at 12:29 AM ET</span>
+            <span style="font-size:0.7rem; opacity:0.5;">Built on a Citrus MacBook in Alliance, Ohio. Last updated May 16, 2026</span>
         </div>
     </footer>
 </body>
