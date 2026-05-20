@@ -22,7 +22,7 @@ export default function GroupCruisesSection() {
                                 <span style={{ fontSize: '1.75rem', fontWeight: 800, color: '#FF6B35', display: 'block' }}>$644</span>
                                 <span style={{ fontSize: '0.85rem', color: '#9CA3AF' }}>per person, double occupancy</span>
                             </div>
-                            <a href="/ABC" style={{ display: 'block', background: '#FF6B35', color: 'white', textAlign: 'center', padding: '0.9rem 1.5rem', borderRadius: '8px', textDecoration: 'none', fontWeight: 700, fontSize: '1rem', transition: 'transform 0.2s' }}>See Full Details</a>
+                            <a href="/abc" style={{ display: 'block', background: '#FF6B35', color: 'white', textAlign: 'center', padding: '0.9rem 1.5rem', borderRadius: '8px', textDecoration: 'none', fontWeight: 700, fontSize: '1rem', transition: 'transform 0.2s' }}>See Full Details</a>
                         </div>
                     </div>
 
