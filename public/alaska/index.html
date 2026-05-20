@@ -1,0 +1,1073 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alaska Circle | Virgin Voyages | Happy Detour Travel</title>
+    <meta name="description" content="7 nights in Alaska aboard Virgin Voyages Brilliant Lady. Seattle to Seattle. June 17-24, 2027. Dining and WiFi included. Adults only.">
+
+    <link rel="icon" type="image/png" href="/HappyFavicon.png">
+    <link rel="shortcut icon" type="image/png" href="/HappyFavicon.png">
+    <link rel="apple-touch-icon" href="/HappyFavicon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --midnight: #0A0F1E;
+            --glacier: #1B3A5C;
+            --ice: #C8DFF0;
+            --snow: #F0F6FC;
+            --gold: #C9A84C;
+            --gold-light: #E8CC7A;
+            --scarlet: #C0392B;
+            --white: #FFFFFF;
+            --text-soft: rgba(255,255,255,0.7);
+            --text-muted: rgba(255,255,255,0.5);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: var(--midnight);
+            color: var(--white);
+            overflow-x: hidden;
+        }
+
+        /* ── HERO ── */
+        .hero {
+            min-height: 100vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            background: linear-gradient(180deg, #050810 0%, #0A1628 40%, #1B3A5C 100%);
+        }
+
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse at 20% 50%, rgba(27,58,92,0.6) 0%, transparent 60%),
+                radial-gradient(ellipse at 80% 20%, rgba(201,168,76,0.08) 0%, transparent 50%),
+                radial-gradient(ellipse at 50% 100%, rgba(200,223,240,0.05) 0%, transparent 50%);
+        }
+
+        /* Aurora effect */
+        .aurora {
+            position: absolute;
+            inset: 0;
+            overflow: hidden;
+            pointer-events: none;
+        }
+
+        .aurora-band {
+            position: absolute;
+            width: 200%;
+            height: 300px;
+            border-radius: 50%;
+            filter: blur(60px);
+            opacity: 0.15;
+            animation: aurora-drift 12s ease-in-out infinite;
+        }
+
+        .aurora-band:nth-child(1) {
+            background: linear-gradient(90deg, transparent, #00ff88, #00ccff, transparent);
+            top: 15%;
+            left: -50%;
+            animation-delay: 0s;
+        }
+
+        .aurora-band:nth-child(2) {
+            background: linear-gradient(90deg, transparent, #0088ff, #8800ff, transparent);
+            top: 25%;
+            left: -30%;
+            animation-delay: -4s;
+            opacity: 0.1;
+        }
+
+        .aurora-band:nth-child(3) {
+            background: linear-gradient(90deg, transparent, #00ff44, #00ffaa, transparent);
+            top: 35%;
+            left: -40%;
+            animation-delay: -8s;
+            opacity: 0.08;
+        }
+
+        @keyframes aurora-drift {
+            0%, 100% { transform: translateX(0) scaleY(1); }
+            50% { transform: translateX(20%) scaleY(1.3); }
+        }
+
+        /* Stars */
+        .stars {
+            position: absolute;
+            inset: 0;
+            background-image:
+                radial-gradient(1px 1px at 10% 15%, rgba(255,255,255,0.8) 0%, transparent 100%),
+                radial-gradient(1px 1px at 25% 8%, rgba(255,255,255,0.6) 0%, transparent 100%),
+                radial-gradient(1px 1px at 40% 20%, rgba(255,255,255,0.9) 0%, transparent 100%),
+                radial-gradient(1px 1px at 60% 5%, rgba(255,255,255,0.7) 0%, transparent 100%),
+                radial-gradient(1px 1px at 75% 12%, rgba(255,255,255,0.5) 0%, transparent 100%),
+                radial-gradient(1px 1px at 85% 25%, rgba(255,255,255,0.8) 0%, transparent 100%),
+                radial-gradient(1px 1px at 15% 40%, rgba(255,255,255,0.4) 0%, transparent 100%),
+                radial-gradient(1px 1px at 90% 35%, rgba(255,255,255,0.6) 0%, transparent 100%),
+                radial-gradient(1.5px 1.5px at 50% 30%, rgba(255,255,255,0.9) 0%, transparent 100%),
+                radial-gradient(1px 1px at 35% 45%, rgba(255,255,255,0.3) 0%, transparent 100%);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            padding: 2rem 1.5rem;
+            max-width: 900px;
+        }
+
+        .hero-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 2rem;
+        }
+
+        .eyebrow-line {
+            width: 40px;
+            height: 1px;
+            background: var(--gold);
+        }
+
+        .eyebrow-text {
+            font-size: 0.75rem;
+            font-weight: 500;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--gold);
+        }
+
+        .hero h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(4rem, 12vw, 8rem);
+            font-weight: 400;
+            font-style: italic;
+            line-height: 0.95;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(180deg, #FFFFFF 0%, #C8DFF0 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-tagline {
+            font-size: clamp(1rem, 2vw, 1.2rem);
+            color: var(--text-soft);
+            letter-spacing: 0.05em;
+            margin-bottom: 0.75rem;
+            font-weight: 300;
+        }
+
+        .hero-details {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: 3rem;
+        }
+
+        .hero-price-block {
+            display: inline-block;
+            border: 1px solid rgba(201,168,76,0.3);
+            border-radius: 4px;
+            padding: 1.5rem 3rem;
+            margin-bottom: 3rem;
+            background: rgba(201,168,76,0.05);
+            backdrop-filter: blur(10px);
+        }
+
+        .price-label {
+            font-size: 0.7rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 0.5rem;
+        }
+
+        .price-amount {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 4rem;
+            font-weight: 600;
+            color: var(--white);
+            line-height: 1;
+            margin-bottom: 0.25rem;
+        }
+
+        .price-sub {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            letter-spacing: 0.05em;
+        }
+
+        .hero-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            justify-content: center;
+            margin-bottom: 3rem;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            background: rgba(255,255,255,0.06);
+            border: 1px solid rgba(255,255,255,0.12);
+            padding: 0.4rem 0.9rem;
+            border-radius: 100px;
+            font-size: 0.8rem;
+            color: var(--ice);
+            font-weight: 400;
+        }
+
+        .badge-dot {
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background: var(--gold);
+            flex-shrink: 0;
+        }
+
+        /* ── PRICING TEASER ── */
+        .pricing-teaser {
+            background: linear-gradient(180deg, #0A0F1E 0%, #0D1520 100%);
+            border-top: 1px solid rgba(201,168,76,0.2);
+            border-bottom: 1px solid rgba(201,168,76,0.2);
+            padding: 3rem 1.5rem;
+        }
+
+        .pricing-teaser-inner {
+            max-width: 500px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .pricing-teaser h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2rem;
+            font-weight: 400;
+            font-style: italic;
+            color: var(--white);
+            margin-bottom: 0.5rem;
+        }
+
+        .pricing-teaser p {
+            font-size: 0.95rem;
+            color: var(--text-soft);
+            margin-bottom: 1.75rem;
+            line-height: 1.7;
+        }
+
+        .teaser-form {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .teaser-form input {
+            width: 100%;
+            padding: 0.9rem 1.25rem;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(201,168,76,0.3);
+            border-radius: 4px;
+            font-size: 0.95rem;
+            font-family: inherit;
+            color: var(--white);
+            transition: border-color 0.2s;
+        }
+
+        .teaser-form input::placeholder { color: rgba(255,255,255,0.3); }
+
+        .teaser-form input:focus {
+            outline: none;
+            border-color: var(--gold);
+        }
+
+        .teaser-form button {
+            background: linear-gradient(135deg, var(--gold), var(--gold-light));
+            color: var(--midnight);
+            font-weight: 600;
+            font-size: 0.95rem;
+            padding: 0.9rem;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            font-family: inherit;
+            letter-spacing: 0.05em;
+            transition: all 0.3s ease;
+        }
+
+        .teaser-form button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(201,168,76,0.3);
+        }
+
+        .teaser-note {
+            font-size: 0.78rem;
+            color: var(--text-muted);
+            margin-top: 0.75rem;
+        }
+
+        /* ── ADULTS ONLY BANNER ── */
+        .adults-banner {
+            background: rgba(192,57,43,0.15);
+            border-top: 1px solid rgba(192,57,43,0.3);
+            border-bottom: 1px solid rgba(192,57,43,0.3);
+            padding: 1.5rem 2rem;
+            text-align: center;
+        }
+
+        .adults-banner p {
+            font-size: 1rem;
+            color: rgba(255,200,200,0.9);
+            line-height: 1.7;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .adults-banner strong {
+            color: white;
+        }
+
+        /* ── SECTIONS ── */
+        .section {
+            padding: 5rem 1.5rem;
+        }
+
+        .inner {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .section-eyebrow {
+            font-size: 0.7rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 1rem;
+        }
+
+        .section-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            font-weight: 400;
+            font-style: italic;
+            color: var(--white);
+            margin-bottom: 1rem;
+            line-height: 1.1;
+        }
+
+        .section-body {
+            font-size: 1.05rem;
+            color: var(--text-soft);
+            line-height: 1.8;
+            max-width: 600px;
+        }
+
+        /* ── ITINERARY ── */
+        .itinerary-section {
+            background: linear-gradient(180deg, #0D1520 0%, #0A0F1E 100%);
+        }
+
+        .itinerary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1px;
+            background: rgba(255,255,255,0.06);
+            border-radius: 8px;
+            overflow: hidden;
+            margin-top: 3rem;
+        }
+
+        .itinerary-item {
+            background: #0A0F1E;
+            padding: 1.75rem;
+            transition: background 0.3s;
+        }
+
+        .itinerary-item:hover {
+            background: rgba(27,58,92,0.5);
+        }
+
+        .itin-day {
+            font-size: 0.65rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 0.5rem;
+        }
+
+        .itin-port {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.4rem;
+            font-style: italic;
+            color: var(--white);
+            margin-bottom: 0.25rem;
+        }
+
+        .itin-note {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        /* ── WHATS INCLUDED ── */
+        .included-section {
+            background: #0A0F1E;
+        }
+
+        .included-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .included-card {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 8px;
+            padding: 2rem;
+            transition: all 0.3s;
+        }
+
+        .included-card:hover {
+            background: rgba(201,168,76,0.05);
+            border-color: rgba(201,168,76,0.2);
+        }
+
+        .included-icon {
+            font-size: 1.75rem;
+            margin-bottom: 1rem;
+        }
+
+        .included-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.3rem;
+            font-style: italic;
+            color: var(--white);
+            margin-bottom: 0.5rem;
+        }
+
+        .included-desc {
+            font-size: 0.88rem;
+            color: var(--text-soft);
+            line-height: 1.7;
+        }
+
+        .not-included {
+            background: rgba(192,57,43,0.08);
+            border-color: rgba(192,57,43,0.2);
+        }
+
+        .not-included .included-title {
+            color: rgba(255,180,180,0.9);
+        }
+
+        /* ── PRICING SECTION ── */
+        .pricing-section {
+            background: linear-gradient(180deg, #0D1520 0%, #0A0F1E 100%);
+        }
+
+        .pricing-cards {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            margin-top: 3rem;
+        }
+
+        .pricing-card {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 8px;
+            padding: 2.5rem 2rem;
+            text-align: center;
+            width: 280px;
+            transition: all 0.3s;
+            position: relative;
+        }
+
+        .pricing-card:hover {
+            border-color: rgba(201,168,76,0.3);
+            background: rgba(201,168,76,0.04);
+            transform: translateY(-4px);
+        }
+
+        .pricing-card.featured {
+            border-color: rgba(201,168,76,0.4);
+            background: rgba(201,168,76,0.06);
+        }
+
+        .featured-tag {
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(135deg, var(--gold), var(--gold-light));
+            color: var(--midnight);
+            font-size: 0.65rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            padding: 0.3rem 1rem;
+            border-radius: 100px;
+            white-space: nowrap;
+        }
+
+        .card-cabin {
+            font-size: 0.7rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+        }
+
+        .card-price {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3.5rem;
+            font-weight: 600;
+            color: var(--white);
+            line-height: 1;
+            margin-bottom: 0.4rem;
+        }
+
+        .card-per {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 1.25rem;
+        }
+
+        .card-detail {
+            font-size: 0.82rem;
+            color: var(--text-soft);
+            line-height: 1.6;
+            padding-top: 1.25rem;
+            border-top: 1px solid rgba(255,255,255,0.08);
+        }
+
+        .pricing-note-box {
+            max-width: 650px;
+            margin: 2.5rem auto 0;
+            background: rgba(201,168,76,0.06);
+            border: 1px solid rgba(201,168,76,0.2);
+            border-radius: 8px;
+            padding: 1.5rem 2rem;
+            text-align: center;
+        }
+
+        .pricing-note-box p {
+            font-size: 0.95rem;
+            color: var(--text-soft);
+            line-height: 1.7;
+        }
+
+        /* ── ERIC SECTION ── */
+        .eric-section {
+            background: linear-gradient(135deg, #0A1628 0%, #1B3A5C 100%);
+            border-top: 1px solid rgba(201,168,76,0.15);
+            border-bottom: 1px solid rgba(201,168,76,0.15);
+        }
+
+        .eric-inner {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .eric-quote {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            font-style: italic;
+            font-weight: 400;
+            color: var(--white);
+            line-height: 1.5;
+            margin-bottom: 2rem;
+            border-left: 2px solid var(--gold);
+            padding-left: 1.5rem;
+        }
+
+        .eric-body {
+            font-size: 1rem;
+            color: var(--text-soft);
+            line-height: 1.8;
+            margin-bottom: 1.25rem;
+        }
+
+        /* ── CONTACT ── */
+        .contact-section {
+            background: #0A0F1E;
+        }
+
+        .contact-form-wrap {
+            max-width: 540px;
+            margin: 2.5rem auto;
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 8px;
+            padding: 2.5rem;
+        }
+
+        .contact-form-wrap form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+        }
+
+        .contact-form-wrap label {
+            display: block;
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: var(--text-soft);
+            margin-bottom: 0.4rem;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+
+        .contact-form-wrap input,
+        .contact-form-wrap select {
+            width: 100%;
+            padding: 0.85rem 1rem;
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 4px;
+            font-size: 0.95rem;
+            font-family: inherit;
+            color: var(--white);
+            transition: border-color 0.2s;
+        }
+
+        .contact-form-wrap input::placeholder { color: rgba(255,255,255,0.25); }
+
+        .contact-form-wrap select option { background: #0A1628; }
+
+        .contact-form-wrap input:focus,
+        .contact-form-wrap select:focus {
+            outline: none;
+            border-color: var(--gold);
+        }
+
+        .contact-form-wrap button[type="submit"] {
+            background: linear-gradient(135deg, var(--gold), var(--gold-light));
+            color: var(--midnight);
+            font-weight: 700;
+            font-size: 1rem;
+            padding: 1rem;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            font-family: inherit;
+            letter-spacing: 0.05em;
+            transition: all 0.3s;
+            margin-top: 0.5rem;
+        }
+
+        .contact-form-wrap button[type="submit"]:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(201,168,76,0.3);
+        }
+
+        .contact-buttons {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 1rem;
+            max-width: 540px;
+            margin: 0 auto 2rem;
+        }
+
+        .contact-btn {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 1.25rem;
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 8px;
+            text-decoration: none;
+            color: var(--white);
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+
+        .contact-btn:hover {
+            border-color: var(--gold);
+            background: rgba(201,168,76,0.06);
+        }
+
+        .contact-btn-label {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        .contact-btn-value {
+            font-size: 0.95rem;
+        }
+
+        .contact-note {
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            margin-top: 1.5rem;
+        }
+
+        /* ── FLOATING BUTTON ── */
+        .floating-reserve {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            z-index: 1000;
+        }
+
+        .floating-reserve a {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: linear-gradient(135deg, var(--gold), var(--gold-light));
+            color: var(--midnight);
+            padding: 0.9rem 1.5rem;
+            border-radius: 100px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.9rem;
+            box-shadow: 0 8px 30px rgba(201,168,76,0.4);
+            transition: all 0.3s;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .floating-reserve a:hover {
+            transform: scale(1.05);
+            box-shadow: 0 12px 40px rgba(201,168,76,0.5);
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+
+        /* ── FOOTER ── */
+        footer {
+            background: #050810;
+            padding: 3rem 2rem;
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.06);
+        }
+
+        .footer-brand {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.3rem;
+            font-style: italic;
+            color: var(--gold);
+            margin-bottom: 0.4rem;
+        }
+
+        .footer-tagline {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-legal {
+            font-size: 0.75rem;
+            color: rgba(255,255,255,0.25);
+            line-height: 1.9;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            padding-top: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        /* ── RESPONSIVE ── */
+        @media (max-width: 640px) {
+            .section { padding: 3.5rem 1.25rem; }
+            .hero-price-block { padding: 1.25rem 2rem; }
+            .price-amount { font-size: 3rem; }
+            .floating-reserve { bottom: 1rem; right: 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Floating Button -->
+    <div class="floating-reserve">
+        <a href="#contact">⚓ Reserve Your Cabin</a>
+    </div>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="aurora">
+            <div class="aurora-band"></div>
+            <div class="aurora-band"></div>
+            <div class="aurora-band"></div>
+        </div>
+        <div class="stars"></div>
+
+        <div class="hero-content">
+            <div class="hero-eyebrow">
+                <div class="eyebrow-line"></div>
+                <span class="eyebrow-text">Virgin Voyages · Brilliant Lady</span>
+                <div class="eyebrow-line"></div>
+            </div>
+
+            <h1>Alaska</h1>
+
+            <p class="hero-tagline">Glacial Fjords & Coastal Views</p>
+            <p class="hero-details">June 17 – 24, 2027 &nbsp;·&nbsp; Seattle, Washington</p>
+
+            <div class="hero-price-block">
+                <div class="price-label">Sea Terrace Starting At</div>
+                <div class="price-amount">$1,797</div>
+                <div class="price-sub">per person · private balcony · dining & WiFi included</div>
+            </div>
+
+            <div class="hero-badges">
+                <div class="badge"><div class="badge-dot"></div>Adults Only</div>
+                <div class="badge"><div class="badge-dot"></div>Dining Included</div>
+                <div class="badge"><div class="badge-dot"></div>WiFi Included</div>
+                <div class="badge"><div class="badge-dot"></div>Seattle to Seattle</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRICING TEASER -->
+    <section class="pricing-teaser">
+        <div class="pricing-teaser-inner">
+            <h2>Want the full pricing breakdown?</h2>
+            <p>Drop your name and number. I'll text you everything personally. No pressure, no pitch.</p>
+            <form class="teaser-form" action="https://formspree.io/f/xaqkqlbw" method="POST">
+                <input type="text" name="name" placeholder="First name" required>
+                <input type="tel" name="phone" placeholder="Your phone number" required>
+                <input type="hidden" name="_subject" value="Alaska Virgin Voyages Pricing Request">
+                <button type="submit">Send Details, No Pressure! 📲</button>
+            </form>
+            <p class="teaser-note">I'm a real person. You'll hear from me, not a bot.</p>
+        </div>
+    </section>
+
+    <!-- ADULTS ONLY BANNER -->
+    <div class="adults-banner">
+        <p><strong>Virgin Voyages is adults only — 18 and older.</strong> No kids menus, no main dining room schedules, no kids clubs. Just adults doing exactly what they want, at their own pace.</p>
+    </div>
+
+    <!-- ITINERARY -->
+    <section class="section itinerary-section">
+        <div class="inner">
+            <div class="section-eyebrow">The Journey</div>
+            <h2 class="section-title">Seattle and Back.<br>Alaska in Between.</h2>
+            <p class="section-body">A circle voyage — you fly into Seattle once and fly home from Seattle. No repositioning. No extra logistics. Just Alaska.</p>
+
+            <div class="itinerary-grid">
+                <div class="itinerary-item">
+                    <div class="itin-day">Day 1 · Jun 17</div>
+                    <div class="itin-port">Seattle</div>
+                    <div class="itin-note">Depart 5:00 PM</div>
+                </div>
+                <div class="itinerary-item">
+                    <div class="itin-day">Day 2</div>
+                    <div class="itin-port">At Sea</div>
+                    <div class="itin-note">Explore the ship</div>
+                </div>
+                <div class="itinerary-item">
+                    <div class="itin-day">Days 3–5</div>
+                    <div class="itin-port">Alaska</div>
+                    <div class="itin-note">Glacial Fjords & Coastal Views</div>
+                </div>
+                <div class="itinerary-item">
+                    <div class="itin-day">Day 6</div>
+                    <div class="itin-port">At Sea</div>
+                    <div class="itin-note">One last full day</div>
+                </div>
+                <div class="itinerary-item">
+                    <div class="itin-day">Day 7 · Jun 24</div>
+                    <div class="itin-port">Seattle</div>
+                    <div class="itin-note">Arrive 7:00 AM</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHATS INCLUDED -->
+    <section class="section included-section">
+        <div class="inner">
+            <div class="section-eyebrow">What's Included</div>
+            <h2 class="section-title">More included.<br>Fewer surprises.</h2>
+            <p class="section-body">Virgin Voyages builds the good stuff in. Here's what's already part of your fare.</p>
+
+            <div class="included-grid">
+                <div class="included-card">
+                    <div class="included-icon">🍽️</div>
+                    <div class="included-title">Award-Winning Dining</div>
+                    <div class="included-desc">20+ restaurants included. No buffets. No rigid schedules. Globally inspired, chef-curated, and already part of your fare. Every night is different.</div>
+                </div>
+
+                <div class="included-card">
+                    <div class="included-icon">📶</div>
+                    <div class="included-title">WiFi</div>
+                    <div class="included-desc">Stay connected, share your Alaska photos, check the app. WiFi is included on every Virgin Voyages sailing — no package to buy.</div>
+                </div>
+
+                <div class="included-card">
+                    <div class="included-icon">🥤</div>
+                    <div class="included-title">Sodas & Essentials</div>
+                    <div class="included-desc">Soda, drip coffee, tea, still and sparkling water included throughout the ship. The little things that add up on other cruise lines — already covered.</div>
+                </div>
+
+                <div class="included-card">
+                    <div class="included-icon">💪</div>
+                    <div class="included-title">Group Fitness Classes</div>
+                    <div class="included-desc">Yoga, spin, HIIT, 80s VHS workouts and more. Fully equipped gym and outdoor running track included. Move when you want, rest when you don't.</div>
+                </div>
+
+                <div class="included-card">
+                    <div class="included-icon">🎭</div>
+                    <div class="included-title">Entertainment</div>
+                    <div class="included-desc">Immersive performances, live music, DJ sets, themed parties like Scarlet Night. Not your typical cruise show. Actually unforgettable.</div>
+                </div>
+
+                <div class="included-card">
+                    <div class="included-icon">🛏️</div>
+                    <div class="included-title">Sea Terrace Cabin</div>
+                    <div class="included-desc">Private balcony. Modern hotel-forward design with smart lighting. Still and sparkling water always in your room. Adults only means actually quiet.</div>
+                </div>
+
+                <div class="included-card not-included">
+                    <div class="included-icon">🍹</div>
+                    <div class="included-title">Bar Tab — Not Included</div>
+                    <div class="included-desc">Cocktails, mocktails, and fresh juices are à la carte. But Virgin's Bar Tab lets you pre-pay and get bonus credit added on top. More flexibility, more value.</div>
+                </div>
+
+                <div class="included-card not-included">
+                    <div class="included-icon">🤝</div>
+                    <div class="included-title">Gratuities — Not Included</div>
+                    <div class="included-desc">Gratuities are added separately. Worth it — the crew on Virgin Voyages is genuinely outstanding. Ask me about the total cost so there are no surprises.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRICING -->
+    <section class="section pricing-section" id="pricing">
+        <div class="inner">
+            <div class="section-eyebrow" style="text-align:center;">Pricing</div>
+            <h2 class="section-title" style="text-align:center;">How much does this cost?</h2>
+            <p class="section-body" style="margin: 0 auto; text-align:center;">Sea Terrace and above. Private balcony. Every cabin includes dining and WiFi.</p>
+
+            <div class="pricing-cards">
+                <div class="pricing-card featured">
+                    <div class="featured-tag">Most Popular</div>
+                    <div class="card-cabin">The Sea Terrace</div>
+                    <div class="card-price">$1,797</div>
+                    <div class="card-per">per person</div>
+                    <div class="card-detail">Private balcony<br>Dining & WiFi included<br>Double occupancy</div>
+                </div>
+
+                <div class="pricing-card">
+                    <div class="card-cabin">Central Sea Terrace</div>
+                    <div class="card-price">$1,829</div>
+                    <div class="card-per">per person</div>
+                    <div class="card-detail">Mid-ship location · Private balcony<br>Dining & WiFi included<br>Double occupancy</div>
+                </div>
+            </div>
+
+            <div class="pricing-note-box">
+                <p><strong style="color:white;">Not sure which cabin is right for you?</strong> Traveling solo or need a different configuration? Bar tab and gratuities are separate — I'll give you the full honest number so you can plan your budget. Just reach out.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ERIC SECTION -->
+    <section class="section eric-section">
+        <div class="eric-inner">
+            <div class="section-eyebrow">Why Book With Me</div>
+            <div class="eric-quote">"I booked my own cabin on this sailing. I'll be there with you."</div>
+            <p class="eric-body">I'm a Gold-certified Virgin Voyages travel advisor and I genuinely love this brand. The dining alone is worth it. The adults-only experience is different from anything else on the water. Alaska on Virgin is bucket list territory.</p>
+            <p class="eric-body">My planning service is completely free to you. The cruise line pays my commission. You get a real person who knows the ship, knows the product, and is actually going to be on board.</p>
+            <p class="eric-body">No call centers. No bots. Just text me.</p>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section contact-section" id="contact">
+        <div class="inner">
+            <div style="text-align:center; margin-bottom:2.5rem;">
+                <div class="section-eyebrow">Let's Talk</div>
+                <h2 class="section-title">Ready to book or have questions?</h2>
+                <p class="section-body" style="margin: 0 auto;">Text is fastest. I'm a real person and my planning service is free to you.</p>
+            </div>
+
+            <div class="contact-form-wrap">
+                <p style="font-size:0.95rem; color:rgba(255,255,255,0.5); text-align:center; margin-bottom:1.5rem;">Let's see if this fits your calendar and budget.</p>
+                <form action="https://formspree.io/f/xaqkqlbw" method="POST">
+                    <div>
+                        <label for="name">First Name</label>
+                        <input type="text" id="name" name="name" required placeholder="Keep it casual">
+                    </div>
+                    <div>
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required placeholder="Where to send the details">
+                    </div>
+                    <div>
+                        <label for="phone">Phone <span style="font-weight:400; opacity:0.5;">(optional — for texting)</span></label>
+                        <input type="tel" id="phone" name="phone" placeholder="Optional">
+                    </div>
+                    <div>
+                        <label for="travelers">How many people traveling?</label>
+                        <select id="travelers" name="travelers" required>
+                            <option value="">Select...</option>
+                            <option value="1">1 (Solo traveler)</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4+">4 or more</option>
+                        </select>
+                    </div>
+                    <button type="submit">Send Me Details</button>
+                    <p style="font-size:0.8rem; color:rgba(255,255,255,0.3); text-align:center; margin:0.5rem 0 0; font-style:italic;">No bots. I personally respond to every inquiry.</p>
+                </form>
+            </div>
+
+            <div class="contact-buttons">
+                <a href="tel:3124602501" class="contact-btn">
+                    <span class="contact-btn-label">Call Eric</span>
+                    <span class="contact-btn-value">📞 312-460-2501</span>
+                </a>
+                <a href="sms:3124602501" class="contact-btn">
+                    <span class="contact-btn-label">Text Eric</span>
+                    <span class="contact-btn-value">💬 312-460-2501</span>
+                </a>
+                <a href="mailto:eric@happydetour.com?subject=Alaska Virgin Voyages 2027" class="contact-btn">
+                    <span class="contact-btn-label">Email Eric</span>
+                    <span class="contact-btn-value">eric@happydetour.com</span>
+                </a>
+            </div>
+
+            <p class="contact-note">Alliance, OH · Eastern Time · Text is usually fastest</p>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-brand">Happy Detour Travel</div>
+        <div class="footer-tagline">Affordable vacations. Fun experiences. Everyone welcome.</div>
+        <div class="footer-legal">
+            Happy Detour Travel is an independent affiliate of WorldVia Travel Network<br>
+            © 2026 Happy Detour Travel. All rights reserved.<br>
+            <span style="opacity:0.5; font-size:0.7rem;">Alliance, Ohio · Last updated May 19, 2026</span>
+        </div>
+    </footer>
+
+</body>
+</html>
