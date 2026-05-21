@@ -26,11 +26,7 @@
             --cream: #FFFEF9;
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
             font-family: 'Work Sans', sans-serif;
@@ -127,7 +123,7 @@
             padding: 2rem 3.5rem;
             border-radius: 16px;
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
-            margin-bottom: 2.5rem;
+            margin-bottom: 1.75rem;
         }
 
         .price-label {
@@ -154,7 +150,26 @@
             font-weight: 500;
         }
 
-        /* Pricing Teaser (NEW) */
+        .hero-cta-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #FFD700, #FF6B35);
+            color: white;
+            font-weight: 700;
+            font-size: 1.1rem;
+            padding: 1rem 2.25rem;
+            border-radius: 50px;
+            text-decoration: none;
+            box-shadow: 0 8px 28px rgba(255, 107, 53, 0.45);
+            transition: all 0.3s ease;
+            margin-top: 0.5rem;
+        }
+
+        .hero-cta-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 36px rgba(255, 107, 53, 0.55);
+        }
+
+        /* Pricing Teaser */
         .pricing-teaser {
             background: #FFF3E0;
             border-bottom: 2px solid #FFCC80;
@@ -239,10 +254,7 @@
             padding: 4rem 2rem;
         }
 
-        .welcome-inner {
-            max-width: 900px;
-            margin: 0 auto;
-        }
+        .welcome-inner { max-width: 900px; margin: 0 auto; }
 
         .welcome-text {
             font-size: 1.3rem;
@@ -253,15 +265,9 @@
         }
 
         /* Islands Section */
-        .islands {
-            padding: 5rem 2rem;
-            background: var(--cream);
-        }
+        .islands { padding: 5rem 2rem; background: var(--cream); }
 
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-        }
+        .container { max-width: 1100px; margin: 0 auto; }
 
         .section-title {
             font-family: 'DM Serif Display', serif;
@@ -299,9 +305,7 @@
             cursor: pointer;
         }
 
-        .island-card:hover {
-            transform: translateY(-8px);
-        }
+        .island-card:hover { transform: translateY(-8px); }
 
         .island-photo {
             width: 100%;
@@ -353,11 +357,7 @@
         }
 
         /* Pricing Section */
-        .pricing {
-            padding: 5rem 2rem;
-            background: var(--dark);
-            color: white;
-        }
+        .pricing { padding: 5rem 2rem; background: var(--dark); color: white; }
 
         .pricing-grid {
             display: grid;
@@ -455,15 +455,9 @@
         }
 
         /* Contact Section */
-        .contact {
-            padding: 5rem 2rem;
-            background: var(--cream);
-        }
+        .contact { padding: 5rem 2rem; background: var(--cream); }
 
-        .contact-header {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
+        .contact-header { text-align: center; margin-bottom: 3rem; }
 
         .contact-title {
             font-family: 'DM Serif Display', serif;
@@ -581,16 +575,8 @@
             border-color: var(--ocean);
         }
 
-        .contact-btn-label {
-            font-size: 0.85rem;
-            color: #999;
-            font-weight: 500;
-        }
-
-        .contact-btn-value {
-            font-size: 1.1rem;
-            font-weight: 600;
-        }
+        .contact-btn-label { font-size: 0.85rem; color: #999; font-weight: 500; }
+        .contact-btn-value { font-size: 1.1rem; font-weight: 600; }
 
         .contact-note {
             text-align: center;
@@ -614,11 +600,7 @@
             font-style: italic;
         }
 
-        .footer-tagline {
-            font-size: 0.95rem;
-            opacity: 0.8;
-            margin-bottom: 1.5rem;
-        }
+        .footer-tagline { font-size: 0.95rem; opacity: 0.8; margin-bottom: 1.5rem; }
 
         .footer-legal {
             font-size: 0.8rem;
@@ -635,6 +617,16 @@
             bottom: 2rem;
             right: 2rem;
             z-index: 1000;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.4s ease, transform 0.4s ease;
+            pointer-events: none;
+        }
+
+        .floating-reserve.visible {
+            opacity: 1;
+            transform: translateY(0);
+            pointer-events: auto;
             animation: floatButton 3s ease-in-out infinite;
         }
 
@@ -664,27 +656,11 @@
         }
 
         @media (max-width: 768px) {
-            .price-amount {
-                font-size: 3.5rem;
-            }
-
-            .islands-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .pricing-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .floating-reserve {
-                bottom: 1rem;
-                right: 1rem;
-            }
-
-            .floating-reserve a {
-                padding: 1rem 1.5rem;
-                font-size: 0.95rem;
-            }
+            .price-amount { font-size: 3.5rem; }
+            .islands-grid { grid-template-columns: 1fr; }
+            .pricing-grid { grid-template-columns: 1fr; }
+            .floating-reserve { bottom: 1rem; right: 1rem; }
+            .floating-reserve a { padding: 1rem 1.5rem; font-size: 0.95rem; }
         }
     </style>
 </head>
@@ -692,7 +668,7 @@
 
     <!-- Floating Reserve Button -->
     <div class="floating-reserve">
-        <a href="#contact">💬 Reserve Now</a>
+        <a href="#pricing-teaser">Get More Info, No Pressure! 📲</a>
     </div>
 
     <!-- Hero Section -->
@@ -707,11 +683,13 @@
                 <div class="price-amount">$644</div>
                 <div class="price-detail">per person</div>
             </div>
+
+            <a href="#pricing-teaser" class="hero-cta-btn">Get More Info, No Pressure! 📲</a>
         </div>
     </section>
 
-    <!-- PRICING TEASER (NEW) -->
-    <section class="pricing-teaser">
+    <!-- PRICING TEASER -->
+    <section class="pricing-teaser" id="pricing-teaser">
         <div class="pricing-teaser-inner">
             <h2>Want the full pricing breakdown?</h2>
             <p>Drop your name and number. I'll text it to you personally. No pressure, no sales pitch.</p>
@@ -746,13 +724,11 @@
                         <div class="island-name">Aruba</div>
                     </div>
                 </div>
-
                 <div class="island-card">
                     <div class="island-photo bonaire">
                         <div class="island-name">Bonaire</div>
                     </div>
                 </div>
-
                 <div class="island-card">
                     <div class="island-photo curacao">
                         <div class="island-name">Curaçao</div>
@@ -780,7 +756,6 @@
                     <div class="cabin-per">per person</div>
                     <div class="cabin-type">Cruise only</div>
                 </div>
-
                 <div class="pricing-card">
                     <div class="cabin-label">Balcony Cabin</div>
                     <div class="cabin-price">$1,204</div>
@@ -803,26 +778,21 @@
                 <p class="contact-subtitle">Text is usually fastest. I'm a real person and my planning service is free to you.</p>
             </div>
 
-            <!-- Contact Form -->
             <div class="contact-form-wrap">
                 <p style="font-size: 1.05rem; color: #666; margin-bottom: 1.5rem; text-align: center; font-weight: 500;">Let's see if this fits your calendar and your budget.</p>
-                
                 <form action="https://formspree.io/f/xojrwlzv" method="POST">
                     <div>
                         <label for="name">First Name</label>
                         <input type="text" id="name" name="name" required placeholder="Keep it casual">
                     </div>
-                    
                     <div>
                         <label for="email">Email Address</label>
                         <input type="email" id="email" name="email" required placeholder="Where you want the info sent">
                     </div>
-                    
                     <div>
                         <label for="phone">Phone <span style="font-weight: 400; color: #999;">(Only if you prefer a text or call)</span></label>
                         <input type="tel" id="phone" name="phone" placeholder="Optional">
                     </div>
-                    
                     <div>
                         <label for="travelers">How many people traveling?</label>
                         <select id="travelers" name="travelers" required>
@@ -833,9 +803,7 @@
                             <option value="4+">4 or more</option>
                         </select>
                     </div>
-                    
                     <button type="submit">Send Me Details</button>
-                    
                     <p style="font-size: 0.85rem; color: #999; text-align: center; margin: 0.75rem 0 0; font-style: italic;">No bots here. I will personally look this up and get back to you.</p>
                 </form>
             </div>
@@ -847,21 +815,17 @@
                     <span class="contact-btn-label">Call Eric</span>
                     <span class="contact-btn-value">📞 312-460-2501</span>
                 </a>
-
                 <a href="sms:3124602501" class="contact-btn">
                     <span class="contact-btn-label">Text Eric</span>
                     <span class="contact-btn-value">💬 312-460-2501</span>
                 </a>
-
                 <a href="mailto:eric@happydetour.com" class="contact-btn">
                     <span class="contact-btn-label">Email Eric</span>
-                    <span class="contact-btn-value">📧 eric@happydetour.com</span>
+                    <span class="contact-btn-value">eric@happydetour.com</span>
                 </a>
             </div>
 
-            <p class="contact-note">
-                I'm in Alliance, OH. Eastern time. Text is usually fastest.
-            </p>
+            <p class="contact-note">I'm in Alliance, OH. Eastern time. Text is usually fastest.</p>
         </div>
     </section>
 
@@ -869,12 +833,23 @@
     <footer>
         <div class="footer-brand">Happy Detour Travel</div>
         <div class="footer-tagline">Affordable vacations. Fun experiences. Everyone welcome.</div>
-        
         <div class="footer-legal">
             Happy Detour Travel is an independent affiliate of WorldVia Travel Network<br>
             © 2026 Happy Detour Travel. All rights reserved<br>
-            <span style="opacity: 0.5; font-size: 0.75rem;">Built on a Citrus MacBook in Alliance, Ohio. Last updated May 19, 2026</span>
+            <span style="opacity: 0.5; font-size: 0.75rem;">Built on a Citrus MacBook in Alliance, Ohio. Last updated May 21, 2026</span>
         </div>
     </footer>
+
+    <script>
+        const floatingBtn = document.querySelector('.floating-reserve');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                floatingBtn.classList.add('visible');
+            } else {
+                floatingBtn.classList.remove('visible');
+            }
+        });
+    </script>
+
 </body>
 </html>
