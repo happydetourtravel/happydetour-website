@@ -10,6 +10,7 @@ const quickLinks = [
   { label: "About", href: "/about" },
   { label: "Blog", href: "https://happydetourtravel.wordpress.com" },
   { label: "Contact", href: "mailto:eric@happydetour.com" },
+  { label: "Terms & Conditions", href: "/tc" },
 ];
 
 export default function ContactFooter() {
@@ -241,8 +242,8 @@ export default function ContactFooter() {
               Privacy Policy
             </a>
           </p>
-          <p className="mt-4">© 2026 Happy Detour Travel. All rights reserved.</p>
-<p className="mt-1">Last updated: <time dateTime="2026-04-27">April 27, 2026</time></p>
+          <p className="mt-4">© 2026 Happy Detour Travel. All rights reserved. · <a href="/tc" className="underline hover:text-gray-600">Terms & Conditions</a></p>
+          <p className="mt-1">Last updated: <time dateTime="2026-05-21">May 21, 2026</time></p>
         </div>
       </div>
     </footer>
