@@ -35,16 +35,28 @@
             overflow-x: hidden;
         }
 
+        /* Deadline Banner */
+        .deadline-banner {
+            background: linear-gradient(135deg, #FFD700, #FF6B35);
+            color: white;
+            text-align: center;
+            padding: 0.85rem 1rem;
+            font-weight: 700;
+            font-size: 0.95rem;
+            letter-spacing: 0.5px;
+            box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+        }
+
         /* Hero Section */
         .hero {
             position: relative;
-            min-height: 90vh;
+            min-height: 95vh;
             background: linear-gradient(165deg, #87CEEB 0%, #4A9FD8 50%, #007298 100%);
             display: flex;
             align-items: center;
             justify-content: center;
             overflow: hidden;
-            padding: 2rem;
+            padding: 3rem 2rem;
         }
 
         .hero::before {
@@ -123,7 +135,7 @@
             padding: 2rem 3.5rem;
             border-radius: 16px;
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
-            margin-bottom: 1.75rem;
+            margin-bottom: 2.5rem;
         }
 
         .price-label {
@@ -150,65 +162,52 @@
             font-weight: 500;
         }
 
-        .hero-cta-btn {
-            display: inline-block;
-            background: linear-gradient(135deg, #FFD700, #FF6B35);
-            color: white;
-            font-weight: 700;
-            font-size: 1.1rem;
-            padding: 1rem 2.25rem;
-            border-radius: 50px;
-            text-decoration: none;
-            box-shadow: 0 8px 28px rgba(255, 107, 53, 0.45);
-            transition: all 0.3s ease;
-            margin-top: 0.5rem;
+        .price-occupancy {
+            font-size: 0.85rem;
+            color: #999;
+            font-weight: 400;
+            margin-top: 0.25rem;
         }
 
-        .hero-cta-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 12px 36px rgba(255, 107, 53, 0.55);
-        }
-
-        /* Pricing Teaser */
-        .pricing-teaser {
-            background: #FFF3E0;
-            border-bottom: 2px solid #FFCC80;
-            padding: 2.5rem 2rem;
-        }
-
-        .pricing-teaser-inner {
-            max-width: 540px;
+        /* Hero Form */
+        .hero-form-box {
+            background: white;
+            border-radius: 20px;
+            padding: 2.5rem;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+            max-width: 480px;
             margin: 0 auto;
-            text-align: center;
         }
 
-        .pricing-teaser h2 {
+        .hero-form-title {
             font-family: 'DM Serif Display', serif;
             font-size: 1.8rem;
             font-weight: 400;
             font-style: italic;
             color: var(--dark);
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.75rem;
+            text-align: center;
         }
 
-        .pricing-teaser p {
+        .hero-form-subtitle {
             font-size: 1rem;
-            color: #BF5B00;
-            margin-bottom: 1.5rem;
+            color: #666;
+            margin-bottom: 1.75rem;
+            text-align: center;
             line-height: 1.6;
         }
 
-        .pricing-teaser-form {
+        .hero-form {
             display: flex;
             flex-direction: column;
-            gap: 0.85rem;
+            gap: 1rem;
         }
 
-        .pricing-teaser-form input {
+        .hero-form input {
             width: 100%;
-            padding: 0.85rem 1rem;
-            border: 1.5px solid #FFCC80;
-            border-radius: 10px;
+            padding: 1rem;
+            border: 2px solid #E0E0E0;
+            border-radius: 12px;
             font-size: 1rem;
             font-family: inherit;
             background: white;
@@ -216,35 +215,36 @@
             transition: border-color 0.2s;
         }
 
-        .pricing-teaser-form input:focus {
+        .hero-form input:focus {
             outline: none;
             border-color: var(--ocean);
         }
 
-        .pricing-teaser-form button {
+        .hero-form button {
             background: var(--sunset);
             color: white;
             font-weight: 700;
-            font-size: 1.05rem;
-            padding: 0.95rem;
+            font-size: 1.1rem;
+            padding: 1.1rem;
             border-radius: 50px;
             border: none;
             cursor: pointer;
             font-family: inherit;
             box-shadow: 0 8px 25px rgba(255, 107, 53, 0.35);
             transition: all 0.3s ease;
+            margin-top: 0.5rem;
         }
 
-        .pricing-teaser-form button:hover {
+        .hero-form button:hover {
             transform: translateY(-3px);
             box-shadow: 0 12px 35px rgba(255, 107, 53, 0.45);
         }
 
-        .pricing-teaser-note {
-            font-size: 0.82rem;
-            color: #BF5B00;
+        .hero-form-note {
+            font-size: 0.85rem;
+            color: #999;
+            text-align: center;
             margin-top: 0.75rem;
-            opacity: 0.8;
         }
 
         /* Welcome Section */
@@ -425,8 +425,14 @@
         .cabin-per {
             font-size: 0.95rem;
             color: rgba(255,255,255,0.8);
-            margin-bottom: 1.5rem;
+            margin-bottom: 0.35rem;
             font-weight: 500;
+        }
+
+        .cabin-occupancy {
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.6);
+            margin-bottom: 1.15rem;
         }
 
         .cabin-type {
@@ -472,77 +478,8 @@
             font-size: 1.15rem;
             color: #666;
             max-width: 700px;
-            margin: 0 auto;
+            margin: 0 auto 2rem;
             line-height: 1.7;
-        }
-
-        .contact-form-wrap {
-            max-width: 540px;
-            margin: 0 auto 3rem;
-            background: white;
-            border: 2px solid rgba(0,0,0,0.08);
-            border-radius: 20px;
-            padding: 2.5rem;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
-        }
-
-        .contact-form-wrap form {
-            display: flex;
-            flex-direction: column;
-            gap: 1.25rem;
-        }
-
-        .contact-form-wrap label {
-            display: block;
-            font-size: 0.9rem;
-            font-weight: 600;
-            color: var(--dark);
-            margin-bottom: 0.5rem;
-        }
-
-        .contact-form-wrap input,
-        .contact-form-wrap select {
-            width: 100%;
-            padding: 0.85rem 1rem;
-            border: 1.5px solid #E0E0E0;
-            border-radius: 10px;
-            font-size: 1rem;
-            font-family: inherit;
-            transition: border-color 0.3s;
-            background: white;
-        }
-
-        .contact-form-wrap input:focus,
-        .contact-form-wrap select:focus {
-            outline: none;
-            border-color: var(--ocean);
-        }
-
-        .contact-form-wrap button[type="submit"] {
-            background: var(--sunset);
-            color: white;
-            font-weight: 700;
-            font-size: 1.05rem;
-            padding: 1rem 2.5rem;
-            border-radius: 50px;
-            border: none;
-            cursor: pointer;
-            font-family: inherit;
-            margin-top: 0.5rem;
-            box-shadow: 0 8px 25px rgba(255, 107, 53, 0.35);
-            transition: all 0.3s ease;
-        }
-
-        .contact-form-wrap button[type="submit"]:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 12px 35px rgba(255, 107, 53, 0.45);
-        }
-
-        .contact-divider {
-            text-align: center;
-            font-size: 0.95rem;
-            color: #999;
-            margin: 2.5rem 0 2rem;
         }
 
         .contact-buttons {
@@ -611,64 +548,19 @@
             margin-top: 1.5rem;
         }
 
-        /* Floating Button */
-        .floating-reserve {
-            position: fixed;
-            bottom: 2rem;
-            right: 2rem;
-            z-index: 1000;
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.4s ease, transform 0.4s ease;
-            pointer-events: none;
-        }
-
-        .floating-reserve.visible {
-            opacity: 1;
-            transform: translateY(0);
-            pointer-events: auto;
-            animation: floatButton 3s ease-in-out infinite;
-        }
-
-        @keyframes floatButton {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-8px); }
-        }
-
-        .floating-reserve a {
-            display: flex;
-            align-items: center;
-            gap: 0.6rem;
-            background: var(--sunset);
-            color: white;
-            padding: 1.1rem 2rem;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 1rem;
-            box-shadow: 0 10px 35px rgba(255, 107, 53, 0.5);
-            transition: all 0.3s ease;
-        }
-
-        .floating-reserve a:hover {
-            transform: scale(1.05);
-            box-shadow: 0 14px 45px rgba(255, 107, 53, 0.6);
-        }
-
         @media (max-width: 768px) {
             .price-amount { font-size: 3.5rem; }
             .islands-grid { grid-template-columns: 1fr; }
             .pricing-grid { grid-template-columns: 1fr; }
-            .floating-reserve { bottom: 1rem; right: 1rem; }
-            .floating-reserve a { padding: 1rem 1.5rem; font-size: 0.95rem; }
+            .hero-form-box { padding: 2rem 1.5rem; }
         }
     </style>
 </head>
 <body>
 
-    <!-- Floating Reserve Button -->
-    <div class="floating-reserve">
-        <a href="#pricing-teaser">Get More Info, No Pressure! 📲</a>
+    <!-- Deadline Banner -->
+    <div class="deadline-banner">
+        🚢 Deposit deadline: July 14, 2026 · Spots filling fast
     </div>
 
     <!-- Hero Section -->
@@ -676,30 +568,27 @@
         <div class="hero-content">
             <div class="hero-tag">October 10 – 18, 2026</div>
             <h1>ABC Islands</h1>
-            <p class="hero-subtitle">Eight days in the Caribbean aboard Carnival Horizon.<br>Aruba. Bonaire. Curaçao.<br>October 10 – 18, 2026 · Departing Miami, Florida</p>
+            <p class="hero-subtitle">Eight days in the Caribbean aboard Carnival Horizon.<br>Aruba. Bonaire. Curaçao.<br>Departing Miami, Florida</p>
             
             <div class="price-display">
                 <div class="price-label">Starting at</div>
                 <div class="price-amount">$644</div>
                 <div class="price-detail">per person</div>
+                <div class="price-occupancy">(dbl occ)</div>
             </div>
 
-            <a href="#pricing-teaser" class="hero-cta-btn">Get More Info, No Pressure!</a>
-        </div>
-    </section>
-
-    <!-- PRICING TEASER -->
-    <section class="pricing-teaser" id="pricing-teaser">
-        <div class="pricing-teaser-inner">
-            <h2>Spots are going fast.</h2>
-            <p>Get the details before July 14. Drop your name and number and I'll text you everything personally.</p>
-            <form class="pricing-teaser-form" action="https://formspree.io/f/xvzyppnz" method="POST">
-                <input type="text" name="name" placeholder="First name" required>
-                <input type="tel" name="phone" placeholder="Your phone number" required>
-                <input type="hidden" name="_subject" value="Carnival ABC Islands Pricing Request">
-                <button type="submit">Send Details, No Pressure! 📲</button>
-            </form>
-            <p class="pricing-teaser-note">I'm a real person. You'll hear from me, not a bot.</p>
+            <!-- Hero Form -->
+            <div class="hero-form-box">
+                <h2 class="hero-form-title">Get trip details</h2>
+                <p class="hero-form-subtitle">Drop your name and number. I'll text you everything you need to know before the July 14 deadline.</p>
+                <form class="hero-form" action="https://formspree.io/f/xvzyppnz" method="POST">
+                    <input type="text" name="name" placeholder="First name" required>
+                    <input type="tel" name="phone" placeholder="Your phone number" required>
+                    <input type="hidden" name="_subject" value="Carnival ABC Islands - Trip Details Request">
+                    <button type="submit">Text Me Trip Info</button>
+                </form>
+                <p class="hero-form-note">I'm a real person. You'll hear from me, not a bot.</p>
+            </div>
         </div>
     </section>
 
@@ -754,12 +643,14 @@
                     <div class="cabin-label">Interior Cabin</div>
                     <div class="cabin-price">$644</div>
                     <div class="cabin-per">per person</div>
+                    <div class="cabin-occupancy">(dbl occ)</div>
                     <div class="cabin-type">Cruise only</div>
                 </div>
                 <div class="pricing-card">
                     <div class="cabin-label">Balcony Cabin</div>
                     <div class="cabin-price">$1,204</div>
                     <div class="cabin-per">per person</div>
+                    <div class="cabin-occupancy">(dbl occ)</div>
                     <div class="cabin-type">Private balcony<br>Cruise only</div>
                 </div>
             </div>
@@ -774,41 +665,9 @@
     <section class="contact" id="contact">
         <div class="container">
             <div class="contact-header">
-                <h2 class="contact-title">Ready to book or have questions?</h2>
+                <h2 class="contact-title">Questions? Reach out directly.</h2>
                 <p class="contact-subtitle">Text is usually fastest. I'm a real person and my planning service is free to you.</p>
             </div>
-
-            <div class="contact-form-wrap">
-                <p style="font-size: 1.05rem; color: #666; margin-bottom: 1.5rem; text-align: center; font-weight: 500;">Let's see if this fits your calendar and your budget.</p>
-                <form action="https://formspree.io/f/xojrwlzv" method="POST">
-                    <div>
-                        <label for="name">First Name</label>
-                        <input type="text" id="name" name="name" required placeholder="Keep it casual">
-                    </div>
-                    <div>
-                        <label for="email">Email Address</label>
-                        <input type="email" id="email" name="email" required placeholder="Where you want the info sent">
-                    </div>
-                    <div>
-                        <label for="phone">Phone <span style="font-weight: 400; color: #999;">(Only if you prefer a text or call)</span></label>
-                        <input type="tel" id="phone" name="phone" placeholder="Optional">
-                    </div>
-                    <div>
-                        <label for="travelers">How many people traveling?</label>
-                        <select id="travelers" name="travelers" required>
-                            <option value="">Select...</option>
-                            <option value="1">1 (Solo traveler)</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4+">4 or more</option>
-                        </select>
-                    </div>
-                    <button type="submit">Send Me Details</button>
-                    <p style="font-size: 0.85rem; color: #999; text-align: center; margin: 0.75rem 0 0; font-style: italic;">No bots here. I will personally look this up and get back to you.</p>
-                </form>
-            </div>
-
-            <div class="contact-divider">Or reach out directly:</div>
 
             <div class="contact-buttons">
                 <a href="tel:3124602501" class="contact-btn">
@@ -839,17 +698,6 @@
             <span style="opacity: 0.5; font-size: 0.75rem;">Built on a Citrus MacBook in Alliance, Ohio. Last updated May 21, 2026</span>
         </div>
     </footer>
-
-    <script>
-        const floatingBtn = document.querySelector('.floating-reserve');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 300) {
-                floatingBtn.classList.add('visible');
-            } else {
-                floatingBtn.classList.remove('visible');
-            }
-        });
-    </script>
 
 </body>
 </html>
