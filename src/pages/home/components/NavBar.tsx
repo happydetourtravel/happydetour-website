@@ -13,7 +13,7 @@ const navLinks = [
   { label: "Destinations", href: "/destinations" },
   { label: "Testimonials", href: "/testimonials" },
   { label: "Blog", href: "https://happydetourtravel.wordpress.com" },
-  { label: "Start Planning My Trip", href: "https://happydetour.app.n8n.cloud/form/91799171-4079-4ab7-9d13-9417ae57dfba" },
+  { label: "Start Planning My Trip", href: "https://api.leadconnectorhq.com/widget/form/V4qo3lEB8oTtXbuWILfK" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -49,7 +49,7 @@ export default function NavBar() {
 
         <nav className="relative mx-auto flex w-full max-w-7xl items-center justify-between px-6 py-2.5 lg:px-10 lg:py-3">
           {/* Logo */}
-          <a
+          
             href="#hero"
             className="flex items-center shrink-0 transition-all duration-300"
           >
@@ -78,7 +78,7 @@ export default function NavBar() {
           {/* Desktop Links */}
           <div className="hidden items-center gap-8 lg:flex">
             {navLinks.map((link) => (
-              <a
+              
                 key={link.label}
                 href={link.href}
                 target={link.href.startsWith("http") ? "_blank" : undefined}
@@ -129,7 +129,7 @@ export default function NavBar() {
             </div>
             <nav className="flex flex-col gap-1 p-4">
               {navLinks.map((link) => (
-                <a
+                
                   key={link.label}
                   href={link.href}
                   target={link.href.startsWith("http") ? "_blank" : undefined}
