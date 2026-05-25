@@ -11,8 +11,7 @@ const reasons = [
     icon: "ri-compass-3-line",
     title: "No More Guessing",
     description:
-      "description:
-      "You shouldn't have to wonder if the reviews are real or if the 'ocean view' is actually a parking lot. I've been there myself. I'll tell you exactly what's worth it and what to avoid.",",
+      "You shouldn't have to wonder if the reviews are real or if the 'ocean view' is actually a parking lot. I've been there myself. I'll tell you exactly what's worth it and what to avoid.",
   },
   {
     icon: "ri-leaf-line",
@@ -31,7 +30,6 @@ export default function WhyBookSection() {
   return (
     <section id="why" className="bg-white py-20 sm:py-28">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
-        {/* Header */}
         <ScrollReveal direction="up" delay={0} duration={680}>
           <div className="mx-auto max-w-2xl text-center">
             <p className="text-sm font-semibold uppercase tracking-widest text-amber-600 mb-3">
@@ -46,7 +44,6 @@ export default function WhyBookSection() {
           </div>
         </ScrollReveal>
 
-        {/* Stats Bar */}
         <ScrollReveal direction="up" delay={150} duration={680}>
           <div className="mt-12 grid grid-cols-2 gap-6 rounded-2xl border border-amber-100 bg-amber-50/50 px-8 py-8 text-center sm:grid-cols-4">
             <div>
@@ -68,7 +65,6 @@ export default function WhyBookSection() {
           </div>
         </ScrollReveal>
 
-        {/* Feature Cards */}
         <div className="mt-16 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {reasons.map((reason, i) => (
             <ScrollReveal key={reason.title} direction="up" delay={i * 110} duration={680}>
@@ -87,15 +83,9 @@ export default function WhyBookSection() {
           ))}
         </div>
 
-        {/* CTA */}
         <ScrollReveal direction="up" delay={480} duration={680}>
           <div className="mt-14 flex flex-col items-center gap-3">
-            
-             <a href={FORM_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 rounded-full bg-amber-500 px-10 py-4 text-base font-semibold text-white hover:bg-amber-600 transition-colors whitespace-nowrap cursor-pointer"
-            >
+             <a href={FORM_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 rounded-full bg-amber-500 px-10 py-4 text-base font-semibold text-white hover:bg-amber-600 transition-colors whitespace-nowrap cursor-pointer">
               <span className="w-4 h-4 flex items-center justify-center">
                 <i className="ri-plane-fill text-base leading-none" />
               </span>
