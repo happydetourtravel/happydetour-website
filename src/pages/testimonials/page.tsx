@@ -1,6 +1,6 @@
 import ScrollReveal from '../../components/base/ScrollReveal';
 
-const FORM_URL = "https://happydetour.app.n8n.cloud/form/b122b50f-8f98-43c6-a180-bf3f1afc90c5";
+const FORM_URL = "https://api.leadconnectorhq.com/widget/form/V4qo3lEB8oTtXbuWILfK";
 const GOOGLE_REVIEW_URL = "#";
 
 const currentDetours = [
