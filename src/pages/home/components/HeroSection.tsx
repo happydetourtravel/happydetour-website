@@ -5,7 +5,7 @@ import React, { useState } from 'react';
 const HERO_IMAGE =
   "https://static.websitebuilder-cdn.com/ff4558209215a440/media/img/hero-beach.f9ce355462534da0976010b7595a03f9.d01dce0c00e575dd.a6948e40.png";
 
-const FORM_URL = "https://happydetour.app.n8n.cloud/form/91799171-4079-4ab7-9d13-9417ae57dfba";
+const FORM_URL = "https://api.leadconnectorhq.com/widget/form/V4qo3lEB8oTtXbuWILfK";
 
 export default function HeroSection() {
 const [showModal, setShowModal] = React.useState(false);
