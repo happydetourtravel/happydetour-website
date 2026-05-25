@@ -11,7 +11,8 @@ const reasons = [
     icon: "ri-compass-3-line",
     title: "No More Guessing",
     description:
-      "You shouldn't have to wonder if the reviews are real or if the "ocean view" is actually a parking lot. I've been there myself. I'll tell you exactly what's worth it and what to avoid.",
+      "description:
+      "You shouldn't have to wonder if the reviews are real or if the 'ocean view' is actually a parking lot. I've been there myself. I'll tell you exactly what's worth it and what to avoid.",",
   },
   {
     icon: "ri-leaf-line",
