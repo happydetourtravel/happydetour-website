@@ -77,17 +77,21 @@ export default function NavBar() {
 
           {/* Desktop Links */}
           <div className="hidden items-center gap-8 lg:flex">
-            {navLinks.map((link) => (
-              <a
-                key={link.label}
-                href={link.href}
-                target={link.href.startsWith("http") ? "_blank" : undefined}
-                rel={link.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                className={`text-sm font-semibold transition-colors whitespace-nowrap ${
-                  scrolled
-                    ? "text-gray-700 hover:text-amber-600"
-                    : "text-white hover:text-amber-200 [text-shadow:0_1px_8px_rgba(0,0,0,0.5)]"
-                }`}
+           {navLinks.map((link) => (
+  <a
+    key={link.label}
+    href={link.href}
+    target={link.href.startsWith("http") ? "_blank" : undefined}
+    rel={link.href.startsWith("http") ? "noopener noreferrer" : undefined}
+    className={`text-sm font-semibold transition-colors whitespace-nowrap ${
+      scrolled
+        ? "text-gray-700 hover:text-amber-600"
+        : "text-white hover:text-amber-200 [text-shadow:0_1px_8px_rgba(0,0,0,0.5)]"
+    }`}
+  >
+    {link.label}
+  </a>
+))}
               >
                 {link.label}
               </a>
@@ -128,18 +132,18 @@ export default function NavBar() {
               </button>
             </div>
             <nav className="flex flex-col gap-1 p-4">
-              {navLinks.map((link) => (
-               <a 
-                  key={link.label}
-                  href={link.href}
-                  target={link.href.startsWith("http") ? "_blank" : undefined}
-                  rel={link.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                  className="rounded-lg px-4 py-3 text-base font-semibold text-gray-700 hover:bg-amber-50 hover:text-amber-700 transition-colors"
-                  onClick={() => setMobileOpen(false)}
-                >
-                  {link.label}
-                </a>
-              ))}
+             {navLinks.map((link) => (
+  <a
+    key={link.label}
+    href={link.href}
+    target={link.href.startsWith("http") ? "_blank" : undefined}
+    rel={link.href.startsWith("http") ? "noopener noreferrer" : undefined}
+    className="rounded-lg px-4 py-3 text-base font-semibold text-gray-700 hover:bg-amber-50 hover:text-amber-700 transition-colors"
+    onClick={() => setMobileOpen(false)}
+  >
+    {link.label}
+  </a>
+))}
             </nav>
           </div>
         </div>
