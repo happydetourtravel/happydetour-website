@@ -1,29 +1,29 @@
 import ScrollReveal from '../../../components/base/ScrollReveal';
-const FORM_URL = "https://happydetour.app.n8n.cloud/form/91799171-4079-4ab7-9d13-9417ae57dfba";
+const FORM_URL = "https://api.leadconnectorhq.com/widget/form/V4qo3lEB8oTtXbuWILfK";
 const reasons = [
   {
     icon: "ri-map-pin-user-line",
     title: "Built Around You",
     description:
-      "Tired of packages that almost fit but not quite? I build your trip around your budget, your pace, and what you actually care about. Not whatever\u2019s left in inventory.",
+      "Tired of packages that almost fit but not quite? I build your trip around your budget, your pace, and what you actually care about. Not whatever's left in inventory.",
   },
   {
     icon: "ri-compass-3-line",
     title: "No More Guessing",
     description:
-      "You shouldn\u2019t have to wonder if the reviews are real or if the \u201cocean view\u201d is actually a parking lot. I\u2019ve been there myself. I\u2019ll tell you exactly what\u2019s worth it and what to avoid.",
+      "You shouldn't have to wonder if the reviews are real or if the "ocean view" is actually a parking lot. I've been there myself. I'll tell you exactly what's worth it and what to avoid.",
   },
   {
     icon: "ri-leaf-line",
     title: "Close the Tabs",
     description:
-      "Stop spending your evenings drowning in comparison sites. Hand me the idea. I\u2019ll come back with the right options. No research rabbit holes. No decision fatigue.",
+      "Stop spending your evenings drowning in comparison sites. Hand me the idea. I'll come back with the right options. No research rabbit holes. No decision fatigue.",
   },
   {
     icon: "ri-customer-service-2-line",
-    title: "I\u2019ve got you if something comes up",
+    title: "I've got you if something comes up",
     description:
-      "Flights change. Plans shift. If anything comes up, I take care of it so you\u2019re not stuck dealing with it. You get to enjoy your trip, not manage it.",
+      "Flights change. Plans shift. If anything comes up, I take care of it so you're not stuck dealing with it. You get to enjoy your trip, not manage it.",
   },
 ];
 export default function WhyBookSection() {
