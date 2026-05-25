@@ -29,8 +29,7 @@ export default function NavBar() {
       passive: true,
     });
 
-    return () =>
-      window.removeEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
@@ -42,7 +41,6 @@ export default function NavBar() {
             : "bg-transparent backdrop-blur-[3px]"
         }`}
       >
-        {/* Gradient overlay */}
         <div
           className={`absolute inset-0 pointer-events-none transition-opacity duration-500 ${
             scrolled ? "opacity-0" : "opacity-100"
@@ -54,12 +52,10 @@ export default function NavBar() {
         />
 
         <nav className="relative mx-auto flex w-full max-w-7xl items-center justify-between px-6 py-2.5 lg:px-10 lg:py-3">
-          {/* Logo */}
-          <a
+          
             href="#hero"
             className="flex items-center shrink-0 transition-all duration-300"
           >
-            {/* Mobile Logo */}
             <img
               src={LOGO_MOBILE_URL}
               alt="Happy Detour Travel"
@@ -70,7 +66,6 @@ export default function NavBar() {
               }`}
             />
 
-            {/* Desktop Logo */}
             <img
               src={LOGO_URL}
               alt="Happy Detour Travel logo"
@@ -82,21 +77,14 @@ export default function NavBar() {
             />
           </a>
 
-          {/* Desktop Links */}
           <div className="hidden items-center gap-8 lg:flex">
             {navLinks.map((link) => (
-              <a
+              
                 key={link.label}
                 href={link.href}
-                target={
-                  link.href.startsWith("http")
-                    ? "_blank"
-                    : undefined
-                }
+                target={link.href.startsWith("http") ? "_blank" : undefined}
                 rel={
-                  link.href.startsWith("http")
-                    ? "noopener noreferrer"
-                    : undefined
+                  link.href.startsWith("http") ? "noopener noreferrer" : undefined
                 }
                 className={`text-sm font-semibold transition-colors whitespace-nowrap ${
                   scrolled
@@ -109,7 +97,6 @@ export default function NavBar() {
             ))}
           </div>
 
-          {/* Mobile Menu Button */}
           <button
             className={`flex items-center justify-center w-8 h-8 lg:hidden transition-colors ${
               scrolled
@@ -124,7 +111,6 @@ export default function NavBar() {
         </nav>
       </header>
 
-      {/* Mobile Drawer */}
       {mobileOpen && (
         <div className="fixed inset-0 z-[60] lg:hidden">
           <div
@@ -151,14 +137,10 @@ export default function NavBar() {
 
             <nav className="flex flex-col gap-1 p-4">
               {navLinks.map((link) => (
-                <a
+                
                   key={link.label}
                   href={link.href}
-                  target={
-                    link.href.startsWith("http")
-                      ? "_blank"
-                      : undefined
-                  }
+                  target={link.href.startsWith("http") ? "_blank" : undefined}
                   rel={
                     link.href.startsWith("http")
                       ? "noopener noreferrer"
