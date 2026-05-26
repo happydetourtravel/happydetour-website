@@ -1,4 +1,6 @@
 {
+  "buildCommand": "npm run build",
+  "outputDirectory": "out",
   "rewrites": [
     { "source": "/everyonewelcome", "destination": "/everyonewelcome.html" },
     { "source": "/about", "destination": "/about.html" },
@@ -7,8 +9,7 @@
     { "source": "/testimonials", "destination": "/testimonials.html" },
     { "source": "/success", "destination": "/success.html" },
     { "source": "/review-success", "destination": "/review-success.html" },
-    { "source": "/", "destination": "/index.html" },
-    { "source": "/:path*", "destination": "/index.html" }
+    { "source": "/(.*)", "destination": "/index.html" }
   ],
   "headers": [
     {
