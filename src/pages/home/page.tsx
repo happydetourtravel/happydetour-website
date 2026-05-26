@@ -37,7 +37,6 @@ export default function Home() {
         <CTASection />
       </main>
       <ContactFooter />
-      <FloatingCTA />
-    </div>
+         </div>
   );
 }
