@@ -10,7 +10,6 @@ import TrustSection from "./components/TrustSection";
 import FAQSection from "./components/FAQSection";
 import CTASection from "./components/CTASection";
 import ContactFooter from "./components/ContactFooter";
-import FloatingCTA from "./components/FloatingCTA";
 
 export default function Home() {
   return (
