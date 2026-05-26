@@ -26,7 +26,6 @@
             flex-direction: column;
         }
 
-        /* Header */
         header {
             background: #007298;
             padding: 1.25rem 2rem;
@@ -51,45 +50,27 @@
             font-weight: 500;
         }
 
-        .header-link:hover {
-            color: white;
-        }
+        .header-link:hover { color: white; }
 
-        /* Main */
         main {
             flex: 1;
+            padding: 3rem 1.5rem;
             display: flex;
-            align-items: center;
             justify-content: center;
-            padding: 4rem 1.5rem;
         }
 
-        .card {
+        .container {
+            max-width: 800px;
+            width: 100%;
+        }
+
+        .page-header {
             background: white;
             border-radius: 16px;
-            padding: 3.5rem 3rem;
-            max-width: 560px;
-            width: 100%;
-            text-align: center;
-            box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+            padding: 2.5rem 3rem;
+            margin-bottom: 2rem;
             border: 1px solid #E5E7EB;
-        }
-
-        .icon {
-            width: 64px;
-            height: 64px;
-            background: #e0f2fe;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 1.75rem;
-        }
-
-        .icon svg {
-            width: 30px;
-            height: 30px;
-            stroke: #007298;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.06);
         }
 
         .label {
@@ -98,23 +79,15 @@
             letter-spacing: 0.15em;
             text-transform: uppercase;
             color: #007298;
-            margin-bottom: 0.75rem;
+            margin-bottom: 0.5rem;
         }
 
-        h1 {
+        .page-header h1 {
             font-size: 2rem;
             font-weight: 800;
             color: #1F2937;
-            margin-bottom: 1rem;
             letter-spacing: -0.02em;
-            line-height: 1.2;
-        }
-
-        .description {
-            font-size: 1rem;
-            color: #6B7280;
-            line-height: 1.75;
-            margin-bottom: 2rem;
+            margin-bottom: 0.75rem;
         }
 
         .divider {
@@ -122,49 +95,78 @@
             height: 3px;
             background: #F59E0B;
             border-radius: 100px;
-            margin: 0 auto 2rem;
+            margin-bottom: 1rem;
         }
 
-        .info-box {
-            background: #F9FAFB;
-            border: 1px solid #E5E7EB;
-            border-radius: 10px;
-            padding: 1.25rem 1.5rem;
-            margin-bottom: 2rem;
-            text-align: left;
-        }
-
-        .info-box p {
-            font-size: 0.9rem;
+        .page-header p {
+            font-size: 0.92rem;
             color: #6B7280;
             line-height: 1.7;
         }
 
-        .info-box strong {
-            color: #1F2937;
+        .content-card {
+            background: white;
+            border-radius: 16px;
+            padding: 2.5rem 3rem;
+            border: 1px solid #E5E7EB;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.06);
         }
 
-        .contact-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            background: linear-gradient(135deg, #FFD700, #F59E0B);
-            color: #1F2937;
-            font-weight: 700;
+        .intro {
             font-size: 0.95rem;
-            padding: 0.85rem 1.75rem;
-            border-radius: 8px;
-            text-decoration: none;
-            transition: transform 0.2s, box-shadow 0.2s;
-            box-shadow: 0 4px 14px rgba(245,158,11,0.35);
+            color: #374151;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #E5E7EB;
         }
 
-        .contact-link:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(245,158,11,0.45);
+        .tc-section {
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #F3F4F6;
         }
 
-        /* Footer */
+        .tc-section:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .tc-section h2 {
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: #007298;
+            margin-bottom: 0.9rem;
+        }
+
+        .tc-section p {
+            font-size: 0.92rem;
+            color: #374151;
+            line-height: 1.85;
+            margin-bottom: 0.85rem;
+        }
+
+        .tc-section p:last-child { margin-bottom: 0; }
+
+        .tc-section a {
+            color: #007298;
+            text-decoration: underline;
+        }
+
+        .notice {
+            background: #FEF3C7;
+            border-left: 4px solid #F59E0B;
+            border-radius: 0 8px 8px 0;
+            padding: 1rem 1.25rem;
+            margin: 1rem 0;
+            font-size: 0.88rem;
+            color: #92400E;
+            line-height: 1.7;
+        }
+
         footer {
             background: #1F2937;
             color: white;
@@ -186,8 +188,8 @@
         }
 
         @media (max-width: 640px) {
-            .card { padding: 2.5rem 1.5rem; }
-            h1 { font-size: 1.6rem; }
+            .page-header, .content-card { padding: 1.75rem 1.25rem; }
+            .page-header h1 { font-size: 1.6rem; }
             header { flex-direction: column; gap: 0.5rem; text-align: center; }
         }
     </style>
@@ -196,43 +198,133 @@
 
     <header>
         <a href="/" class="header-brand">Happy Detour Travel</a>
-        <a href="/" class="header-link">← Back to Home</a>
+        <a href="/" class="header-link">&#8592; Back to Home</a>
     </header>
 
     <main>
-        <div class="card">
-            <div class="icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-                    <polyline points="14,2 14,8 20,8"/>
-                    <line x1="16" y1="13" x2="8" y2="13"/>
-                    <line x1="16" y1="17" x2="8" y2="17"/>
-                    <polyline points="10,9 9,9 8,9"/>
-                </svg>
+        <div class="container">
+
+            <div class="page-header">
+                <div class="label">Legal</div>
+                <h1>Terms &amp; Conditions</h1>
+                <div class="divider"></div>
+                <p>Please read these terms carefully before booking travel with Happy Detour Travel. By planning travel with us, you agree to be bound by these terms.</p>
             </div>
 
-            <div class="label">Legal</div>
-            <h1>Terms & Conditions</h1>
-            <div class="divider"></div>
+            <div class="content-card">
 
-            <p class="description">
-                Our full Terms and Conditions are being finalized and will be published here shortly. Thank you for your patience.
-            </p>
+                <p class="intro">These terms and conditions ("Terms and Conditions") govern the relationship between Happy Detour Travel LLC d/b/a Happy Detour Travel ("HDT" and/or "we/us/our") and you, the purchaser or traveler ("Client" and "you/your"). By planning travel with HDT, you agree to be bound by these terms and acknowledge that HDT acts solely as a booking agent for disclosed principal supplier tour operators, cruise lines, hotels, airlines, air charters, bus companies, ground transportation, boat purveyors or owners, and other independent contractors providing accommodations, transportation, and other services ("Supplier(s)") and is not the source or provider of the travel services. These terms include warranties and disclaimers and exclusions of liability and may restrict your rights and remedies and provide protection to HDT.</p>
 
-            <div class="info-box">
-                <p>
-                    <strong>Have a question before booking?</strong> Reach out directly and I'll walk you through everything personally. No fine print surprises here.
-                </p>
+                <div class="tc-section">
+                    <h2>Use of HDT Services, Access and Information for Travel Bookings</h2>
+                    <p>You warrant that you are at least 18 years of age and possess the legal authority to enter into this Agreement and to make travel bookings with HDT. You agree to be financially responsible for all travel bookings you make with us, whether made on behalf of yourself or for other members of your traveling party. You warrant that all information supplied by you on behalf of yourself, members of your household, or others for whom you are authorized to transact business with us is true and accurate. You agree that you will only make legitimate reservations or purchases with HDT and its Suppliers, and you acknowledge that, without limitation, any speculative, false, or fraudulent reservation is prohibited.</p>
+                    <p>HDT accepts all bookings solely as the booking agent for the travel Suppliers on your itinerary. Separate Supplier terms and conditions will apply to your reservation and purchase of travel-related goods and services that you select, and you understand and agree that by booking travel through HDT, you are also agreeing to the booking terms of each Supplier partner you have selected for your itinerary.</p>
+                    <p>HDT is not liable or responsible for any arrangements made independently of HDT. HDT assumes no responsibility for costs or fees you incur for independent arrangements not booked through HDT, inclusive of, but not limited to, airline, hotel, excursion, and travel protection related charges. If you make your own flight arrangements, HDT is not responsible for any loss resulting from cancellation or changes in international gateways, itineraries, or travel dates.</p>
+                    <p>HDT is an independent contractor of WorldVia, California Seller of Travel 2073234-00, Florida ST36257, Washington 602864166. Registration as a seller of travel does not constitute approval by the State of California.</p>
+                </div>
+
+                <div class="tc-section">
+                    <h2>Right to Correct Errors and Offers Subject to Availability</h2>
+                    <p>We reserve the right to correct errors. In the event of any pricing error or omission, we reserve the right to adjust such pricing or make any other corrections. All offers, incentives and Supplier promotions are subject to availability and may change without notice. You are advised to confirm reservations well in advance of your anticipated dates of travel to avoid disappointment, increases in fares and additional late booking fees.</p>
+                </div>
+
+                <div class="tc-section">
+                    <h2>Payments, Cancellations, and Changes to Bookings</h2>
+                    <p>You shall be completely responsible for all charges, fees, duties, taxes, and assessments arising out of your travel bookings through HDT. By submitting a credit card authorization form to HDT, you agree to allow HDT to use your payment method to purchase travel products from our Suppliers on your behalf.</p>
+                    <div class="notice">EXCEPTING IN CASES OF FRAUD, YOU AGREE NOT TO FILE ANY DISPUTE WITH YOUR BANK OR CREDIT CARD COMPANY TO AVOID OR VIOLATE ANY BOOKING TERMS AND CONDITIONS OF HDT OR ITS SUPPLIERS. IF YOU ATTEMPT TO CHARGEBACK, REVERSE OR RECOLLECT A PREVIOUSLY AUTHORIZED TRIP PAYMENT, HDT RESERVES THE RIGHT TO COLLECT ALL ADDITIONAL COSTS, FEES AND EXPENSES ASSOCIATED WITH SUCH CHARGEBACK, REVERSAL OR RECOLLECTION, INCLUDING, WITHOUT LIMITATION, ATTORNEY FEES.</div>
+                    <p>All payments for travel are due prior to departure according to each Supplier's terms and conditions of booking. In some cases, there is NO REFUND once a booking is made and under deposit. You may not be entitled to a refund if you change or cancel your travel plans after confirmation of a booking. All cancellation requests must be sent to HDT in writing. As a result of cancellation or changes to confirmed bookings, HDT's and third-party Supplier's cancellation penalties will apply.</p>
+                    <p>If you decide to change any portion of your confirmed arrangements prior to departure or during your trip, we will attempt to assist you. Certain bookings may not be able to be changed, and you will be responsible for any increases in cost imposed by the Supplier, as well as any HDT or Supplier change fees. All requests for changes to a booking must be made in writing to HDT.</p>
+                </div>
+
+                <div class="tc-section">
+                    <h2>Travel Documents, Including TSA and DHS Acceptable Identification Requirements</h2>
+                    <p>It is the responsibility of each Client to obtain and carry a valid passport book, visa(s), and all other documents required by applicable government regulations. Passport cards are not accepted for most international travel. Acceptable identification can be found at <a href="http://www.tsa.gov/" target="_blank" rel="noopener">www.tsa.gov</a>. You will need a state-issued REAL ID compliant license or identification card, or another acceptable form of ID such as a passport, to fly within the United States.</p>
+                    <p>Certain countries will not admit a passenger if their passport expires within six (6) months of the anticipated date of return. Non-United States citizens may require additional documentation, and you are responsible to make HDT aware when traveling on a passport from a country other than the United States of America. HDT neither controls nor warrants the issuance of visas or approval of visa waivers related to your travel.</p>
+                    <p>Children and infants may also require travel documents. Minors traveling with one parent, and/or without both parents, may be stopped and not admitted unless authenticated and verified consent forms are provided to the authorities; please see <a href="https://help.cbp.gov" target="_blank" rel="noopener">help.cbp.gov</a> for additional information.</p>
+                    <p>The name, date of birth and gender that appears on the identification card must exactly match the same such data that is listed on your tickets and booking records.</p>
+                    <div class="notice">WHEN YOU RECEIVE YOUR TRAVEL DOCUMENTS, IT IS YOUR RESPONSIBILITY TO REVIEW AND VERIFY ALL INFORMATION FOR ACCURACY. CONTACT HDT IMMEDIATELY IF CHANGES OR CORRECTIONS ARE REQUIRED. IF YOU HAVE NOT NOTIFIED US OF NECESSARY CORRECTIONS WITHIN TWENTY-FOUR (24) HOURS OF RECEIVING YOUR TRAVEL DOCUMENTS, HDT BEARS NO RESPONSIBILITY FOR ANY ADDITIONAL COSTS ASSOCIATED WITH MAKING NECESSARY CORRECTIONS.</div>
+                </div>
+
+                <div class="tc-section">
+                    <h2>Individual Entry and Exit Requirements</h2>
+                    <p>Each country holds different rules of entry for travel, including views of past criminal offenses, and it is your responsibility to know whether you are eligible to enter the jurisdictions on your itinerary. You can visit the US State Department website for further information: <a href="https://travel.state.gov/content/travel.html" target="_blank" rel="noopener">travel.state.gov</a>.</p>
+                    <p>In some countries, it is illegal to enter with firearms or ammunition, and if you attempt to enter a country with prohibited items, you may be detained, refused admission, or arrested.</p>
+                </div>
+
+                <div class="tc-section">
+                    <h2>Immunizations and Health Screenings</h2>
+                    <p>You must have the proper immunizations and health screenings and required documentation before travel. HDT shall not assume responsibility for the accuracy of health, vaccination, or documentation requirements prior to departure or upon landing at the final destination. If you are concerned about taking any medications or receiving certain inoculations, check with your health practitioner BEFORE booking. Check <a href="http://travel.state.gov" target="_blank" rel="noopener">travel.state.gov</a> and <a href="http://wwwnc.cdc.gov/travel/" target="_blank" rel="noopener">wwwnc.cdc.gov/travel</a> for relevant health and travel information.</p>
+                </div>
+
+                <div class="tc-section">
+                    <h2>Risks and Safety</h2>
+                    <p>Travel to certain destinations may involve greater risk than others. HDT urges Clients to remain informed on a daily basis as to current news events, as well as to review travel prohibitions, warnings, announcements and advisories issued by the United States Government prior to booking travel to international destinations. Information on health and safety conditions in various countries can be found at <a href="http://www.state.gov" target="_blank" rel="noopener">state.gov</a>, <a href="http://www.tsa.gov" target="_blank" rel="noopener">tsa.gov</a>, and <a href="http://www.cdc.gov" target="_blank" rel="noopener">cdc.gov</a>. The free Smart Traveler Enrollment Program (STEP) is available at <a href="https://step.state.gov/step/" target="_blank" rel="noopener">step.state.gov</a>.</p>
+                    <div class="notice">BY OFFERING FOR SALE TRAVEL TO PARTICULAR DESTINATIONS, HDT DOES NOT REPRESENT OR WARRANT THAT TRAVEL TO SUCH POINTS IS ADVISABLE OR WITHOUT RISK, AND SHALL NOT BE LIABLE FOR COSTS, DAMAGES, OR LOSSES THAT MAY RESULT FROM TRAVEL TO SUCH DESTINATIONS. CLIENT'S PARTICIPATION CONSTITUTES ACCEPTANCE OF SUCH EVENTS AT CLIENT'S OWN RISK.</div>
+                    <p>Laws and attitudes in some countries may affect safety and ease of travel. Many countries do not recognize same-sex marriage or the X gender marker in passports, and some countries consider consensual same-sex relations a crime.</p>
+                    <p>In the event of emergent health or safety concerns, HDT shall have the sole and absolute discretion whether to proceed with any HDT escorted trip or private departure, or to make alterations to the itinerary.</p>
+                </div>
+
+                <div class="tc-section">
+                    <h2>Hazardous Materials</h2>
+                    <p>Federal law prohibits passengers from bringing hazardous materials on aircraft. Hazardous materials include explosives, compressed gases, flammable liquids and solids, oxidizers, poisons, corrosives and radioactive materials. A violation can result in five years' imprisonment and penalties of $250,000 or more (49 U.S.C. 5124). For further information, visit <a href="http://www.tsa.gov/traveler-information/prohibited-items" target="_blank" rel="noopener">tsa.gov</a>.</p>
+                </div>
+
+                <div class="tc-section">
+                    <h2>Insecticide Notice</h2>
+                    <p>We recommend that you refer to the DOT list of countries that require airlines to treat the passenger cabin with insecticides. This list is available at <a href="http://www.dot.gov/office-policy/aviation-policy/aircraft-disinsection-requirements" target="_blank" rel="noopener">dot.gov</a>.</p>
+                </div>
+
+                <div class="tc-section">
+                    <h2>Air Travel, Schedule Reconfirmation, Check-In</h2>
+                    <p>Your airline ticket is a contract between you and the air carrier, even if you purchase through HDT. HDT does not have the right to control the operations of independent airlines and is not liable for any personal injury, property damage, act, error, omission, injury, loss, accident, or delay caused by any act, error or omission of the airline.</p>
+                    <p>HDT functions solely as a booking agent for the air carrier and does not handle or hold client funds for airline tickets. Any refund for cancelled or delayed flights, baggage fees or seat assignments must come directly from the airline and not from HDT.</p>
+                    <p>HDT shall not assume any responsibility for any air schedule changes. Airline e-tickets expire one year from issue date unless fare rules provide otherwise. It is strongly recommended that you check in a minimum of 2 hours prior to scheduled departure for domestic flights and 3 hours prior for international flights. Reconfirm flight times at least 24 hours prior for domestic flights, and 72 hours prior for international flights.</p>
+                    <p>Frequent flyer mileage accrual is at the discretion of the airline(s). Seat assignments are not guaranteed even after they are assigned, and HDT has no control over airline seat assignments.</p>
+                </div>
+
+                <div class="tc-section">
+                    <h2>Limitations of Responsibility and Disclosure</h2>
+                    <p>HDT acts solely as a booking agent for disclosed principal Suppliers and is not the source or provider of any travel service. Each Supplier is an independent entity with its own management and is not subject to the control of HDT.</p>
+                    <div class="notice">BECAUSE HDT ACTS AS AGENT FOR DISCLOSED PRINCIPAL SUPPLIERS AND DOES NOT HAVE THE RIGHT TO CONTROL THE OPERATIONS OF SUCH INDEPENDENT OPERATORS AND SUPPLIERS, YOU AGREE THAT HDT IS NOT LIABLE FOR ANY PERSONAL INJURY OR PROPERTY DAMAGE WHICH MAY ARISE OUT OF THESE SERVICES. HDT HEREBY DISCLAIMS ANY LIABILITY WHETHER BASED ON CONTRACT, TORT, STRICT LIABILITY, OR OTHERWISE, INCLUDING WITHOUT LIMITATION LIABILITY FOR ANY DIRECT, PUNITIVE, SPECIAL CONSEQUENTIAL, INCIDENTAL OR INDIRECT DAMAGES IN CONNECTION WITH THE GOODS OR SERVICES PROVIDED BY ANY PRINCIPAL SUPPLIER. HDT HAS SOLELY RECEIVED COMMISSION AND FEES FOR TRAVEL TRANSACTIONS AND CLIENT AGREES AND UNDERSTANDS THAT ANY RECOVERY FROM HDT WILL BE LIMITED TO THE AMOUNT OF COMMISSION AND FEES ACTUALLY RECEIVED BY HDT.</div>
+                </div>
+
+                <div class="tc-section">
+                    <h2>Force Majeure</h2>
+                    <p>HDT will not be in breach of these terms and conditions or otherwise be liable to you for any failure or delay in performing an obligation under this Agreement that is due to causes beyond its reasonable control, including: acts of God, accident, riots, war, terrorist act, epidemic, pandemic, quarantine, civil commotion, breakdown of communication facilities, natural catastrophes including extreme weather events, floods and volcanic eruptions, governmental acts or omissions, changes in laws or regulations, national strikes, fire, or explosion.</p>
+                    <div class="notice">THE PURCHASE OF TRAVEL INSURANCE IS HIGHLY RECOMMENDED ON ALL TRIPS.</div>
+                </div>
+
+                <div class="tc-section">
+                    <h2>Client Conduct</h2>
+                    <p>Each participant in any trip escorted by HDT is expected to act responsibly and adhere to all behavior guidelines established by HDT and our Suppliers. HDT and all local Suppliers reserve the right to remove you from any facility, hotel, tour location or means of transportation if your health or conduct appears to endanger yourself or others, or disrupts the general well-being of other clients. In any such case, there will be no refund.</p>
+                    <p>When you book with HDT, you accept responsibility for any damage or loss caused by you. Baggage and personal effects are at all times the sole responsibility of the participant. Any transportation, possession or use of illegal drugs will result in immediate termination of your trip and may result in prosecution by law enforcement authorities.</p>
+                </div>
+
+                <div class="tc-section">
+                    <h2>Currency Fluctuations</h2>
+                    <p>Currency exchange rates fluctuate. Prices are subject to change based upon currency exchange rate fluctuations. HDT is not responsible for surcharges or foreign transaction fees imposed by Client's credit card or bank.</p>
+                </div>
+
+                <div class="tc-section">
+                    <h2>Travel Insurance</h2>
+                    <div class="notice">HDT OFFERS ACCESS TO TRAVEL INSURANCE TO PROTECT PASSENGERS AND THEIR INVESTMENT IN TRAVEL. UNLESS SPECIFICALLY NOTED, TRAVEL INSURANCE IS NOT INCLUDED IN THE COST OF CLIENT'S ITINERARY. WITHOUT APPROPRIATE TRAVEL INSURANCE, IF YOU CANCEL OR INTERRUPT YOUR TRAVEL FOR ANY REASON, PORTIONS OF THE TRIP MAY NOT BE REFUNDED AND CANCELLATION PENALTIES WILL APPLY, RESULTING IN THE LOSS OF MONIES UP TO THE FULL COST OF YOUR TRAVEL BOOKING.</div>
+                    <p>The purchase of travel insurance is not required in order to purchase any other product or service offered by HDT, however if you decline to purchase insurance, HDT may require that you execute an insurance waiver. HDT is not a licensed insurance broker and cannot guarantee that any insurance provider will approve coverage for a claim made under the insurer's policy.</p>
+                </div>
+
+                <div class="tc-section">
+                    <h2>Reservation of Rights and Changes to These Terms</h2>
+                    <p>We reserve the right, in our sole discretion, to change these Terms and Conditions at any time. Updated versions of the Terms will be provided to Clients, will be posted on our website, and are effective immediately on posting.</p>
+                </div>
+
+                <div class="tc-section">
+                    <h2>General</h2>
+                    <p>The laws of the State of Ohio govern these Terms and Conditions. You hereby consent to the exclusive jurisdiction and venue of courts in Stark County, Ohio in all disputes arising out of or relating to travel bookings with HDT. Any claim against HDT must be brought within 12 months after the date of the completion of the trip. HDT shall not in any case be liable for damages other than compensatory damages, and you waive any right to claim punitive or exemplary damages.</p>
+                    <p>You agree that you may only bring claims in your individual capacity and not as plaintiffs or class members in any class action or other representative action, regardless of the type of proceeding.</p>
+                    <p>These Terms and Conditions constitute the entire agreement between the Client and HDT with respect to travel bookings made with HDT by any means, and supersede all prior or contemporaneous communications and proposals, whether electronic, oral, or written, between Client and HDT.</p>
+                </div>
+
             </div>
 
-            <div style="display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center;">
-                <a href="mailto:eric@happydetour.com" class="contact-link">
-                    ✉️ eric@happydetour.com
-                </a>
-                <a href="sms:3124602501" class="contact-link" style="background: linear-gradient(135deg, #BEF264, #84CC16); color: #1F2937; box-shadow: 0 4px 14px rgba(190,242,100,0.35);">
-                    💬 312-460-2501
-                </a>
-            </div>
         </div>
     </main>
 
@@ -241,8 +333,7 @@
         <div class="footer-tagline">Affordable vacations. Fun experiences. Everyone welcome.</div>
         <div style="font-size: 0.75rem; color: rgba(255,255,255,0.3); margin-top: 1rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.08); line-height: 1.9;">
             Happy Detour Travel is an independent affiliate of WorldVia Travel Network<br>
-            © 2026 Happy Detour Travel. All rights reserved.<br>
-            <span style="font-size: 0.7rem; opacity: 0.5;">Built on a Citrus MacBook in Alliance, Ohio. Last updated May 21, 2026</span>
+            &copy; 2026 Happy Detour Travel. All rights reserved. &nbsp;&middot;&nbsp; Last updated May 26, 2026
         </div>
     </footer>
 
