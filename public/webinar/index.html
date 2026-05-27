@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cruise Chat with Eric | Happy Detour Travel</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --blue: #007298;
+    --amber: #F59E0B;
+    --bg: #F9FAFB;
+    --text: #1F2937;
+    --soft: #6B7280;
+    --white: #ffffff;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+  }
+
+  /* ── FLOATING FORM PANEL ── */
+  .float-panel {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 360px;
+    height: 100vh;
+    background: var(--white);
+    border-left: 1px solid #E5E7EB;
+    box-shadow: -4px 0 24px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+    z-index: 100;
+    overflow: hidden;
+  }
+
+  .float-panel-header {
+    background: var(--blue);
+    color: var(--white);
+    padding: 20px 22px 16px;
+    text-align: center;
+    flex-shrink: 0;
+  }
+
+  .float-panel-header .fp-badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.18);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 20px;
+    margin-bottom: 8px;
+  }
+
+  .float-panel-header h2 {
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 1.25;
+    margin-bottom: 4px;
+  }
+
+  .float-panel-header p {
+    font-size: 12px;
+    opacity: 0.82;
+  }
+
+  .float-panel-body {
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  .float-panel-body iframe {
+    width: 100%;
+    height: 680px;
+    border: none;
+    display: block;
+  }
+
+  .float-panel-footer {
+    padding: 10px 16px;
+    border-top: 1px solid #F3F4F6;
+    text-align: center;
+    font-size: 11px;
+    color: var(--soft);
+    flex-shrink: 0;
+  }
+
+  /* ── MAIN CONTENT (offset for panel) ── */
+  .page-wrap {
+    margin-right: 360px;
+  }
+
+  /* TOP BAR */
+  .topbar {
+    background: var(--blue);
+    color: var(--white);
+    text-align: center;
+    padding: 10px 20px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.4px;
+  }
+
+  /* HERO */
+  .hero {
+    background: var(--blue);
+    color: var(--white);
+  }
+
+  .hero-inner {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 60px 40px 0;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 48px;
+    align-items: end;
+  }
+
+  .hero-badge {
+    display: inline-block;
+    background: var(--amber);
+    color: #7c4a00;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 5px 12px;
+    border-radius: 20px;
+    margin-bottom: 18px;
+  }
+
+  .hero h1 {
+    font-size: 42px;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 16px;
+  }
+
+  .hero h1 span { color: var(--amber); }
+
+  .hero p {
+    font-size: 16px;
+    line-height: 1.7;
+    opacity: 0.88;
+    margin-bottom: 24px;
+    max-width: 420px;
+  }
+
+  .hero-details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 32px;
+  }
+
+  .hero-detail {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  .hero-detail .icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    flex-shrink: 0;
+  }
+
+  .hero-photo {
+    width: 260px;
+    height: 340px;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 14px 14px 0 0;
+    border: 3px solid rgba(255,255,255,0.18);
+    display: block;
+  }
+
+  /* WAVE */
+  .wave { background: var(--blue); line-height: 0; }
+  .wave svg { display: block; width: 100%; }
+
+  /* TRUST STRIP */
+  .trust-strip {
+    background: var(--white);
+    border-bottom: 1px solid #E5E7EB;
+    padding: 20px 40px;
+  }
+
+  .trust-inner {
+    max-width: 760px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px 36px;
+    justify-content: center;
+  }
+
+  .trust-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--soft);
+  }
+
+  .trust-item .dot {
+    width: 7px; height: 7px;
+    border-radius: 50%;
+    background: var(--amber);
+    flex-shrink: 0;
+  }
+
+  /* CONTENT SECTIONS */
+  .content {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 56px 40px 64px;
+  }
+
+  .section-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--blue);
+    margin-bottom: 10px;
+  }
+
+  .section-title {
+    font-size: 28px;
+    font-weight: 800;
+    line-height: 1.2;
+    color: var(--text);
+    margin-bottom: 14px;
+  }
+
+  .section-body {
+    font-size: 15px;
+    line-height: 1.75;
+    color: var(--soft);
+    margin-bottom: 28px;
+  }
+
+  /* TOPIC GRID */
+  .topics {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin-bottom: 48px;
+  }
+
+  .topic-card {
+    background: var(--white);
+    border: 1px solid #E5E7EB;
+    border-radius: 12px;
+    padding: 18px;
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+  }
+
+  .topic-icon {
+    width: 34px; height: 34px;
+    border-radius: 8px;
+    background: #EBF5FA;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px;
+    flex-shrink: 0;
+  }
+
+  .topic-card h4 {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 3px;
+  }
+
+  .topic-card p {
+    font-size: 13px;
+    color: var(--soft);
+    line-height: 1.5;
+  }
+
+  /* BIO */
+  .bio-block {
+    background: var(--white);
+    border: 1px solid #E5E7EB;
+    border-radius: 16px;
+    padding: 24px;
+    display: flex;
+    gap: 18px;
+    align-items: flex-start;
+  }
+
+  .bio-avatar {
+    width: 68px; height: 68px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center top;
+    border: 3px solid #EBF5FA;
+    flex-shrink: 0;
+  }
+
+  .bio-block h3 { font-size: 16px; font-weight: 700; margin-bottom: 2px; }
+  .bio-block .bio-title { font-size: 12px; color: var(--blue); font-weight: 600; margin-bottom: 8px; }
+  .bio-block p { font-size: 14px; line-height: 1.65; color: var(--soft); }
+
+  /* MOBILE CTA (shown only on small screens) */
+  .mobile-cta {
+    display: none;
+    background: var(--blue);
+    color: var(--white);
+    text-align: center;
+    padding: 18px 24px;
+    font-size: 15px;
+    font-weight: 700;
+  }
+
+  .mobile-cta a {
+    display: inline-block;
+    margin-top: 10px;
+    background: var(--amber);
+    color: #7c4a00;
+    padding: 12px 28px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  /* FOOTER */
+  .footer {
+    background: var(--text);
+    color: var(--white);
+    padding: 36px 40px;
+    text-align: center;
+  }
+
+  .footer-logo { font-size: 17px; font-weight: 800; margin-bottom: 4px; }
+  .footer-tagline { font-size: 13px; color: var(--amber); font-weight: 500; margin-bottom: 14px; }
+
+  .footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    font-size: 12px;
+    color: rgba(255,255,255,0.55);
+  }
+
+  .footer-links a { color: rgba(255,255,255,0.55); text-decoration: none; }
+  .footer-links a:hover { color: var(--white); }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 900px) {
+    .float-panel { display: none; }
+    .page-wrap { margin-right: 0; }
+    .mobile-cta { display: block; }
+    .hero-inner { grid-template-columns: 1fr; padding: 40px 24px 0; gap: 24px; }
+    .hero h1 { font-size: 30px; }
+    .hero-photo { width: 100%; max-width: 280px; height: 260px; border-radius: 12px 12px 0 0; }
+    .hero-photo-wrap { display: flex; justify-content: center; }
+    .content { padding: 36px 24px 48px; }
+    .topics { grid-template-columns: 1fr; }
+    .trust-inner { gap: 12px 24px; }
+    .footer { padding: 28px 24px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- FLOATING FORM (desktop) -->
+<div class="float-panel">
+  <div class="float-panel-header">
+    <div class="fp-badge">Free Event</div>
+    <h2>Register for Cruise Chat with Eric</h2>
+    <p>No pressure. Real answers. No pitch.</p>
+  </div>
+  <div class="float-panel-body">
+    <iframe
+      src="https://api.leadconnectorhq.com/widget/form/L9HRucZjKWNF9P7xWFkx"
+      id="inline-L9HRucZjKWNF9P7xWFkx"
+      data-layout="{'id':'INLINE'}"
+      data-trigger-type="alwaysShow"
+      data-trigger-value=""
+      data-activation-type="alwaysActivated"
+      data-activation-value=""
+      data-deactivation-type="neverDeactivate"
+      data-deactivation-value=""
+      data-form-name="HDT - Webinar"
+      data-height="680"
+      data-layout-iframe-id="inline-L9HRucZjKWNF9P7xWFkx"
+      data-form-id="L9HRucZjKWNF9P7xWFkx"
+      title="HDT - Webinar"
+    ></iframe>
+    <script src="https://link.msgsndr.com/js/form_embed.js"></script>
+  </div>
+  <div class="float-panel-footer">
+    🔒 Your info is private. No spam. Ever.<br>
+    Questions? Text Eric: <strong>312-460-2501</strong>
+  </div>
+</div>
+
+<!-- MAIN PAGE CONTENT -->
+<div class="page-wrap">
+
+  <div class="topbar">Free. No sales pitch. Just a real conversation about cruising.</div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div>
+        <div class="hero-badge">Free Online Event</div>
+        <h1>Cruise Chat<br>with <span>Eric</span></h1>
+        <p>A casual, no-pressure conversation about cruising. Ask anything. Real answers, not a sales pitch.</p>
+        <div class="hero-details">
+          <div class="hero-detail"><div class="icon">🎙</div> Live Q&amp;A — your questions, answered honestly</div>
+          <div class="hero-detail"><div class="icon">🚢</div> 20+ cruises sailed. I know what works.</div>
+          <div class="hero-detail"><div class="icon">🎟</div> Completely free. No obligation to book.</div>
+        </div>
+      </div>
+      <div class="hero-photo-wrap">
+        <img src="IMG_0201__2_.jpeg" alt="Eric from Happy Detour Travel smiling on a cruise ship deck" class="hero-photo" />
+      </div>
+    </div>
+  </section>
+
+  <div class="wave">
+    <svg viewBox="0 0 1200 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" height="52">
+      <path d="M0,0 C300,60 900,0 1200,60 L1200,0 L0,0 Z" fill="#007298"/>
+      <path d="M0,0 C300,60 900,0 1200,60 L1200,0 L0,0 Z" fill="#F9FAFB" transform="scale(1,-1) translate(0,-60)"/>
+    </svg>
+  </div>
+
+  <!-- MOBILE CTA -->
+  <div class="mobile-cta">
+    Ready to save your spot?
+    <br>
+    <a href="#mobile-form">Sign Up Free Below</a>
+  </div>
+
+  <!-- TRUST STRIP -->
+  <div class="trust-strip">
+    <div class="trust-inner">
+      <div class="trust-item"><div class="dot"></div> My planning service is always free to you</div>
+      <div class="trust-item"><div class="dot"></div> Affiliated with WorldVia Travel Network</div>
+      <div class="trust-item"><div class="dot"></div> Independent advisor, not a call center</div>
+      <div class="trust-item"><div class="dot"></div> Text me directly: 312-460-2501</div>
+    </div>
+  </div>
+
+  <!-- CONTENT -->
+  <div class="content">
+
+    <div class="section-label">What we'll cover</div>
+    <h2 class="section-title">Everything you actually want to know about cruising</h2>
+    <p class="section-body">No scripted presentation. No pressure. I'll walk you through how cruising works, what things really cost, which cruise lines fit different people, and answer every question you've got. Honest answers only.</p>
+
+    <div class="topics">
+      <div class="topic-card">
+        <div class="topic-icon">💰</div>
+        <div>
+          <h4>What's really included</h4>
+          <p>Food, drinks, tips, Wi-Fi. No surprises when you get on the ship.</p>
+        </div>
+      </div>
+      <div class="topic-card">
+        <div class="topic-icon">🚢</div>
+        <div>
+          <h4>The major cruise lines</h4>
+          <p>Carnival, Royal, Norwegian, MSC. Who each one is actually for.</p>
+        </div>
+      </div>
+      <div class="topic-card">
+        <div class="topic-icon">💸</div>
+        <div>
+          <h4>Drink packages</h4>
+          <p>Worth it or not? When to buy. Simple math so you don't overpay.</p>
+        </div>
+      </div>
+      <div class="topic-card">
+        <div class="topic-icon">🏝</div>
+        <div>
+          <h4>Shore excursions</h4>
+          <p>What to book, what to skip, and why the ship is usually the safer bet.</p>
+        </div>
+      </div>
+      <div class="topic-card">
+        <div class="topic-icon">✈️</div>
+        <div>
+          <h4>Getting there</h4>
+          <p>Flights, pre-cruise hotels, airport transfers. I handle all of it.</p>
+        </div>
+      </div>
+      <div class="topic-card">
+        <div class="topic-icon">🎉</div>
+        <div>
+          <h4>A deal I'm excited about</h4>
+          <p>ABC Islands on Carnival Horizon. Oct 10-18, 2026. From $644/person.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-label">Your host</div>
+    <h2 class="section-title" style="font-size: 24px;">Hi, I'm Eric.</h2>
+    <p class="section-body">I run Happy Detour Travel out of the Cleveland area. I'm an independent travel advisor affiliated with WorldVia Travel Network, one of the biggest host agencies in the country. That means you get the same rates and inventory the big agencies have, but you work directly with me. And my planning service is always free.</p>
+
+    <div class="bio-block">
+      <img src="IMG_0201__2_.jpeg" alt="Eric Carney" class="bio-avatar" />
+      <div>
+        <h3>Eric Carney</h3>
+        <div class="bio-title">Independent Travel Advisor, Happy Detour Travel</div>
+        <p>I've sailed over 20 cruises across the Caribbean, Europe, and beyond. I've made mistakes, learned what works, and that experience is what I bring to every conversation. Affordable vacations. Fun experiences. Everyone welcome.</p>
+      </div>
+    </div>
+
+    <!-- MOBILE FORM -->
+    <div id="mobile-form" style="margin-top: 48px; display: none;" class="mobile-form-section">
+      <div class="section-label">Save your spot</div>
+      <h2 class="section-title" style="font-size: 24px;">Register for free</h2>
+      <div style="background: var(--white); border: 1px solid #E5E7EB; border-radius: 16px; overflow: hidden;">
+        <iframe
+          src="https://api.leadconnectorhq.com/widget/form/L9HRucZjKWNF9P7xWFkx"
+          style="width:100%; height:680px; border:none; display:block;"
+          title="HDT - Webinar Register"
+        ></iframe>
+      </div>
+    </div>
+
+  </div>
+
+  <footer class="footer">
+    <div class="footer-logo">Happy Detour Travel</div>
+    <div class="footer-tagline">Affordable vacations. Fun experiences. Everyone welcome.</div>
+    <div class="footer-links">
+      <a href="https://happydetour.com">happydetour.com</a>
+      <a href="mailto:eric@happydetour.com">eric@happydetour.com</a>
+      <span>312-460-2501</span>
+      <a href="https://facebook.com/happydetourtravel">Facebook</a>
+      <a href="https://instagram.com/happydetourtravel">Instagram</a>
+      <a href="https://tiktok.com/@happydetourtravel">TikTok</a>
+    </div>
+  </footer>
+
+</div>
+
+<script>
+  if (window.innerWidth <= 900) {
+    document.querySelector('.mobile-form-section').style.display = 'block';
+  }
+</script>
+
+</body>
+</html>
