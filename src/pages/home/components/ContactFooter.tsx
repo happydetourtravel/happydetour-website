@@ -108,10 +108,10 @@ export default function ContactFooter() {
                     </div>
                     <span className="inline-flex items-baseline">
                       <a
-                        href="tel:+13124602501"
+                        href="tel:+17163338687"
                         className="text-amber-600 hover:text-amber-700 transition-colors cursor-pointer"
                       >
-                        312-460-2501
+                        716-333-8687
                       </a>
                       <span className="relative group/sup">
                         <a
