@@ -25,7 +25,7 @@ export default function CTASection() {
         </ScrollReveal>
         <ScrollReveal direction="up" delay={300} duration={700}>
           <div className="mt-10 flex flex-col items-center gap-3">
-            
+            <a
               href={FORM_URL}
               target="_blank"
               rel="noopener noreferrer"
