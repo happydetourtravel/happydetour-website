@@ -21,7 +21,7 @@ const services = [
     icon: "ri-map-2-line",
     title: "Custom Travel Experiences",
     description:
-      "From a long weekend getaway to a two-week trip, I build itineraries around your budget, timeline, and travel style. Whether you are leaning toward a cruise or an all-inclusive resort, I know both inside and out and will help you figure out what actually fits. Planning fees vary depending on the complexity of your trip. For simple bookings there may be no fee at all. Either way you get a real person handling the details so you can just look forward to going.",
+      "From a long weekend getaway to a two-week trip, I build itineraries around your budget, timeline, and travel style. Whether you are leaning toward a cruise or an all-inclusive resort, I know both inside and out and will help you figure out what actually fits. Planning fees start at $50 depending on your trip. We talk through everything together before anything is confirmed. Either way you get a real person handling the details so you can just look forward to going.",
     accent: "text-rose-500 bg-rose-50 border-rose-200",
   },
 ];
