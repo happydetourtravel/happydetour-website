@@ -11,7 +11,7 @@ interface FAQ {
 const faqs: FAQ[] = [
   {
     question: "What does it cost to work with you?",
-    answer: "It depends on the trip. For simple bookings there may be no planning fee at all. For more complex itineraries I charge a planning fee that we discuss upfront before anything is booked. Either way there are no hidden costs and no surprises. Cruise lines and resorts pay me a commission when you travel, the same way a mortgage broker works. You get a real person in your corner without paying more than you would booking on your own."
+    answer: "Planning fees start at $50 depending on your trip. We talk through it together before anything is confirmed so there are no surprises. Cruise lines and resorts pay me a commission when you travel, the same way a mortgage broker works. You get a real person in your corner without paying more than you would booking on your own."
   },
   {
     question: "Why work with you instead of just booking online?",
