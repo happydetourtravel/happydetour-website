@@ -38,8 +38,8 @@ export default function CTASection() {
               Start Planning My Trip
             </a>
             <p className="text-sm text-gray-500">
-              Start with an idea. I'll help from there.
-            </p>
+  Start with an idea. I will help from there. Planning fees start at $50. We talk through everything before anything is confirmed.
+</p>
           </div>
         </ScrollReveal>
       </div>
