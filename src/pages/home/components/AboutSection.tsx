@@ -17,20 +17,20 @@ export default function AboutSection() {
                 Your Travel Advisor
               </p>
               <p className="text-xs text-gray-400 mb-2">
-                Happy Detour Travel is a personalized, free vacation planning service led by independent travel advisor Eric Carney, specializing in cruises and all-inclusive resorts.
+                Happy Detour Travel is a personalized travel advisory service led by independent travel advisor Eric Carney, specializing in cruises and all-inclusive resorts.
               </p>
               <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl leading-snug">
                 I'm Eric. I help people plan trips without making it complicated or overwhelming.
               </h2>
               <div className="mt-6 space-y-4 text-base leading-7 text-gray-600">
                 <p>
-                  Most people know they want to travel. They just don't know where to start — and honestly, the research can feel like a second job. That's where I come in.
+                  Most people know they want to travel. They just don't know where to start. And honestly, the research can feel like a second job. That's where I come in.
                 </p>
                 <p>
-                  You share a rough idea. I take it from there. I find the options, sort through the details, and help you pick something that actually fits — your budget, your timeline, your vibe.
+                  You share a rough idea. I take it from there. I find the options, sort through the details, and help you pick something that actually fits your budget, your timeline, and your vibe.
                 </p>
                 <p>
-                  And the best part? <strong className="text-gray-800">It's completely free to you.</strong> Cruise lines and resorts pay my commission. You get a real travel advisor without the extra cost.
+                  I am a professional travel advisor. My planning fees vary depending on the complexity of your trip. For simple bookings there may be no fee at all. Either way, you get a real person who knows travel and handles the details so you can just enjoy the trip.
                 </p>
               </div>
 
@@ -47,7 +47,7 @@ export default function AboutSection() {
               {/* CTAs */}
               <div className="mt-10 flex flex-col gap-3">
                 <div className="flex flex-wrap gap-4">
-                  <a
+                  
                     href={FORM_URL}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -59,7 +59,7 @@ export default function AboutSection() {
                     </span>
                     Start Planning My Trip
                   </a>
-                  <a
+                  
                     href="mailto:eric@happydetour.com"
                     aria-label="Email Eric Carney directly at eric@happydetour.com"
                     className="inline-flex items-center gap-2 rounded-full border border-amber-400 px-7 py-3 text-sm font-semibold text-amber-600 hover:bg-amber-50 transition-colors whitespace-nowrap cursor-pointer"
