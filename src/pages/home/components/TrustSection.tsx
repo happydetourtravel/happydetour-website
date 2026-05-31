@@ -22,8 +22,8 @@ const TRUST_POINTS = [
   },
   {
     icon: "ri-hand-coin-line",
-    title: "Free to you. Always.",
-    body: "The cruise lines and resorts pay me, not you. So you get my full help for free. And honestly, I usually track down better deals than most people find on their own.",
+    title: "No hidden costs. No surprises.",
+    body: "Cruise lines and resorts pay me when you travel. Planning fees vary depending on the complexity of your trip. Either way you will always know exactly what to expect before anything is booked.",
   },
 ];
 
