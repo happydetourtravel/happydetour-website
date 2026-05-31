@@ -53,8 +53,8 @@ export default function TestimonialsPage() {
                   <p className="mt-1 text-sm text-gray-500">Dunkin' coffees deep into trip research today</p>
                 </div>
                 <div className="bg-white rounded-2xl border border-gray-100 p-6 text-center shadow-sm">
-                  <p className="text-3xl font-bold text-amber-500">$0</p>
-                  <p className="mt-1 text-sm text-gray-500">Cost to you. Always.</p>
+                 <p className="text-3xl font-bold text-amber-500">100%</p>
+<p className="mt-1 text-sm text-gray-500">Committed to getting your trip right</p>
                 </div>
               </div>
 
