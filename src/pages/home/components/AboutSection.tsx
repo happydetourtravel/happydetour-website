@@ -30,7 +30,7 @@ export default function AboutSection() {
                   You share a rough idea. I take it from there. I find the options, sort through the details, and help you pick something that actually fits your budget, your timeline, your vibe.
                 </p>
                 <p>
-   I am a professional travel advisor. Planning fees start at $50 depending on the complexity of your trip. Simple bookings may have no fee at all. Either way, cruise lines and resorts pay me when you travel, and that is already built into the price you would pay anyway.
+   I am a professional travel advisor. Planning fees start at $50 depending on the complexity of your trip. We talk through it together before anything is confirmed so there are no surprises. Either way, cruise lines and resorts pay me when you travel, and that is already built into the price you would pay anyway.
 </p>
 <p>
    And if something goes wrong while you are out there, I am the one making the calls so you do not have to.
