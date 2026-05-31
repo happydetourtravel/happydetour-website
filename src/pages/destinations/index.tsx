@@ -148,7 +148,7 @@ export default function DestinationsPage() {
       {/* Footer */}
       <section className="py-8 text-center px-6">
         <p className="text-sm font-semibold mb-2" style={{ color: '#F59E0B' }}>
-          Affordable vacations. Fun experiences. Everyone welcome.
+          Real trips. Real value. Someone actually in your corner.
         </p>
         <p className="text-xs mb-1" style={{ color: '#6B7280' }}>
           © 2026 Happy Detour Travel. All rights reserved. Happy Detour is a proud independent affiliate of WorldVia.
