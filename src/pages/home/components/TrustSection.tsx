@@ -139,7 +139,7 @@ export default function TrustSection() {
         <ScrollReveal direction="up" delay={350} duration={680}>
           <div className="mt-14 text-center">
             <p className="text-xl font-semibold text-gray-800 tracking-wide sm:text-2xl">
-              Affordable vacations.&nbsp; Fun experiences.&nbsp; Everyone welcome.
+              Real trips.&nbsp; Real value.&nbsp; Someone actually in your corner.
             </p>
           </div>
         </ScrollReveal>
