@@ -38,23 +38,21 @@ const [showModal, setShowModal] = React.useState(false);
           <ScrollReveal direction="up" delay={80} duration={700} threshold={0.05}>
             <h1 className="leading-tight tracking-tight">
   <span className="block text-4xl font-bold text-white sm:text-5xl lg:text-6xl">Happy Detour Travel</span>
-  <span className="block text-2xl font-semibold text-white sm:text-3xl lg:text-4xl mt-2">Stress-Free Cruise & Vacation Planning</span>
+  <span className="block text-2xl font-semibold text-white sm:text-3xl lg:text-4xl mt-2">Your personal travel advisor from start to finish.</span>
 </h1>
           </ScrollReveal>
 
           {/* 2. Tagline */}
           <ScrollReveal direction="up" delay={200} duration={700} threshold={0.05}>
             <p className="mt-5 text-xl font-semibold text-amber-400 sm:text-2xl leading-snug">
-              Affordable vacations.{" "}
-              Fun experiences.{" "}
-              Everyone welcome.
+              Real trips. Real value. Someone actually in your corner.
             </p>
           </ScrollReveal>
 
           {/* 3. Supporting line */}
           <ScrollReveal direction="up" delay={310} duration={700} threshold={0.05}>
             <p className="mt-4 text-sm text-white/80 leading-relaxed mx-auto text-center whitespace-nowrap">
-              Forget the 'work' of planning. Just tell me you're ready for a break, and I'll do the heavy lifting.
+              Anyone can book a trip. I am the one who answers the phone when things do not go as planned.
             </p>
           </ScrollReveal>
 
