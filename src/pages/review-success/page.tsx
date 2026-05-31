@@ -77,7 +77,7 @@ export default function ReviewSuccessPage() {
           </div>
 
           <p className="text-sm font-semibold" style={{ color: '#F59E0B' }}>
-            Affordable vacations. Fun experiences. Everyone welcome.
+            Real trips. Real value. Someone actually in your corner.
           </p>
           <p className="text-xs mt-2" style={{ color: '#9CA3AF' }}>
             Happy Detour Travel is an independent travel advisory service affiliated with WorldVia Travel Network.
