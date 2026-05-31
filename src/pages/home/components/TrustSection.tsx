@@ -23,7 +23,7 @@ const TRUST_POINTS = [
   {
     icon: "ri-shield-check-line",
     title: "No hidden costs. No surprises.",
-    body: "Cruise lines and resorts pay me when you travel. Planning fees vary depending on the complexity of your trip. Either way you will always know exactly what to expect before anything is booked.",
+    body: "Cruise lines and resorts pay me when you travel. Planning fees start at $50 depending on your trip. We talk through everything together before anything is confirmed so there are no surprises.",
   },
 ];
 
