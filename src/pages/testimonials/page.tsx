@@ -118,7 +118,7 @@ export default function TestimonialsPage() {
               I want to hear about it. Not just because it helps the business but because
               I genuinely love knowing the trip went well. Tell me everything.
               Your story might be exactly what someone else needs to finally book that trip
-              they have been putting off. Affordable vacations. Fun experiences. Everyone welcome.
+              they have been putting off. Real trips. Real value. Someone actually in your corner.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a href={GOOGLE_REVIEW_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-amber-500 px-8 py-4 text-base font-semibold text-amber-600 hover:bg-amber-50 transition-colors whitespace-nowrap">
