@@ -10,8 +10,8 @@ interface FAQ {
 
 const faqs: FAQ[] = [
   {
-    question: "Is this actually free? What's the catch?",
-    answer: "No catch. My services cost you nothing. Travel suppliers like cruise lines and resorts pay me a commission when you book. Same idea as a mortgage broker. You get someone actually looking out for you, and it doesn't cost you a cent more than if you'd booked it yourself."
+    question: "What does it cost to work with you?",
+    answer: "It depends on the trip. For simple bookings there may be no planning fee at all. For more complex itineraries I charge a planning fee that we discuss upfront before anything is booked. Either way there are no hidden costs and no surprises. Cruise lines and resorts pay me a commission when you travel, the same way a mortgage broker works. You get a real person in your corner without paying more than you would booking on your own."
   },
   {
     question: "Why work with you instead of just booking online?",
