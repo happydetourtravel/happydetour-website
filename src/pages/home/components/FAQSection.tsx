@@ -39,7 +39,7 @@ const faqs: FAQ[] = [
   },
   {
     question: "Can you help with groups or special occasions?",
-    answer: "Definitely. Destination weddings, family reunions, anniversary trips, milestone birthdays. Groups are some of my favorite trips to plan. They also tend to get better pricing and extras that solo bookings just don't."
+    answer: "Definitely. Anniversary trips, milestone birthdays, group cruises, group resort stays. Groups are some of my favorite trips to plan. They also tend to get better pricing and extras that solo bookings just don't."
   },
   {
     question: "What cruise lines do you work with?",
