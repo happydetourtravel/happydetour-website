@@ -18,9 +18,9 @@ export default function CTASection() {
         </ScrollReveal>
         <ScrollReveal direction="up" delay={200} duration={700}>
           <p className="mt-6 text-lg font-semibold text-gray-700 sm:text-xl leading-relaxed">
-            Affordable vacations.{" "}
-            <span className="text-amber-500">Fun experiences.</span>{" "}
-            Everyone welcome.
+            Real trips.{" "}
+            <span className="text-amber-500">Real value.</span>{" "}
+            Someone actually in your corner.
           </p>
         </ScrollReveal>
         <ScrollReveal direction="up" delay={300} duration={700}>
