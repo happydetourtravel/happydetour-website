@@ -89,7 +89,7 @@ export default function SuccessPage() {
 
           {/* Tagline */}
           <p className="text-sm italic text-gray-400">
-            Affordable vacations. Fun experiences. Everyone welcome.
+            Real trips. Real value. Someone actually in your corner.
           </p>
 
         </div>
