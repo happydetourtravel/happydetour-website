@@ -21,7 +21,7 @@ const services = [
     icon: "ri-map-2-line",
     title: "Custom Travel Experiences",
     description:
-      "From a long weekend getaway to a two-week international trip, I build itineraries around your budget, timeline, and travel style. Honeymoons, family reunions, destination weddings, solo adventures, group sailings, I handle every booking and coordinate every detail. My planning service is always 100% free to you. Cruise lines and resorts pay my commission, so you get a dedicated travel advisor at no extra cost.",
+      "From a long weekend getaway to a two-week international trip, I build itineraries around your budget, timeline, and travel style. Honeymoons, family reunions, destination weddings, solo adventures, group sailings, I handle every booking and coordinate every detail. Planning fees vary depending on the complexity of your trip. For simple bookings there may be no fee at all. Either way you get a dedicated travel advisor who handles every detail so you can just look forward to the trip.",
     accent: "text-rose-500 bg-rose-50 border-rose-200",
   },
 ];
