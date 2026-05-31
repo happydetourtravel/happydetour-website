@@ -29,7 +29,7 @@ export default function CTASection() {
               href={FORM_URL}
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Start planning my trip with Happy Detour Travel — free travel planning"
+              aria-label="Start planning my trip with Happy Detour Travel"
               className="inline-flex items-center justify-center gap-2.5 rounded-full bg-amber-500 px-12 py-4 text-base font-semibold text-white hover:bg-amber-600 active:scale-95 transition-all duration-150 whitespace-nowrap cursor-pointer"
             >
               <span className="w-4 h-4 flex items-center justify-center">
