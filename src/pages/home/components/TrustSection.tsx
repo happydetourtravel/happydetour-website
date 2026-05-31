@@ -21,7 +21,7 @@ const TRUST_POINTS = [
     body: "Throughout your trip planning, you're working with me. I'll know your trip inside and out, you'll have clear ways to reach me, and I stay involved from our first conversation all the way to when you leave.",
   },
   {
-    icon: "ri-hand-coin-line",
+    icon: "ri-shield-check-line",
     title: "No hidden costs. No surprises.",
     body: "Cruise lines and resorts pay me when you travel. Planning fees vary depending on the complexity of your trip. Either way you will always know exactly what to expect before anything is booked.",
   },
