@@ -2,8 +2,6 @@ import ScrollReveal from '../../../components/base/ScrollReveal';
 
 import React, { useState } from 'react';
 
-const HERO_IMAGE = "/hero-image.webp";
-
 const FORM_URL = "https://api.leadconnectorhq.com/widget/form/V4qo3lEB8oTtXbuWILfK";
 
 export default function HeroSection() {
@@ -13,10 +11,13 @@ const [showModal, setShowModal] = React.useState(false);
       id="hero"
       className="relative isolate overflow-hidden min-h-screen flex flex-col"
     >
-      {/* Background image */}
-      <div
-        className="absolute inset-0 z-0 bg-cover bg-center"
-        style={{ backgroundImage: `url(${HERO_IMAGE})` }}
+      {/* Background image - using img tag for faster LCP */}
+      <img
+        src="/hero-image.webp"
+        alt=""
+        fetchPriority="high"
+        decoding="async"
+        className="absolute inset-0 z-0 w-full h-full object-cover"
       />
       {/* Dark overlay */}
       <div className="absolute inset-0 z-[1] bg-black/60" />
