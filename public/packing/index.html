@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cruise Packing List | Happy Detour Travel</title>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: #F9FAFB;
+      color: #1F2937;
+      padding: 24px 16px;
+    }
+
+    .page {
+      width: 100%;
+      max-width: 760px;
+      margin: 0 auto;
+      background: #ffffff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    }
+
+    /* ── Amber top bar ── */
+    .amber-bar { height: 5px; background: #F59E0B; }
+
+    /* ── Header ── */
+    .header-banner {
+      background: #007298;
+      padding: 24px 28px 20px;
+      text-align: center;
+    }
+
+    /* Cruise line logo area — swap src for each client */
+    .cruise-logo-wrap {
+      margin-bottom: 12px;
+    }
+    .cruise-logo-wrap img {
+      max-height: 60px;
+      max-width: 220px;
+      object-fit: contain;
+    }
+    /* Placeholder shown when no image is set */
+    .cruise-logo-placeholder {
+      display: inline-block;
+      background: rgba(255,255,255,0.12);
+      border: 2px dashed rgba(255,255,255,0.45);
+      border-radius: 8px;
+      padding: 10px 20px;
+      color: rgba(255,255,255,0.6);
+      font-size: 12px;
+      letter-spacing: 0.5px;
+    }
+
+    .header-title {
+      color: #ffffff;
+      font-size: 28px;
+      font-weight: 700;
+      line-height: 1.15;
+      margin-bottom: 4px;
+    }
+    .header-title span { color: #F59E0B; }
+
+    /* Trip info fields */
+    .trip-info {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      margin-top: 14px;
+      flex-wrap: wrap;
+    }
+    .trip-field {
+      background: rgba(255,255,255,0.12);
+      border-radius: 8px;
+      padding: 8px 18px;
+      text-align: center;
+      min-width: 160px;
+    }
+    .trip-field-label {
+      color: rgba(255,255,255,0.65);
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      font-weight: 600;
+    }
+    .trip-field-value {
+      color: #ffffff;
+      font-size: 14px;
+      font-weight: 600;
+      margin-top: 3px;
+    }
+
+    /* ── Checklist grid ── */
+    .list-area {
+      padding: 20px 20px 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    @media (max-width: 540px) {
+      .list-area { grid-template-columns: 1fr; }
+      .trip-info { flex-direction: column; align-items: center; }
+    }
+
+    .category-block {
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .category-header {
+      background: #007298;
+      padding: 7px 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .category-header svg {
+      flex-shrink: 0;
+      color: #F59E0B;
+    }
+    .category-name {
+      color: #ffffff;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .item-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 6px 14px;
+      border-bottom: 0.5px solid #f3f4f6;
+      gap: 10px;
+    }
+    .item-row:last-child { border-bottom: none; }
+    .item-name { font-size: 12.5px; color: #374151; flex: 1; }
+    .checkbox {
+      width: 15px;
+      height: 15px;
+      border: 1.5px solid #007298;
+      border-radius: 3px;
+      flex-shrink: 0;
+      background: white;
+      appearance: none;
+      -webkit-appearance: none;
+      cursor: pointer;
+    }
+    .checkbox:checked {
+      background: #007298;
+      position: relative;
+    }
+    .checkbox:checked::after {
+      content: '';
+      display: block;
+      width: 4px;
+      height: 8px;
+      border: 2px solid white;
+      border-top: none;
+      border-left: none;
+      transform: rotate(45deg);
+      margin: 1px auto 0;
+    }
+
+    /* ── Footer ── */
+    .footer {
+      margin: 20px 20px 20px;
+      border-top: 2.5px solid #F59E0B;
+      padding-top: 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .footer-left { font-size: 12px; color: #6B7280; line-height: 1.6; }
+    .footer-left strong { color: #1F2937; font-weight: 600; }
+    .footer-brand { text-align: right; }
+    .footer-logo { color: #007298; font-size: 14px; font-weight: 700; }
+    .footer-tagline { color: #6B7280; font-size: 10.5px; margin-top: 2px; }
+    .footer-contact { color: #007298; font-size: 10.5px; margin-top: 3px; font-weight: 600; }
+
+    /* ── Print styles ── */
+    @media print {
+      body { background: white; padding: 0; }
+      .page { box-shadow: none; border-radius: 0; max-width: 100%; }
+      .checkbox { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .header-banner, .category-header, .amber-bar {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+  <div class="amber-bar"></div>
+
+  <div class="header-banner">
+
+    <!--
+      CRUISE LINE LOGO
+      To customize for each client:
+      1. Replace the placeholder div below with an <img> tag
+      2. Example: <img src="carnival-logo.png" alt="Carnival Cruise Line" />
+      3. Or use a hosted URL: <img src="https://example.com/logo.png" alt="..." />
+    -->
+    <div class="cruise-logo-wrap">
+      <div class="cruise-logo-placeholder">[ Cruise Line Logo ]</div>
+    </div>
+
+    <div class="header-title">Your Cruise <span>Packing List</span></div>
+
+    <div class="trip-info">
+      <!--
+        TRIP DETAILS
+        To customize: replace the text inside each .trip-field-value span
+        Example: <span class="trip-field-value">Jane &amp; Tom Smith</span>
+      -->
+      <div class="trip-field">
+        <div class="trip-field-label">Guest Name(s)</div>
+        <span class="trip-field-value">____________________________</span>
+      </div>
+      <div class="trip-field">
+        <div class="trip-field-label">Ship</div>
+        <span class="trip-field-value">____________________________</span>
+      </div>
+      <div class="trip-field">
+        <div class="trip-field-label">Travel Dates</div>
+        <span class="trip-field-value">____________________________</span>
+      </div>
+    </div>
+
+  </div><!-- /header-banner -->
+
+  <div class="list-area">
+
+    <!-- TRAVEL DOCUMENTS -->
+    <div class="category-block">
+      <div class="category-header">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        <span class="category-name">Travel Documents</span>
+      </div>
+      <div class="item-row"><span class="item-name">Passport or Birth Certificate</span><input type="checkbox" class="checkbox" /></div>
+      <div class="item-row"><span class="item-name">Cruise Documents / Set Sail Pass</span><input type="checkbox" class="checkbox" /></div>
+      <div class="item-row"><span class="item-name">Valid Driver's License or ID</span><input type="checkbox" class="checkbox" /></div>
+      <div class="item-row"><span class="item-name">Cash and Credit Cards</span><input type="checkbox" class="checkbox" /></div>
+      <div class="item-row"><span class="item-name">Luggage Tags (printed)</span><input type="checkbox" class="checkbox" /></div>
+    </div>
+
+    <!-- LUGGAGE -->
+    <div class="category-block">
+      <div class="category-header">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
+        <span class="category-name">Luggage</span>
+      </div>
+      <div class="item-row"><span class="item-name">Suitcase(s)</span><input type="checkbox" class="checkbox" /></div>
+      <div class="item-row"><span class="item-name">Packing Cubes</span><input type="checkbox" class="checkbox" /></div>
+      <div class="item-row"><span class="item-name">Wet/Dry Bag</span><input type="checkbox" class="checkbox" /></div>
+      <div class="item-row"><span class="item-name">Beach Bag or Day Bag</span><input type="checkbox" class="checkbox" /></div>
+      <div class="item-row"><span class="item-name">Carry-On Bag</span><input type="checkbox" class="checkbox" /></div>
+    </div>
+
+    <!-- CLOTHING -->
+    <div class="category-block">
+      <div class="category-header">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20.38 3.46 16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.57a1 1 0 0 0 .99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2V10h2.15a1 1 0 0 0 .99-.84l.58-3.57a2 2 0 0 0-1.34-2.23z"/></svg>
+        <span class="category-name">Clothing (x # of Days)</span>
+      </div>
+      <div class="item-row"><span class="item-name">T-Shirts / Tops</span><input type="checkbox" class="checkbox" /></div>
+      <div class="item-row"><span class="item-name">Shorts or Capris</span><input type="checkbox" class="checkbox" /></div>
+      <div class="item-row"><span class="item-name">Swimwear and Cover-Up</span><input type="checkbox" class="checkbox" /></div>
+      <div class="item-row"><span class="item-name">Sundress or Light Layers</span><input type="checkbox" class="checkbox" /></div>
+      <div class="item-row"><span class="item-name">Formal or Dressy Outfit</span><input type="checkbox" class="checkbox" /></div>
+      <div class="item-row"><span class="item-name">Pajamas and Loungewear</span><input type="checkbox" class="checkbox" /></div>
+    </div>
+
+    <!-- SHOES & ACCESSORIES -->
+    <div class="category-block">
+      <div class="category-header">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72m2.54-15.38c-3.72 4.35-8.94 5.66-16.88 5.85m19.5 1.9c-3.5-.93-6.63-.82-8.94 0-2.58.92-5.01 2.86-7.44 6.32"/></svg>
+        <span class="category-name">Shoes &amp; Accessories</span>
+      </div>
+      <div class="item-row"><span class="item-name">Flip Flops or Sandals</span><input type="checkbox" class="checkbox" /></div>
+      <div class="item-row"><span class="item-name">Closed-Toe or Water Shoes</span><input type="checkbox" class="checkbox" /></div>
+      <div class="item-row"><span class="item-name">Dress Shoes</span><input type="checkbox" class="checkbox" /></div>
+      <div class="item-row"><span class="item-name">Sunglasses</span><input type="checkbox" class="checkbox" /></div>
+      <div class="item-row"><span class="item-name">Sun Hat or Baseball Cap</span><input type="checkbox" class="checkbox" /></div>
+      <div class="item-row"><span class="item-name">Jewelry / Watch</span><input type="checkbox" class="checkbox" /></div>
+    </div>
+
+    <!-- ELECTRONICS -->
+    <div class="category-block">
+      <div class="category-header">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+        <span class="category-name">Electronics</span>
+      </div>
+      <div class="item-row"><span class="item-name">Phone and All Chargers</span><input type="checkbox" class="checkbox" /></div>
+      <div class="item-row"><span class="item-name">Waterproof Phone Case</span><input type="checkbox" class="checkbox" /></div>
+      <div class="item-row"><span class="item-name">Headphones</span><input type="checkbox" class="checkbox" /></div>
+      <div class="item-row"><span class="item-name">Power Strip (NO surge protector)</span><input type="checkbox" class="checkbox" /></div>
+      <div class="item-row"><span class="item-name">Camera or GoPro</span><input type="checkbox" class="checkbox" /></div>
+      <div class="item-row"><span class="item-name">Laptop or Tablet (if needed)</span><input type="checkbox" class="checkbox" /></div>
+    </div>
+
+    <!-- MEDICATIONS -->
+    <div class="category-block">
+      <div class="category-header">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="m10.5 20.5 10-10a4.95 4.95 0 1 0-7-7l-10 10a4.95 4.95 0 1 0 7 7z"/><line x1="8.5" y1="8.5" x2="15.5" y2="15.5"/></svg>
+        <span class="category-name">Medications</span>
+      </div>
+      <div class="item-row"><span class="item-name">Daily Medications (x # of Days)</span><input type="checkbox" class="checkbox" /></div>
+      <div class="item-row"><span class="item-name">Seasick Medicine</span><input type="checkbox" class="checkbox" /></div>
+      <div class="item-row"><span class="item-name">Tylenol / Ibuprofen</span><input type="checkbox" class="checkbox" /></div>
+      <div class="item-row"><span class="item-name">Pepto-Bismol or Antacid</span><input type="checkbox" class="checkbox" /></div>
+      <div class="item-row"><span class="item-name">Allergy Medication</span><input type="checkbox" class="checkbox" /></div>
+    </div>
+
+    <!-- TOILETRIES -->
+    <div class="category-block">
+      <div class="category-header">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"/></svg>
+        <span class="category-name">Toiletries</span>
+      </div>
+      <div class="item-row"><span class="item-name">Sunscreen (SPF 30+)</span><input type="checkbox" class="checkbox" /></div>
+      <div class="item-row"><span class="item-name">Aloe Vera Gel</span><input type="checkbox" class="checkbox" /></div>
+      <div class="item-row"><span class="item-name">Shampoo / Conditioner / Body Wash</span><input type="checkbox" class="checkbox" /></div>
+      <div class="item-row"><span class="item-name">Deodorant and Toothbrush Kit</span><input type="checkbox" class="checkbox" /></div>
+      <div class="item-row"><span class="item-name">Makeup and Hair Care</span><input type="checkbox" class="checkbox" /></div>
+      <div class="item-row"><span class="item-name">Feminine / Personal Products</span><input type="checkbox" class="checkbox" /></div>
+    </div>
+
+    <!-- THE EXTRAS -->
+    <div class="category-block">
+      <div class="category-header">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <span class="category-name">The Extras</span>
+      </div>
+      <div class="item-row"><span class="item-name">Lanyard (for your cruise card)</span><input type="checkbox" class="checkbox" /></div>
+      <div class="item-row"><span class="item-name">Reusable Water Bottle</span><input type="checkbox" class="checkbox" /></div>
+      <div class="item-row"><span class="item-name">Rain Poncho</span><input type="checkbox" class="checkbox" /></div>
+      <div class="item-row"><span class="item-name">Wine or Soda (if allowed)</span><input type="checkbox" class="checkbox" /></div>
+      <div class="item-row"><span class="item-name">Cards or Small Game</span><input type="checkbox" class="checkbox" /></div>
+      <div class="item-row"><span class="item-name">Snacks for Travel Day</span><input type="checkbox" class="checkbox" /></div>
+    </div>
+
+  </div><!-- /list-area -->
+
+  <div class="footer">
+    <div class="footer-left">
+      <strong>Questions? I'm here for you.</strong><br>
+      Reach out before, during, or after your trip.
+    </div>
+    <div class="footer-brand">
+      <div class="footer-logo">Happy Detour Travel</div>
+      <div class="footer-tagline">Real trips. Real value. Someone actually in your corner.</div>
+      <div class="footer-contact">eric@happydetour.com &nbsp;|&nbsp; 716-333-8687 &nbsp;|&nbsp; happydetour.com</div>
+    </div>
+  </div>
+
+</div><!-- /page -->
+</body>
+</html>
