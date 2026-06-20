@@ -1,6 +1,6 @@
 import ScrollReveal from '../../../components/base/ScrollReveal';
 
-const FORM_URL = "https://api.leadconnectorhq.com/widget/form/V4qo3lEB8oTtXbuWILfK";
+const FORM_URL = "https://forgehq.app/f/?s=yozjm6l0";
 
 const services = [
   {
