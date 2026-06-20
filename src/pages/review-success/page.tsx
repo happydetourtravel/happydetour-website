@@ -1,6 +1,6 @@
 import ScrollReveal from '../../components/base/ScrollReveal';
 
-const FORM_URL = "https://api.leadconnectorhq.com/widget/form/V4qo3lEB8oTtXbuWILfK";
+const FORM_URL = "https://forgehq.app/f/?s=yozjm6l0";
 const BLOG_URL = "https://happydetourtravel.wordpress.com/";
 const INSTAGRAM_URL = "https://www.instagram.com/happydetourtravel";
 const FACEBOOK_URL = "https://www.facebook.com/profile.php?id=61582209485454";
