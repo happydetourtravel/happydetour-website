@@ -2,7 +2,7 @@ import ScrollReveal from '../../../components/base/ScrollReveal';
 
 import React, { useState } from 'react';
 
-const FORM_URL = "https://api.leadconnectorhq.com/widget/form/V4qo3lEB8oTtXbuWILfK";
+const FORM_URL = "https://forgehq.app/f/?s=yozjm6l0";
 
 export default function HeroSection() {
 const [showModal, setShowModal] = React.useState(false);
