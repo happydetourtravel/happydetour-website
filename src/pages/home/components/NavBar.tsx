@@ -9,7 +9,7 @@ const navLinks = [
   { label: "Destinations", href: "/destinations" },
   { label: "Testimonials", href: "/testimonials" },
   { label: "Blog", href: "https://happydetourtravel.wordpress.com" },
-  { label: "Start Planning My Trip", href: "https://api.leadconnectorhq.com/widget/form/V4qo3lEB8oTtXbuWILfK" },
+  { label: "Start Planning My Trip", href: "https://forgehq.app/f/?s=yozjm6l0" },
   { label: "Contact", href: "#contact" }
 ];
 
