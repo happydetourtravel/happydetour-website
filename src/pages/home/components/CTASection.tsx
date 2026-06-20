@@ -1,5 +1,5 @@
 import ScrollReveal from '../../../components/base/ScrollReveal';
-const FORM_URL = "https://api.leadconnectorhq.com/widget/form/V4qo3lEB8oTtXbuWILfK";
+const FORM_URL = "https://forgehq.app/f/?s=yozjm6l0";
 export default function CTASection() {
   return (
     <section aria-labelledby="cta-heading" className="relative overflow-hidden bg-amber-50 border-t border-amber-100 py-24 sm:py-32">
