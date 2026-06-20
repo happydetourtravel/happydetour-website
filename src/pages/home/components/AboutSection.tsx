@@ -1,6 +1,6 @@
 import ScrollReveal from '../../../components/base/ScrollReveal';
 
-const FORM_URL = "https://api.leadconnectorhq.com/widget/form/V4qo3lEB8oTtXbuWILfK";
+const FORM_URL = "https://forgehq.app/f/?s=yozjm6l0";
 
 const ADVISOR_IMAGE =
   "https://static.websitebuilder-cdn.com/ff4558209215a440/media/img/advisor-consultation.d8568320beb24d17b1f85afa43cb9205.159c1c0c29690be857e712bce1febba19b6fdb5a060f1ac926c93ee5b116b38a.png";
